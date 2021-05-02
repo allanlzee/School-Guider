@@ -107,6 +107,7 @@
             android:textSize="10dp"
             app:layout_column="0"
             app:layout_row="1"
+            android:onClick="onMorningClick"
             />
 
         <Button
@@ -114,21 +115,24 @@
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:text="Morning"
-            android:textSize="10dp"/>
+            android:textSize="10dp"
+            android:onClick="onMorningClick"/>
 
         <Button
             android:id="@+id/morningCourse3"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:text="Morning"
-            android:textSize="10dp"/>
+            android:textSize="10dp"
+            android:onClick="onMorningClick"/>
 
         <Button
             android:id="@+id/morningCourse4"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:text="Morning"
-            android:textSize="10dp"/>
+            android:textSize="10dp"
+            android:onClick="onMorningClick"/>
 
         <ImageView
             android:id="@+id/image1"
@@ -163,7 +167,8 @@
             android:text="Afternoon"
             android:textSize="10dp"
             app:layout_row="3"
-            app:layout_column="0"/>
+            app:layout_column="0"
+            android:onClick="onAfternoonClick"/>
 
         <Button
             android:id="@+id/afternoonCourse2"
@@ -172,7 +177,8 @@
             android:text="Afternoon"
             android:textSize="10dp"
             app:layout_row="3"
-            app:layout_column="1"/>
+            app:layout_column="1"
+            android:onClick="onAfternoonClick"/>
 
         <Button
             android:id="@+id/afternoonCourse3"
@@ -181,7 +187,8 @@
             android:text="Afternoon"
             android:textSize="10dp"
             app:layout_row="3"
-            app:layout_column="2"/>
+            app:layout_column="2"
+            android:onClick="onAfternoonClick"/>
 
         <Button
             android:id="@+id/afternoonCourse4"
@@ -190,7 +197,8 @@
             android:text="Afternoon"
             android:textSize="10dp"
             app:layout_row="3"
-            app:layout_column="3"/>
+            app:layout_column="3"
+            android:onClick="onAfternoonClick"/>
 
         <ImageView
             android:id="@+id/image5"
@@ -231,7 +239,8 @@
             android:text="Evening"
             android:textSize="10dp"
             app:layout_row="5"
-            app:layout_column="0"/>
+            app:layout_column="0"
+            android:onClick="onEveningClick"/>
 
         <Button
             android:id="@+id/eveningCourse1"
@@ -240,7 +249,8 @@
             android:text="Evening"
             android:textSize="10dp"
             app:layout_row="5"
-            app:layout_column="1"/>
+            app:layout_column="1"
+            android:onClick="onEveningClick"/>
 
         <Button
             android:id="@+id/eveningCourse2"
@@ -249,7 +259,8 @@
             android:text="Evening"
             android:textSize="10dp"
             app:layout_row="5"
-            app:layout_column="2"/>
+            app:layout_column="2"
+            android:onClick="onEveningClick"/>
 
         <Button
             android:id="@+id/eveningCourse3"
@@ -258,7 +269,8 @@
             android:text="Evening"
             android:textSize="10dp"
             app:layout_row="5"
-            app:layout_column="3"/>
+            app:layout_column="3"
+            android:onClick="onEveningClick"/>
 
         <ImageView
             android:id="@+id/image9"

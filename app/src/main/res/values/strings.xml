@@ -31,4 +31,6 @@
     <string name="tab_text_2">Tab 2</string>
     <string name="title_activity_guider__settings">Guider_Settings</string>
     <string name="title_activity_mindfulness">MindfulnessActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
 </resources>

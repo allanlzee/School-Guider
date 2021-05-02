@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
         switch (id) {
             case R.id.settings_menu:
                 Toast.makeText(MainActivity.this, "Settings", Toast.LENGTH_SHORT).show();
-
+                startActivity(new Intent(MainActivity.this, SettingsActivity.class));
                 return true;
             case R.id.school_menu:
                 Toast.makeText(MainActivity.this, "School", Toast.LENGTH_SHORT).show();
@@ -60,7 +60,8 @@ public class MainActivity extends AppCompatActivity {
                 return true;
             case R.id.mindful_menu:
                 Toast.makeText(MainActivity.this, "Mindfulness", Toast.LENGTH_SHORT).show();
-
+                startActivity(new Intent(MainActivity.this, MindfulnessActivity.class));
+                return true;
             default:
                 return super.onOptionsItemSelected(item);
         }
@@ -71,6 +72,4 @@ public class MainActivity extends AppCompatActivity {
         EditText inputName = findViewById(R.id.inputName);
         greetingMsg.setText("Greetings " + inputName.getText().toString());
     }
-
-    // Bring User to Menu Fragment
 }

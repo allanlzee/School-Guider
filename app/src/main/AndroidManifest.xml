@@ -10,9 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SchoolGuider">
         <activity
+            android:name=".SettingsActivity"
+            android:label="@string/title_activity_settings"></activity>
+        <activity
             android:name=".MindfulnessActivity"
             android:label="@string/title_activity_mindfulness"
-            android:theme="@style/Theme.SchoolGuider.NoActionBar"></activity>
+            android:theme="@style/Theme.SchoolGuider.NoActionBar" />
         <activity
             android:name=".Guider_Settings"
             android:label="@string/title_activity_guider__settings" />

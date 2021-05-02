@@ -6,6 +6,9 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.tabs.TabLayout;
 
+import androidx.navigation.NavController;
+import androidx.navigation.Navigation;
+import androidx.navigation.fragment.NavHostFragment;
 import androidx.viewpager.widget.ViewPager;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -159,5 +162,37 @@ public class School_Schedule extends AppCompatActivity {
         });
 
         // TODO: add remaining button functionality
+    }
+
+    // This function brings the user to the "Morning Section" of the App when the user clicks on the Morning button in the schedule
+    public void onMorningClick(View view) {
+        Toast.makeText(School_Schedule.this, "Good Morning!", Toast.LENGTH_SHORT).show();
+
+        NavController activityToMorning = Navigation.findNavController(School_Schedule.this,
+                R.id.action_school_Schedule_to_morning_Fragment);
+        activityToMorning.navigateUp();
+        activityToMorning.navigate(R.id.action_school_Schedule_to_morning_Fragment);
+    }
+
+    // This function brings the user to the "Afternoon Section" of the App when the user clicks on the Afternoon button in the schedule
+    public void onAfternoonClick(View view) {
+        Toast.makeText(School_Schedule.this, "Good Afternoon!", Toast.LENGTH_SHORT).show();
+
+        NavController activityToAfternoon = Navigation.findNavController(School_Schedule.this,
+                    R.id.action_school_Schedule_to_afternoon_Fragment);
+        activityToAfternoon.navigateUp();
+        activityToAfternoon.navigate(R.id.action_school_Schedule_to_afternoon_Fragment);
+    }
+
+    // This function brings the user to the "Evening Section" of the App when the user clicks on the Evening button in the schedule
+    public void onEveningClick(View view) {
+        Toast.makeText(School_Schedule.this, "Good Evening!", Toast.LENGTH_SHORT).show();
+
+        // action_school_Schedule_to_evening_Fragment
+
+        NavController activityToEvening = Navigation.findNavController(School_Schedule.this,
+                R.id.action_school_Schedule_to_evening_Fragment);
+        activityToEvening.navigateUp();
+        activityToEvening.navigate(R.id.action_school_Schedule_to_evening_Fragment);
     }
 }

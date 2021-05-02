@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".School_Schedule">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/Theme.SchoolGuider.AppBarOverlay"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:minHeight="?actionBarSize"
+            android:padding="10dp"
+            android:text="@string/app_name"
+            android:textAppearance="@style/TextAppearance.Widget.AppCompat.Toolbar.Title"
+            android:textSize="30dp" />
+
+        <TextView
+            android:id="@+id/subtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="Schedule"
+            android:textSize="25dp"
+            android:textStyle="italic" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        app:layout_constraintTop_toTopOf="@+id/appBarLayout2" />
+
+    <androidx.gridlayout.widget.GridLayout
+        android:layout_width="414dp"
+        android:layout_height="618dp"
+        app:layout_constraintBottom_toBottomOf="@+id/view_pager"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/view_pager"
+        app:layout_constraintTop_toBottomOf="@+id/appBarLayout2">
+
+        <TextView
+            android:id="@+id/header1"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:text="Day 1"
+            android:layout_marginLeft="3dp"
+            android:textSize="25dp"
+            android:textStyle="bold"
+            android:textColor="@color/red"
+            android:textAlignment="center"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"/>
+
+        <TextView
+            android:id="@+id/header2"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:text="Day 2"
+            android:layout_marginLeft="3dp"
+            android:textStyle="bold"
+            android:textSize="25dp"
+            android:textColor="@color/orange"
+            android:textAlignment="center"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:id="@+id/header3"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:text="Day 3"
+            android:layout_marginLeft="3dp"
+            android:textSize="25dp"
+            android:textColor="@color/green"
+            android:textAlignment="center"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:id="@+id/header4"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:text="Day 4"
+            android:textStyle="bold"
+            android:textSize="25dp"
+            android:textColor="@color/blue"
+            android:textAlignment="center"
+            android:layout_marginTop="10dp"/>
+
+        <Button
+            android:id="@+id/morningCourse1"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:text="Morning"
+            android:textSize="10dp"
+            app:layout_column="0"
+            app:layout_row="1"
+            />
+
+        <Button
+            android:id="@+id/morningCourse2"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:text="Morning"
+            android:textSize="10dp"/>
+
+        <Button
+            android:id="@+id/morningCourse3"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:text="Morning"
+            android:textSize="10dp"/>
+
+        <Button
+            android:id="@+id/morningCourse4"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:text="Morning"
+            android:textSize="10dp"/>
+
+        <ImageView
+            android:id="@+id/image1"
+            android:layout_width="100dp"
+            android:layout_height="90dp"
+            app:layout_column="0"
+            app:layout_row="2"
+            tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+        <ImageView
+            android:id="@+id/image2"
+            android:layout_width="100dp"
+            android:layout_height="90dp"
+            tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+        <ImageView
+            android:id="@+id/image3"
+            android:layout_width="100dp"
+            android:layout_height="90dp"
+            tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+        <ImageView
+            android:id="@+id/image4"
+            android:layout_width="100dp"
+            android:layout_height="90dp"
+            tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+        <Button
+            android:id="@+id/afternoonCourse1"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:text="Afternoon"
+            android:textSize="10dp"
+            app:layout_row="3"
+            app:layout_column="0"/>
+
+        <Button
+            android:id="@+id/afternoonCourse2"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:text="Afternoon"
+            android:textSize="10dp"
+            app:layout_row="3"
+            app:layout_column="1"/>
+
+        <Button
+            android:id="@+id/afternoonCourse3"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:text="Afternoon"
+            android:textSize="10dp"
+            app:layout_row="3"
+            app:layout_column="2"/>
+
+        <Button
+            android:id="@+id/afternoonCourse4"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:text="Afternoon"
+            android:textSize="10dp"
+            app:layout_row="3"
+            app:layout_column="3"/>
+
+        <ImageView
+            android:id="@+id/image5"
+            android:layout_width="100dp"
+            android:layout_height="90dp"
+            tools:srcCompat="@tools:sample/backgrounds/scenic"
+            app:layout_row="4"
+            app:layout_column="0"/>
+
+        <ImageView
+            android:id="@+id/image6"
+            android:layout_width="100dp"
+            android:layout_height="90dp"
+            tools:srcCompat="@tools:sample/backgrounds/scenic"
+            app:layout_row="4"
+            app:layout_column="1"/>
+
+        <ImageView
+            android:id="@+id/image7"
+            android:layout_width="100dp"
+            android:layout_height="90dp"
+            tools:srcCompat="@tools:sample/backgrounds/scenic"
+            app:layout_row="4"
+            app:layout_column="2"/>
+
+        <ImageView
+            android:id="@+id/image8"
+            android:layout_width="100dp"
+            android:layout_height="90dp"
+            tools:srcCompat="@tools:sample/backgrounds/scenic"
+            app:layout_row="4"
+            app:layout_column="3"/>
+
+        <Button
+            android:id="@+id/eveningCourse4"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="Evening"
+            android:textSize="10dp"
+            app:layout_row="5"
+            app:layout_column="0"/>
+
+        <Button
+            android:id="@+id/eveningCourse1"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="Evening"
+            android:textSize="10dp"
+            app:layout_row="5"
+            app:layout_column="1"/>
+
+        <Button
+            android:id="@+id/eveningCourse2"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="Evening"
+            android:textSize="10dp"
+            app:layout_row="5"
+            app:layout_column="2"/>
+
+        <Button
+            android:id="@+id/eveningCourse3"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="Evening"
+            android:textSize="10dp"
+            app:layout_row="5"
+            app:layout_column="3"/>
+
+        <ImageView
+            android:id="@+id/image9"
+            android:layout_width="100dp"
+            android:layout_height="90dp"
+            tools:srcCompat="@tools:sample/backgrounds/scenic"
+            app:layout_row="6"
+            app:layout_column="0"/>
+
+        <ImageView
+            android:id="@+id/image10"
+            android:layout_width="100dp"
+            android:layout_height="90dp"
+            tools:srcCompat="@tools:sample/backgrounds/scenic"
+            app:layout_row="6"
+            app:layout_column="1"/>
+
+        <ImageView
+            android:id="@+id/image11"
+            android:layout_width="100dp"
+            android:layout_height="90dp"
+            tools:srcCompat="@tools:sample/backgrounds/scenic"
+            app:layout_row="6"
+            app:layout_column="2"/>
+
+        <ImageView
+            android:id="@+id/image12"
+            android:layout_width="100dp"
+            android:layout_height="90dp"
+            tools:srcCompat="@tools:sample/backgrounds/scenic"
+            app:layout_row="6"
+            app:layout_column="3"/>
+
+        <Spinner
+            android:id="@+id/spinnerMorning1"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            app:layout_row="7"
+            app:layout_column="0"
+            />
+
+        <Spinner
+            android:id="@+id/spinnerMorning2"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            app:layout_row="7"
+            app:layout_column="1"/>
+
+        <Spinner
+            android:id="@+id/spinnerMorning3"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            app:layout_row="7"
+            app:layout_column="2"/>
+
+        <Spinner
+            android:id="@+id/spinnerMorning4"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            app:layout_row="7"
+            app:layout_column="3"/>
+
+        <Spinner
+            android:id="@+id/spinnerAfternoon1"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            app:layout_row="8"
+            app:layout_column="0"/>
+
+        <Spinner
+            android:id="@+id/spinnerAfternoon2"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            app:layout_row="8"
+            app:layout_column="1"/>
+
+        <Spinner
+            android:id="@+id/spinnerAfternoon3"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            app:layout_row="8"
+            app:layout_column="2"/>
+
+        <Spinner
+            android:id="@+id/spinnerAfternoon4"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            app:layout_row="8"
+            app:layout_column="3"/>
+
+        <Spinner
+            android:id="@+id/spinnerEvening1"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            app:layout_row="9"
+            app:layout_column="0"/>
+
+        <Spinner
+            android:id="@+id/spinnerEvening2"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            app:layout_row="9"
+            app:layout_column="1"/>
+
+        <Spinner
+            android:id="@+id/spinnerEvening3"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            app:layout_row="9"
+            app:layout_column="2"/>
+
+        <Spinner
+            android:id="@+id/spinnerEvening4"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            app:layout_row="9"
+            app:layout_column="3"/>
+
+
+
+    </androidx.gridlayout.widget.GridLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/fab_margin"
+        app:srcCompat="@android:drawable/ic_dialog_email"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

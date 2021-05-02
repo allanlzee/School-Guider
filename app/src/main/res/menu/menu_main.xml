@@ -1,0 +1,34 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example2.schoolguider.MainActivity">
+    <item
+        android:id="@+id/settings_menu"
+        android:orderInCategory="100"
+        android:title="@string/action_settings"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_action_settings"
+        android:onClick=""/>
+
+    <item
+        android:id="@+id/school_menu"
+        android:title="School"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_action_school"
+        />
+
+    <item
+        android:id="@+id/schedule_menu"
+        android:title="Schedule"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_action_schedule"
+        />
+
+    <item
+        android:id="@+id/mindful_menu"
+        android:title="Mindfulness"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_action_mindful"
+        />
+
+</menu>

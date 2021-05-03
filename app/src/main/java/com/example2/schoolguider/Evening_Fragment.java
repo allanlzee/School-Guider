@@ -7,6 +7,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.fragment.NavHostFragment;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -220,5 +221,9 @@ public class Evening_Fragment extends Fragment {
             actionBar = activity.getSupportActionBar();
         }
         return actionBar;
+    }
+
+    public void onEveningActivitiesClick(View view) {
+        NavHostFragment.findNavController(Evening_Fragment.this).navigate(R.id.action_evening_Fragment_to_eveningActivity);
     }
 }

@@ -33,4 +33,7 @@
     <string name="title_activity_mindfulness">MindfulnessActivity</string>
     <string name="dummy_button">Dummy Button</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="title_activity_morning_activities_page">MorningActivitiesPage</string>
+    <string name="title_activity_afternoon">FullscreenActivity</string>
+    <string name="title_activity_afternoon2">AfternoonActivity2</string>
 </resources>

@@ -48,8 +48,6 @@
                 android:text="Relaxing Evening Activities"
                 android:onClick="onEveningActivitiesClick"/>
 
-            <!-- TODO: add onEveningActivitiesClick(View view)-->
-
         </LinearLayout>
 
     </FrameLayout>

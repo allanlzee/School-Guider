@@ -36,6 +36,11 @@
             app:destination="@id/mindfulnessActivity"
             app:enterAnim="@anim/fragment_fade_enter"
             app:exitAnim="@anim/fragment_fade_exit" />
+        <action
+            android:id="@+id/action_mainActivity_to_settingsActivity"
+            app:destination="@id/settingsActivity"
+            app:enterAnim="@anim/fragment_fade_enter"
+            app:exitAnim="@anim/fragment_fade_exit" />
     </activity>
 
     <fragment
@@ -78,17 +83,13 @@
         android:label="activity_school__page"
         tools:layout="@layout/activity_school__page" >
         <action
-            android:id="@+id/action_school_Page_to_Second2Fragment"
-            app:destination="@id/Second2Fragment" >
-            <action
-                android:id="@+id/action_school_to_grades"
-                app:destination="@id/First2Fragment" />
-        </action>
-        <action
             android:id="@+id/action_school_Page_to_Grades"
             app:destination="@id/First2Fragment"
             app:enterAnim="@anim/fragment_fade_enter"
             app:exitAnim="@anim/fragment_fade_exit" />
+        <action
+            android:id="@+id/action_school_Page_to_Achievements"
+            app:destination="@id/Second2Fragment" />
     </activity>
     <activity
         android:id="@+id/school_Schedule"
@@ -125,19 +126,51 @@
         android:id="@+id/morning_Fragment"
         android:name="com.example2.schoolguider.Morning_Fragment"
         android:label="fragment_morning_"
-        tools:layout="@layout/fragment_morning_" />
+        tools:layout="@layout/fragment_morning_" >
+        <action
+            android:id="@+id/action_morning_Fragment_to_morningActivitiesPage"
+            app:destination="@id/morningActivitiesPage"
+            app:enterAnim="@anim/fragment_fade_enter"
+            app:exitAnim="@anim/fragment_fade_exit" />
+    </fragment>
     <fragment
         android:id="@+id/afternoon_Fragment"
         android:name="com.example2.schoolguider.Afternoon_Fragment"
         android:label="fragment_afternoon_"
-        tools:layout="@layout/fragment_afternoon_" />
+        tools:layout="@layout/fragment_afternoon_" >
+        <action
+            android:id="@+id/action_afternoon_Fragment_to_afternoon_activites_fragment"
+            app:destination="@id/placeholderFragment"
+            app:enterAnim="@anim/fragment_fade_enter"
+            app:exitAnim="@anim/fragment_fade_exit" />
+    </fragment>
     <fragment
         android:id="@+id/evening_Fragment"
         android:name="com.example2.schoolguider.Evening_Fragment"
         android:label="fragment_evening_"
-        tools:layout="@layout/fragment_evening_" />
+        tools:layout="@layout/fragment_evening_" >
+        <action
+            android:id="@+id/action_evening_Fragment_to_eveningActivity"
+            app:destination="@id/eveningActivity"
+            app:enterAnim="@anim/fragment_fade_enter"
+            app:exitAnim="@anim/fragment_fade_exit" />
+    </fragment>
     <activity
         android:id="@+id/settingsActivity"
         android:name="com.example2.schoolguider.SettingsActivity"
         android:label="SettingsActivity" />
+    <activity
+        android:id="@+id/morningActivitiesPage"
+        android:name="com.example2.schoolguider.MorningActivitiesPage"
+        android:label="activity_morning_activities_page"
+        tools:layout="@layout/activity_morning_activities_page" />
+    <fragment
+        android:id="@+id/placeholderFragment"
+        android:name="com.example2.schoolguider.ui.main.PlaceholderFragment"
+        android:label="fragment_afternoon_activity2"
+        tools:layout="@layout/fragment_afternoon_activity2" />
+    <activity
+        android:id="@+id/eveningActivity"
+        android:name="com.example2.schoolguider.EveningActivity"
+        android:label="EveningActivity" />
 </navigation>

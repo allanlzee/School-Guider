@@ -47,8 +47,6 @@
                 android:text="Cleansing Morning Activities"
                 android:onClick="onMorningActivitiesClick"/>
 
-            <!-- TODO: add onMorningActivitiesClick(View view)-->
-
         </LinearLayout>
 
     </FrameLayout>

@@ -7,6 +7,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.fragment.NavHostFragment;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -223,7 +224,7 @@ public class Morning_Fragment extends Fragment {
     }
 
     public void onMorningActivitiesClick(View view) {
-        // TODO: add a new fragment for morning activities
+        NavHostFragment.findNavController(Morning_Fragment.this).navigate(R.id.action_morning_Fragment_to_morningActivitiesPage);
     }
 
 }

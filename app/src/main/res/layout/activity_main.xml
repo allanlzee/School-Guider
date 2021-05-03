@@ -31,77 +31,81 @@
 
     <!-- Include the Trademark -->
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:text="School Guider"
-        android:textColor="@color/teal_200"
-        android:textSize="40dp"
-        android:textStyle="bold|italic"
-        app:layout_constraintBottom_toTopOf="@+id/include_Trademark"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.469"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.214" />
+   <TextView
+       android:id="@+id/textView"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_centerHorizontal="true"
+       android:layout_centerVertical="true"
+       android:text="School Guider"
+       android:textColor="@color/teal_200"
+       android:textSize="40sp"
+       android:textStyle="bold|italic"
+       app:layout_constraintBottom_toTopOf="@+id/include_Trademark"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toTopOf="parent"
+       app:layout_constraintVertical_bias="0.118" />
 
-    <include
-        android:id="@+id/include_Trademark"
-        layout="@layout/trademark"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+   <ImageView
+       android:id="@+id/imageView"
+       android:layout_width="75dp"
+       android:layout_height="75dp"
+       android:contentDescription="Image of Clipboard"
+       android:src="@drawable/ic_action_clipboard"
+       app:layout_constraintBottom_toTopOf="@+id/include_Trademark"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintHorizontal_bias="0.386"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toBottomOf="@+id/textView"
+       app:layout_constraintVertical_bias="0.052" />
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="75dp"
-        android:layout_height="75dp"
+   <ImageView
+       android:layout_width="75dp"
+       android:layout_height="75dp"
+       android:contentDescription="Image of Backpack"
+       android:layout_marginTop="25dp"
+       android:src="@drawable/ic_action_achievements"
+       app:layout_constraintBottom_toBottomOf="parent"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintHorizontal_bias="0.061"
+       app:layout_constraintStart_toEndOf="@+id/imageView"
+       app:layout_constraintTop_toBottomOf="@+id/textView"
+       app:layout_constraintVertical_bias="0.0" />
 
-        android:src="@drawable/ic_action_clipboard"
-        app:layout_constraintBottom_toTopOf="@+id/include_Trademark"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:layout_constraintVertical_bias="0.052" />
+   <TextView
+       android:id="@+id/greetingMsg"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:text="Hello World!"
+       android:textColor="@color/teal_200"
+       android:textSize="30sp"
+       android:textStyle="bold"
+       app:layout_constraintBottom_toTopOf="@+id/include_Trademark"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintHorizontal_bias="0.497"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toBottomOf="@+id/imageView"
+       app:layout_constraintVertical_bias="0.08" />
 
-    <TextView
-        android:id="@+id/greetingMsg"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        android:textColor="@color/teal_200"
-        android:textSize="30dp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/include_Trademark"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView"
-        app:layout_constraintVertical_bias="0.15" />
+   <EditText
+       android:id="@+id/inputName"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_marginTop="18dp"
+       android:width="150dp"
+       android:hint="Name"
+       android:inputType="textPersonName"
+       android:textAlignment="center"
+       android:textSize="25sp"
+       app:layout_constraintBottom_toTopOf="@+id/include_Trademark"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintHorizontal_bias="0.498"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toBottomOf="@+id/greetingMsg"
+       app:layout_constraintVertical_bias="0.0" />
 
-    <EditText
-        android:id="@+id/inputName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="18dp"
-        android:textSize="25dp"
-        android:hint="Name"
-        android:width="150dp"
-        android:textAlignment="center"
-        android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/include_Trademark"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/greetingMsg"
-        app:layout_constraintVertical_bias="0.013" />
-
-    <EditText
+   <EditText
         android:id="@+id/inputEmail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -109,12 +113,36 @@
         android:hint="Email"
         android:inputType="textWebEmailAddress"
         android:textAlignment="center"
-        android:textSize="25dp"
+        android:textSize="25sp"
         app:layout_constraintBottom_toTopOf="@+id/include_Trademark"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/inputName"
         app:layout_constraintVertical_bias="0.075" />
+
+   <include
+       android:id="@+id/include_Trademark"
+       layout="@layout/trademark"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       app:layout_constraintBottom_toBottomOf="parent"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintStart_toStartOf="parent" />
+
+   <ImageView
+       android:layout_width="200dp"
+       android:layout_height="200dp"
+       android:foreground="@drawable/rounded_fg"
+       android:contentDescription="Image of Profile"
+       android:padding="20dp"
+       android:src="@drawable/profile"
+       app:layout_constraintBottom_toTopOf="@+id/include_Trademark"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintHorizontal_bias="0.497"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toBottomOf="@+id/inputEmail"
+       app:layout_constraintVertical_bias="1.0" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -48,5 +48,16 @@ public class School_Page extends AppCompatActivity {
         });
     }
 
+    public void onGradesClick(View view) {
+         NavController activityToGrades = Navigation.findNavController(School_Page.this, R.id.action_school_Page_to_Grades);
+         activityToGrades.navigateUp();
+         activityToGrades.navigate(R.id.action_school_Page_to_Grades);
+    }
+
+    public void onAchievementsClick(View view) {
+        NavController activityToAchievements = Navigation.findNavController(School_Page.this, R.id.action_school_Page_to_Achievements);
+        activityToAchievements.navigateUp();
+        activityToAchievements.navigate(R.id.action_school_Page_to_Achievements);
+    }
 
 }

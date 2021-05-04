@@ -70,7 +70,7 @@
             android:layout_height="wrap_content"
             android:padding="15dp"
             android:text="Violin"
-            android:textSize="20dp"
+            android:textSize="20sp"
             app:layout_column="0"
             app:layout_row="0"
             android:layout_marginTop="12dp"/>
@@ -147,6 +147,4 @@
             android:contentDescription="Basketball Net"/>
 
     </androidx.gridlayout.widget.GridLayout>
-
-
 </RelativeLayout>

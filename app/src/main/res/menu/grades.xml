@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+    <item
+        android:id="@+id/action_settings"
+        android:orderInCategory="100"
+        android:title="@string/action_settings"
+        app:showAsAction="never"
+        android:icon="@drawable/ic_action_settings"/>
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_course1"
+            android:icon="@drawable/ic_action_school"
+            android:title="Course 1" />
+
+        <item
+            android:id="@+id/nav_course2"
+            android:icon="@drawable/ic_action_improvements"
+            android:title="Course 2" />
+
+        <item
+            android:id="@+id/nav_course3"
+            android:icon="@drawable/ic_action_clipboard"
+            android:title="Course 3" />
+
+        <item
+            android:id="@+id/nav_course4"
+            android:icon="@drawable/ic_action_grades"
+            android:title="Course 4" />
+
+    </group>
+
+    <item android:title="Communicate">
+        <menu>
+            <item
+                android:id="@+id/nav_email"
+                android:icon="@drawable/ic_action_email"
+                android:title="Email" />
+            <item
+                android:id="@+id/nav_classroom"
+                android:icon="@drawable/ic_action_class"
+                android:title="Classroom" />
+        </menu>
+    </item>
+
+
+</menu>

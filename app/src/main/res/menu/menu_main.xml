@@ -1,34 +1,63 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="com.example2.schoolguider.MainActivity">
-    <item
-        android:id="@+id/settings_menu"
-        android:orderInCategory="100"
-        android:title="@string/action_settings"
-        app:showAsAction="always"
-        android:icon="@drawable/ic_action_settings"
-        android:onClick=""/>
+    tools:context="com.example2.schoolguider.MainActivity"
+    tools:showIn="navigation_view">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_action_home"
+            android:title="@string/menu_home" />
 
-    <item
-        android:id="@+id/school_menu"
-        android:title="School"
-        app:showAsAction="always"
-        android:icon="@drawable/ic_action_school"
-        />
+        <item
+            android:id="@+id/nav_schedule"
+            android:icon="@drawable/ic_action_calender"
+            android:title="Schedule" />
 
-    <item
-        android:id="@+id/schedule_menu"
-        android:title="Schedule"
-        app:showAsAction="always"
-        android:icon="@drawable/ic_action_schedule"
-        />
+        <item
+            android:id="@+id/nav_school"
+            android:icon="@drawable/ic_action_school"
+            android:title="School" />
 
-    <item
-        android:id="@+id/mindful_menu"
-        android:title="Mindfulness"
-        app:showAsAction="always"
-        android:icon="@drawable/ic_action_mindful"
-        />
+        <item
+            android:id="@+id/nav_mindfulness"
+            android:icon="@drawable/ic_action_mindful"
+            android:title="Mindfulness" />
+    </group>
 
+    <item android:title="Schedule">
+        <menu>
+            <item
+                android:id="@+id/nav_Morning"
+                android:title="Morning"
+                android:icon="@drawable/ic_action_alarm" />
+
+            <item
+                android:id="@+id/nav_Afternoon"
+                android:title="Afternoon"
+                android:icon="@drawable/ic_action_computer" />
+            <item
+                android:id="@+id/nav_Evening"
+                android:title="Evening"
+                android:icon="@drawable/ic_action_evening" />
+        </menu>
+    </item>
+
+    <item android:title="Grades">
+        <menu>
+            <item
+                android:id="@+id/nav_courseGrades"
+                android:title="Course Grades"
+                android:icon="@drawable/ic_action_clipboard" />
+
+            <item
+                android:id="@+id/nav_achievements"
+                android:title="Achievements"
+                android:icon="@drawable/ic_action_achievements" />
+            <item
+                android:id="@+id/nav_goals"
+                android:title="Goals"
+                android:icon="@drawable/ic_action_improvements" />
+        </menu>
+    </item>
 </menu>

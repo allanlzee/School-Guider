@@ -7,9 +7,9 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
-import androidx.navigation.fragment.NavHostFragment;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.LayoutInflater;
@@ -17,6 +17,7 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
+import android.widget.Button;
 
 /**
  * An example full-screen activity that shows and hides the system UI (i.e.
@@ -118,7 +119,7 @@ public class Afternoon_Fragment extends Fragment {
         mVisible = true;
 
         mControlsView = view.findViewById(R.id.fullscreen_content_controls);
-        mContentView = view.findViewById(R.id.fullscreen_content);
+        mContentView = view.findViewById(R.id.afternoonFragmentScreen);
 
         // Set up the user interaction to manually show or hide the system UI.
         mContentView.setOnClickListener(new View.OnClickListener() {
@@ -223,7 +224,7 @@ public class Afternoon_Fragment extends Fragment {
         return actionBar;
     }
 
-    public void onAfternoonActivitiesClick(View view) {
-        NavHostFragment.findNavController(Afternoon_Fragment.this).navigate(R.id.action_afternoon_Fragment_to_afternoon_activites_fragment);
+    public void onAfternoonActivitiesClick(Button btn) {
+        startActivity(new Intent(Afternoon_Fragment.this, AfternoonActivitiesPage.class));
     }
 }

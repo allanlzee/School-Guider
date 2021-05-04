@@ -5,7 +5,8 @@
     android:layout_height="match_parent"
     android:background="?attr/fullscreenBackgroundColor"
     android:theme="@style/ThemeOverlay.SchoolGuider.FullscreenContainer"
-    tools:context=".Afternoon_Fragment">
+    tools:context=".Afternoon_Fragment"
+    android:id="@+id/afternoonFragmentScreen">
 
     <!-- The primary full-screen view. This can be replaced with whatever view
          is needed to present your content, e.g. VideoView, SurfaceView,
@@ -29,7 +30,7 @@
         android:fitsSystemWindows="true">
 
         <LinearLayout
-            android:id="@+id/afternoonActivitesButton"
+            android:id="@+id/afternoonActivitiesButton"
             style="@style/Widget.Theme.SchoolGuider.ButtonBar.Fullscreen"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

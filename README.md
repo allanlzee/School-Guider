@@ -1,7 +1,7 @@
 # School_Guider_Updated
 A mobile application for personal school usage.
 
-Programmed using Android Studio. 
+Programmed in Android Studio, using Java and XML. 
 
 Content and Sections: 
 Grades, Schedule, Meditation

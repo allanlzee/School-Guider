@@ -68,6 +68,7 @@
             app:layout_row="0" />
 
         <TextView
+            android:id="@+id/customNotifications"
             android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="75dp"

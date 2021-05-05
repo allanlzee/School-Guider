@@ -10,10 +10,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.SchoolGuider">
+        <activity android:name=".AlarmNotification"></activity>
         <activity
             android:name=".Notification"
             android:label="@string/title_activity_notification"
-            android:theme="@style/Theme.SchoolGuider.NoActionBar"></activity>
+            android:theme="@style/Theme.SchoolGuider.NoActionBar" />
         <activity
             android:name=".UserGradesActivity"
             android:label="@string/title_activity_user_grades"
@@ -63,6 +64,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <receiver android:name=".ReminderBroadcast"/>
     </application>
 
 </manifest>

@@ -10,6 +10,7 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.NotificationCompat;
 import androidx.preference.PreferenceFragmentCompat;
 
 import java.util.ArrayList;
@@ -52,8 +53,12 @@ public class SettingsActivity extends AppCompatActivity {
 
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                Toast.makeText(SettingsActivity.this, activities.get(position) + " Selected", Toast.LENGTH_SHORT).show();
-                // TODO: mute notifications for the activity selected
+                String activity = activities.get(position);
+                Toast.makeText(SettingsActivity.this, activity + " Selected", Toast.LENGTH_SHORT).show();
+
+                TextView textView = findViewById(R.id.notification);
+                String message = getIntent().getStringExtra("message");
+                textView.setText(message + activity);
             }
 
             @Override
@@ -62,11 +67,9 @@ public class SettingsActivity extends AppCompatActivity {
             }
         });
 
-        TextView textView = findViewById(R.id.notification);
-
+        /* TextView textView = findViewById(R.id.customNotifications);
         String message = getIntent().getStringExtra("message");
-
-        textView.setText(message);
+        textView.setText(message); */
     }
 
     public static class SettingsFragment extends PreferenceFragmentCompat {

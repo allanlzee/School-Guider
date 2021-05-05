@@ -56,7 +56,7 @@ public class Notification extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
-                String message = "Notification Enabled for School Guider";
+                String message = "Notification Enabled: ";
                 NotificationCompat.Builder builder = new NotificationCompat.Builder(
                         Notification.this
                 )

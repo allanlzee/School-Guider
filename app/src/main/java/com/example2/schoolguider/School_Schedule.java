@@ -1,5 +1,8 @@
 package com.example2.schoolguider;
 
+import android.app.NotificationChannel;
+import android.app.NotificationManager;
+import android.os.Build;
 import android.os.Bundle;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -78,6 +81,8 @@ public class School_Schedule extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+
+
 
         // Initialize the Spinners using IDs
         morning1 = findViewById(R.id.spinnerMorning1);
@@ -195,4 +200,5 @@ public class School_Schedule extends AppCompatActivity {
         activityToEvening.navigateUp();
         activityToEvening.navigate(R.id.action_school_Schedule_to_evening_Fragment);
     }
+
 }

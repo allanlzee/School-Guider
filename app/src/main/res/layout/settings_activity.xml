@@ -1,6 +1,9 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".SettingsActivity">
 
     <FrameLayout
         android:id="@+id/settings"
@@ -11,4 +14,87 @@
         android:id="@+id/settings2"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/Theme.SchoolGuider.AppBarOverlay">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:minHeight="?actionBarSize"
+            android:padding="@dimen/appbar_padding"
+            android:text="@string/app_name"
+            android:textAppearance="@style/TextAppearance.Widget.AppCompat.Toolbar.Title"
+            android:textSize="40sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:text="@string/action_settings"
+            android:textColor="@color/light_blue_A400"
+            android:textSize="30sp" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.gridlayout.widget.GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/appBar">
+
+        <TextView
+            android:id="@+id/notifications"
+            android:layout_width="250dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="75dp"
+            android:fontFamily="casual"
+            android:padding="25dp"
+            android:text="Notifications"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_column="0"
+            app:layout_row="0" />
+
+        <Switch
+            android:id="@+id/switch1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            app:layout_column="1"
+            app:layout_row="0" />
+
+        <TextView
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="75dp"
+            android:fontFamily="casual"
+            android:padding="25dp"
+            android:text="Custom Notifications"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_column="0"
+            app:layout_row="1" />
+
+        <Spinner
+            android:id="@+id/notificationSpinner"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            app:layout_column="1"
+            app:layout_row="1"
+            android:layout_marginTop="25dp"/>
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:id="@+id/notification"
+            />
+
+
+    </androidx.gridlayout.widget.GridLayout>
+
+
 </RelativeLayout>

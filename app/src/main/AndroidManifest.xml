@@ -11,9 +11,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SchoolGuider">
         <activity
+            android:name=".Notification"
+            android:label="@string/title_activity_notification"
+            android:theme="@style/Theme.SchoolGuider.NoActionBar"></activity>
+        <activity
             android:name=".UserGradesActivity"
             android:label="@string/title_activity_user_grades"
-            android:theme="@style/Theme.SchoolGuider.NoActionBar"></activity>
+            android:theme="@style/Theme.SchoolGuider.NoActionBar" />
         <activity
             android:name=".EveningActivitiesPage"
             android:label="@string/title_activity_evening_activites_page"

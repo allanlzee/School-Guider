@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".Mindfulness_Reading">
 
     <!-- TODO: Update blank fragment layout -->
@@ -15,7 +16,8 @@
         android:id="@+id/appBar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:theme="@style/Theme.SchoolGuider.AppBarOverlay">
+        android:theme="@style/Theme.SchoolGuider.AppBarOverlay"
+        >
 
         <TextView
             android:id="@+id/title"
@@ -26,7 +28,8 @@
             android:padding="@dimen/appbar_padding"
             android:text="@string/app_name"
             android:textSize="40sp"
-            android:textAppearance="@style/TextAppearance.Widget.AppCompat.Toolbar.Title" />
+            android:textAppearance="@style/TextAppearance.Widget.AppCompat.Toolbar.Title"
+            />
 
         <TextView
             android:layout_width="wrap_content"
@@ -42,6 +45,8 @@
         android:id="@+id/quote"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:textAlignment="center"
         android:text="The greatest glory in living lies not in never falling, but in rising every
 time we fall. \n\n~Nelson Mandela"
         android:textStyle="italic|bold"
@@ -51,16 +56,124 @@ time we fall. \n\n~Nelson Mandela"
         />
 
     <androidx.gridlayout.widget.GridLayout
+        android:layout_below="@id/quote"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
         <TextView
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            android:text="Book1"
-            android:layout_marginTop="300dp"
+            android:layout_height="125dp"
+            android:layout_width="150dp"
+            android:text="The Subtle Art of Not Giving A F*ck"
+            app:layout_row="0"
+            app:layout_column="0"
+            android:fontFamily="monospace"
             android:padding="16dp"
+            android:textSize="18sp"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            android:textColor="@color/blue"
             />
+
+        <TextView
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:text="The Fault in Our Stars"
+            android:fontFamily="monospace"
+            android:textAlignment="center"
+            android:textColor="@color/green"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_column="0"
+            app:layout_row="1" />
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="150dp"
+            android:text="Harry Potter"
+            android:fontFamily="monospace"
+            android:padding="16dp"
+            android:textSize="20sp"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            android:textColor="@color/red"
+            app:layout_row="2"
+            app:layout_column="0"
+            android:layout_marginTop="30dp"
+            />
+
+        <ImageView
+            android:layout_height="125dp"
+            android:layout_width="150dp"
+            app:layout_row="0"
+            app:layout_column="1"
+            android:src="@drawable/book1"
+            android:padding="16dp"
+            android:contentDescription="Book"
+            />
+
+        <ImageView
+            android:layout_height="125dp"
+            android:layout_width="150dp"
+            app:layout_row="1"
+            app:layout_column="1"
+            android:src="@drawable/tfios"
+            android:contentDescription="book"
+            />
+
+        <ImageView
+            android:layout_width="125dp"
+            android:layout_height="150dp"
+            app:layout_row="2"
+            app:layout_column="1"
+            android:src="@drawable/harrypotter"
+            android:layout_marginStart="14dp"
+            android:contentDescription="book"
+            />
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            app:layout_column="2"
+            app:layout_row="0"
+            android:padding="16dp"
+            android:text="Mark Manson"
+            android:textSize="15sp"
+            android:fontFamily="monospace"
+            android:layout_marginTop="25dp"
+            android:textAlignment="center"
+            android:textColor="@color/blue"
+            />
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            app:layout_column="2"
+            app:layout_row="1"
+            android:padding="16dp"
+            android:text="John Green"
+            android:textSize="15sp"
+            android:fontFamily="monospace"
+            android:layout_marginTop="25dp"
+            android:textAlignment="center"
+            android:textColor="@color/green"
+            />
+
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            app:layout_column="2"
+            app:layout_row="2"
+            android:padding="16dp"
+            android:text="J.K. Rowling"
+            android:textSize="15sp"
+            android:fontFamily="monospace"
+            android:layout_marginTop="25dp"
+            android:textAlignment="center"
+            android:textColor="@color/blue"
+            />
+
 
     </androidx.gridlayout.widget.GridLayout>
 

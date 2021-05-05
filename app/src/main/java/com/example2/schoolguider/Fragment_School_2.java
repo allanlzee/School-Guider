@@ -26,8 +26,8 @@ public class Fragment_School_2 extends Fragment {
         view.findViewById(R.id.backToActivity).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                NavHostFragment.findNavController(Fragment_School_2.this)
-                        .navigate(R.id.action_First2Fragment_to_school_Page);
+                //NavHostFragment.findNavController(Fragment_School_2.this)
+                //        .navigate(R.id.action_First2Fragment_to_school_Page);
             }
         });
     }

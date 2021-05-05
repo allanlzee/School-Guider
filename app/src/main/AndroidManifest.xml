@@ -15,7 +15,7 @@
             android:label="@string/title_activity_user_grades"
             android:theme="@style/Theme.SchoolGuider.NoActionBar"></activity>
         <activity
-            android:name=".EveningActivitesPage"
+            android:name=".EveningActivitiesPage"
             android:label="@string/title_activity_evening_activites_page"
             android:theme="@style/Theme.SchoolGuider.NoActionBar" />
         <activity

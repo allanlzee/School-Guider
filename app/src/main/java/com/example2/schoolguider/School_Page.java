@@ -40,10 +40,10 @@ public class School_Page extends AppCompatActivity {
         gradesButton.setOnClickListener(new View.OnClickListener() {
 
             @Override
-            public void onClick(View v) {
-                //NavController activityToGrades = Navigation.findNavController(School_Page.this, R.id.action_school_Page_to_Grades);
-                //activityToGrades.navigateUp();
-                //activityToGrades.navigate(R.id.action_school_Page_to_Grades);
+            public void onClick(View view) {
+                NavController activityToGrades = Navigation.findNavController(School_Page.this, R.id.action_school_Page_to_FirstFragment2);
+                activityToGrades.navigateUp();
+                activityToGrades.navigate(R.id.action_school_Page_to_FirstFragment2);
             }
         });
     }
@@ -52,6 +52,8 @@ public class School_Page extends AppCompatActivity {
          //NavController activityToGrades = Navigation.findNavController(School_Page.this, R.id.action_school_Page_to_Grades);
          //activityToGrades.navigateUp();
          //activityToGrades.navigate(R.id.action_school_Page_to_Grades);
+
+
     }
 
     public void onAchievementsClick(View view) {

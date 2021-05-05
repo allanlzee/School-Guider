@@ -1,15 +1,15 @@
 package com.example2.schoolguider;
 
+import android.app.ActivityOptions;
 import android.content.Intent;
 import android.os.Bundle;
 
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
-
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
-import androidx.navigation.NavHost;
 
+import android.transition.Explode;
+import android.transition.Fade;
+import android.transition.Slide;
 import android.view.View;
 
 import android.view.Menu;
@@ -17,8 +17,6 @@ import android.view.MenuItem;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import java.util.Date;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -51,6 +49,9 @@ public class MainActivity extends AppCompatActivity {
             case R.id.nav_home:
                 Toast.makeText(MainActivity.this, "Settings", Toast.LENGTH_SHORT).show();
                 startActivity(new Intent(MainActivity.this, SettingsActivity.class));
+                /* Intent intent = new Intent(MainActivity.this, SettingsActivity.class);
+                ActivityOptions transition = ActivityOptions.makeSceneTransitionAnimation(this, transitionActivity.toBundle());
+                startActivity(intent, transition.toBundle()); */
                 return true;
             case R.id.nav_school:
                 Toast.makeText(MainActivity.this, "School", Toast.LENGTH_SHORT).show();
@@ -75,7 +76,7 @@ public class MainActivity extends AppCompatActivity {
                 return true;
             case R.id.nav_Evening:
                 Toast.makeText(MainActivity.this, "Good Evening " + userName + "!", Toast.LENGTH_SHORT).show();
-                startActivity(new Intent(MainActivity.this, EveningActivitesPage.class));
+                startActivity(new Intent(MainActivity.this, EveningActivitiesPage.class));
                 return true;
             default:
                 return super.onOptionsItemSelected(item);

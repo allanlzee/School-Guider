@@ -26,17 +26,24 @@
         android:id="@+id/First2Fragment"
         android:name="com.example2.schoolguider.Fragment_School"
         android:label="@string/first_fragment_label"
-        tools:layout="@layout/fragment_school"/>
-    <fragment
-        android:id="@+id/Second2Fragment"
-        android:name="com.example2.schoolguider.Fragment_School_2"
-        android:label="@string/second_fragment_label"
-        tools:layout="@layout/fragment_school_2"/>
+        tools:layout="@layout/fragment_school">
+        <action
+            android:id="@+id/action_First2Fragment_to_FirstFragment"
+            app:destination="@id/FirstFragment"
+            app:enterAnim="@anim/fragment_fade_enter"
+            app:exitAnim="@anim/fragment_fade_exit" />
+    </fragment>
     <activity
         android:id="@+id/school_Page"
         android:name="com.example2.schoolguider.School_Page"
         android:label="activity_school__page"
-        tools:layout="@layout/activity_school__page"/>
+        tools:layout="@layout/activity_school__page">
+        <action
+            android:id="@+id/action_school_Page_to_FirstFragment2"
+            app:destination="@id/FirstFragment"
+            app:enterAnim="@anim/fragment_fade_enter"
+            app:exitAnim="@anim/fragment_fade_exit" />
+    </activity>
     <activity
         android:id="@+id/school_Schedule"
         android:name="com.example2.schoolguider.School_Schedule"
@@ -62,7 +69,18 @@
         android:id="@+id/mindfulnessActivity"
         android:name="com.example2.schoolguider.MindfulnessActivity"
         android:label="activity_mindfulness"
-        tools:layout="@layout/activity_mindfulness" />
+        tools:layout="@layout/activity_mindfulness" >
+        <action
+            android:id="@+id/action_mindfulnessActivity_to_mindfulnessFragment1"
+            app:destination="@id/mindfulnessFragment1"
+            app:enterAnim="@anim/fragment_fade_enter"
+            app:exitAnim="@anim/fragment_fade_exit" />
+        <action
+            android:id="@+id/action_mindfulnessActivity_to_music_Mindfulness"
+            app:destination="@id/music_Mindfulness"
+            app:enterAnim="@anim/fragment_fade_enter"
+            app:exitAnim="@anim/fragment_fade_exit" />
+    </activity>
     <fragment
         android:id="@+id/morning_Fragment"
         android:name="com.example2.schoolguider.Morning_Fragment"
@@ -91,7 +109,13 @@
         android:id="@+id/FirstFragment"
         android:name="com.example2.schoolguider.FirstFragment"
         android:label="@string/first_fragment_label"
-        tools:layout="@layout/fragment_first"/>
+        tools:layout="@layout/fragment_first">
+        <action
+            android:id="@+id/action_FirstFragment_to_school_Page"
+            app:destination="@id/school_Page"
+            app:enterAnim="@anim/fragment_fade_enter"
+            app:exitAnim="@anim/fragment_fade_exit" />
+    </fragment>
     <activity
         android:id="@+id/afternoonActivitiesPage"
         android:name="com.example2.schoolguider.AfternoonActivitiesPage"
@@ -99,7 +123,17 @@
         tools:layout="@layout/activity_afternoon_activities_page" />
     <activity
         android:id="@+id/eveningActivitiesPage"
-        android:name="com.example2.schoolguider.EveningActivitesPage"
+        android:name="com.example2.schoolguider.EveningActivitiesPage"
         android:label="activity_evening_activities_page"
-        tools:layout="@layout/activity_evening_activites_page" />
+        tools:layout="@layout/activity_evening_activities_page" />
+    <fragment
+        android:id="@+id/mindfulnessFragment1"
+        android:name="com.example2.schoolguider.MindfulnessFragment1"
+        android:label="mindfulness1_fragment"
+        tools:layout="@layout/mindfulness1_fragment" />
+    <fragment
+        android:id="@+id/music_Mindfulness"
+        android:name="com.example2.schoolguider.Music_Mindfulness"
+        android:label="music_mindfulness_fragment"
+        tools:layout="@layout/music_mindfulness_fragment" />
 </navigation>

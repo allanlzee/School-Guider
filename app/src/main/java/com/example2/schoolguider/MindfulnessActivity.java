@@ -6,6 +6,9 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.tabs.TabLayout;
 
+import androidx.navigation.NavController;
+import androidx.navigation.Navigation;
+import androidx.navigation.fragment.NavHostFragment;
 import androidx.viewpager.widget.ViewPager;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -35,5 +38,27 @@ public class MindfulnessActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+    }
+
+    public void onMeditationClick(View view) {
+        NavController activityToMeditation = Navigation.findNavController(MindfulnessActivity.this,
+                R.id.action_mindfulnessActivity_to_mindfulnessFragment1);
+        activityToMeditation.navigateUp();
+        activityToMeditation.navigate(R.id.action_mindfulnessActivity_to_mindfulnessFragment1);
+    }
+
+    public void onMusicClick(View view) {
+        NavController activityToMusic =  Navigation.findNavController(MindfulnessActivity.this,
+                R.id.action_mindfulnessActivity_to_music_Mindfulness);
+        activityToMusic.navigateUp();
+        activityToMusic.navigate(R.id.action_mindfulnessActivity_to_music_Mindfulness);
+    }
+
+    public void onReadingClick(View view) {
+        NavController activityToReading =  Navigation.findNavController(MindfulnessActivity.this,
+                // TODO: add reading fragments
+                R.id.action_mindfulnessActivity_to_music_Mindfulness);
+        activityToReading.navigateUp();
+        activityToReading.navigate(R.id.action_mindfulnessActivity_to_music_Mindfulness);
     }
 }

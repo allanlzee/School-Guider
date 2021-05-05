@@ -9,7 +9,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
 import android.app.Activity;
-import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.LayoutInflater;
@@ -17,13 +16,14 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
-import android.widget.Button;
+
+import com.example2.schoolguider.databinding.Mindfulness1FragmentBinding;
 
 /**
  * An example full-screen activity that shows and hides the system UI (i.e.
  * status bar and navigation/system bar) with user interaction.
  */
-public class Afternoon_Fragment extends Fragment {
+public class MindfulnessFragment1 extends Fragment {
     /**
      * Whether or not the system UI should be auto-hidden after
      * {@link #AUTO_HIDE_DELAY_MILLIS} milliseconds.
@@ -104,13 +104,17 @@ public class Afternoon_Fragment extends Fragment {
             hide();
         }
     };
+    private Mindfulness1FragmentBinding binding;
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater,
                              @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_afternoon_, container, false);
+
+        binding = Mindfulness1FragmentBinding.inflate(inflater, container, false);
+        return binding.getRoot();
+
     }
 
     @Override
@@ -118,8 +122,8 @@ public class Afternoon_Fragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         mVisible = true;
 
-        mControlsView = view.findViewById(R.id.fullscreen_content_controls);
-        mContentView = view.findViewById(R.id.afternoonFragmentScreen);
+        mControlsView = binding.fullscreenContentControls;
+        mContentView = binding.fullscreenContent;
 
         // Set up the user interaction to manually show or hide the system UI.
         mContentView.setOnClickListener(new View.OnClickListener() {
@@ -132,7 +136,7 @@ public class Afternoon_Fragment extends Fragment {
         // Upon interacting with UI controls, delay any scheduled hide()
         // operations to prevent the jarring behavior of controls going away
         // while interacting with the UI.
-        view.findViewById(R.id.afternoonActivities).setOnTouchListener(mDelayHideTouchListener);
+        binding.dummyButton.setOnTouchListener(mDelayHideTouchListener);
     }
 
     @Override
@@ -224,8 +228,9 @@ public class Afternoon_Fragment extends Fragment {
         return actionBar;
     }
 
-    public void onAfternoonActivitiesClick(View view) {
-        Intent intent = new Intent(getActivity(), AfternoonActivitiesPage.class);
-        startActivity(intent);
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        binding = null;
     }
 }

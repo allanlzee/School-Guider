@@ -27,7 +27,7 @@ public class FirstFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 NavHostFragment.findNavController(FirstFragment.this)
-                        .navigate(R.id.action_FirstFragment_to_Second2Fragment);
+                        .navigate(R.id.action_FirstFragment_to_school_Page);
             }
         });
     }

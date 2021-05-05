@@ -80,6 +80,11 @@
             app:destination="@id/music_Mindfulness"
             app:enterAnim="@anim/fragment_fade_enter"
             app:exitAnim="@anim/fragment_fade_exit" />
+        <action
+            android:id="@+id/action_mindfulnessActivity_to_mindfulness_Reading"
+            app:destination="@id/mindfulness_Reading"
+            app:enterAnim="@anim/fragment_fade_enter"
+            app:exitAnim="@anim/fragment_fade_exit" />
     </activity>
     <fragment
         android:id="@+id/morning_Fragment"
@@ -136,4 +141,9 @@
         android:name="com.example2.schoolguider.Music_Mindfulness"
         android:label="music_mindfulness_fragment"
         tools:layout="@layout/music_mindfulness_fragment" />
+    <fragment
+        android:id="@+id/mindfulness_Reading"
+        android:name="com.example2.schoolguider.Mindfulness_Reading"
+        android:label="mindfulness_reading_fragment"
+        tools:layout="@layout/mindfulness_reading_fragment" />
 </navigation>

@@ -6,6 +6,8 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.tabs.TabLayout;
 
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.fragment.NavHostFragment;
@@ -38,6 +40,10 @@ public class MindfulnessActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+
+        /* Fragment reading = new Fragment();
+        FragmentManager manager = getSupportFragmentManager();
+        manager.beginTransaction().replace(R.id.mainLayout, reading).commit(); */
     }
 
     public void onMeditationClick(View view) {
@@ -57,8 +63,8 @@ public class MindfulnessActivity extends AppCompatActivity {
     public void onReadingClick(View view) {
         NavController activityToReading =  Navigation.findNavController(MindfulnessActivity.this,
                 // TODO: add reading fragments
-                R.id.action_mindfulnessActivity_to_music_Mindfulness);
+                R.id.action_mindfulnessActivity_to_mindfulness_Reading);
         activityToReading.navigateUp();
-        activityToReading.navigate(R.id.action_mindfulnessActivity_to_music_Mindfulness);
+        activityToReading.navigate(R.id.action_mindfulnessActivity_to_mindfulness_Reading);
     }
 }

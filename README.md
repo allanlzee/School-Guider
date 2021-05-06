@@ -13,4 +13,4 @@ Schedule Subsections:
 Morning, Afternoon, Evening
 
 Meditation Subsections:
-In development. 
+Meditation, Music, Reading

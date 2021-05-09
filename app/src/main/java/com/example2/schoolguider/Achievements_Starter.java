@@ -27,12 +27,6 @@ public class Achievements_Starter extends AppCompatActivity {
         binding = AchievementsStarterBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        setSupportActionBar(binding.toolbar);
-
-        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_achievements_starter);
-        appBarConfiguration = new AppBarConfiguration.Builder(navController.getGraph()).build();
-        NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
-
         binding.fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -42,10 +36,8 @@ public class Achievements_Starter extends AppCompatActivity {
         });
     }
 
-    @Override
-    public boolean onSupportNavigateUp() {
-        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_achievements_starter);
-        return NavigationUI.navigateUp(navController, appBarConfiguration)
-                || super.onSupportNavigateUp();
+    public void onAchievementsClick(View view) {
+        NavController navController = Navigation.findNavController(this, R.id.action_achievements_Starter_to_achievements_Overview);
+        navController.navigate(R.id.action_achievements_Starter_to_achievements_Overview);
     }
 }

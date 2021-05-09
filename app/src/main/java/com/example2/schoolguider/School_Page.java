@@ -1,5 +1,6 @@
 package com.example2.schoolguider;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -41,25 +42,38 @@ public class School_Page extends AppCompatActivity {
 
             @Override
             public void onClick(View view) {
-                NavController activityToGrades = Navigation.findNavController(School_Page.this, R.id.action_school_Page_to_FirstFragment2);
-                activityToGrades.navigateUp();
-                activityToGrades.navigate(R.id.action_school_Page_to_FirstFragment2);
+                startActivity(new Intent(School_Page.this, Course_Grades.class));
+            }
+        });
+
+        achievementsButton.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(School_Page.this, Achievements_Starter.class));
+            }
+        });
+
+        goalsButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(School_Page.this, Goals_Starter.class));
             }
         });
     }
 
     public void onGradesClick(View view) {
-         //NavController activityToGrades = Navigation.findNavController(School_Page.this, R.id.action_school_Page_to_Grades);
-         //activityToGrades.navigateUp();
-         //activityToGrades.navigate(R.id.action_school_Page_to_Grades);
+         //NavController activityToGrades = Navigation.findNavController(School_Page.this, R.id.action_school_Page_to_gradesFragment);
+         //activityToGrades.navigate(R.id.action_school_Page_to_gradesFragment);
 
-
+         startActivity(new Intent(School_Page.this, Course_Grades.class));
     }
 
     public void onAchievementsClick(View view) {
-        //NavController activityToAchievements = Navigation.findNavController(School_Page.this, R.id.action_school_Page_to_Achievements);
-        //activityToAchievements.navigateUp();
-        //activityToAchievements.navigate(R.id.action_school_Page_to_Achievements);
+        startActivity(new Intent(School_Page.this, Achievements_Starter.class));
     }
 
+    public void onGoalsClick(View view) {
+        startActivity(new Intent(School_Page.this, Goals_Starter.class));
+    }
 }

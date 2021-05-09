@@ -82,13 +82,21 @@ public class School_Schedule extends AppCompatActivity {
             }
         });
 
-
-
         // Initialize the Spinners using IDs
         morning1 = findViewById(R.id.spinnerMorning1);
         morning2 = findViewById(R.id.spinnerMorning2);
         morning3 = findViewById(R.id.spinnerMorning3);
         morning4 = findViewById(R.id.spinnerMorning4);
+
+        afternoon1 = findViewById(R.id.spinnerAfternoon1);
+        afternoon2 = findViewById(R.id.spinnerAfternoon2);
+        afternoon3 = findViewById(R.id.spinnerAfternoon3);
+        afternoon4 = findViewById(R.id.spinnerAfternoon4);
+
+        evening1 = findViewById(R.id.spinnerEvening1);
+        evening2 = findViewById(R.id.spinnerEvening2);
+        evening3 = findViewById(R.id.spinnerEvening3);
+        evening4 = findViewById(R.id.spinnerEvening4);
 
         // Initialize all Buttons
         course1 = findViewById(R.id.morningCourse1);

@@ -27,9 +27,7 @@ public class Course_Grades extends AppCompatActivity {
         binding = CourseGradesBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        setSupportActionBar(binding.toolbar);
-
-        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_course_grades);
+        NavController navController = Navigation.findNavController(this, R.id.action_course_Grades_to_gradesFragment);
         appBarConfiguration = new AppBarConfiguration.Builder(navController.getGraph()).build();
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
 
@@ -44,8 +42,13 @@ public class Course_Grades extends AppCompatActivity {
 
     @Override
     public boolean onSupportNavigateUp() {
-        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_course_grades);
+        NavController navController = Navigation.findNavController(this, R.id.action_course_Grades_to_gradesFragment);
         return NavigationUI.navigateUp(navController, appBarConfiguration)
                 || super.onSupportNavigateUp();
+    }
+
+    public void onOutlineClick(View view) {
+        NavController navController = Navigation.findNavController(this, R.id.action_course_Grades_to_gradesFragment);
+        navController.navigate(R.id.action_course_Grades_to_gradesFragment);
     }
 }

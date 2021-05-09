@@ -9,41 +9,13 @@
         android:id="@+id/mainActivity"
         android:name="com.example2.schoolguider.MainActivity"
         android:label="activity_main"
-        tools:layout="@layout/activity_main">
-        <action
-            android:id="@+id/action_mainActivity_to_school_Page2"
-            app:destination="@id/school_Page"
-            app:enterAnim="@anim/fragment_fade_enter"
-            app:exitAnim="@anim/fragment_fade_exit" />
-        <action
-            android:id="@+id/action_mainActivity_to_school_Schedule"
-            app:destination="@id/school_Schedule"
-            app:enterAnim="@anim/fragment_fade_enter"
-            app:exitAnim="@anim/fragment_fade_exit" />
-    </activity>
+        tools:layout="@layout/activity_main"/>
 
-    <fragment
-        android:id="@+id/First2Fragment"
-        android:name="com.example2.schoolguider.Fragment_School"
-        android:label="@string/first_fragment_label"
-        tools:layout="@layout/fragment_school">
-        <action
-            android:id="@+id/action_First2Fragment_to_FirstFragment"
-            app:destination="@id/FirstFragment"
-            app:enterAnim="@anim/fragment_fade_enter"
-            app:exitAnim="@anim/fragment_fade_exit" />
-    </fragment>
     <activity
         android:id="@+id/school_Page"
         android:name="com.example2.schoolguider.School_Page"
         android:label="activity_school__page"
-        tools:layout="@layout/activity_school__page">
-        <action
-            android:id="@+id/action_school_Page_to_FirstFragment2"
-            app:destination="@id/FirstFragment"
-            app:enterAnim="@anim/fragment_fade_enter"
-            app:exitAnim="@anim/fragment_fade_exit" />
-    </activity>
+        tools:layout="@layout/activity_school__page"/>
     <activity
         android:id="@+id/school_Schedule"
         android:name="com.example2.schoolguider.School_Schedule"
@@ -110,17 +82,6 @@
         android:name="com.example2.schoolguider.MorningActivitiesPage"
         android:label="activity_morning_activities_page"
         tools:layout="@layout/activity_morning_activities_page" />
-    <fragment
-        android:id="@+id/FirstFragment"
-        android:name="com.example2.schoolguider.FirstFragment"
-        android:label="@string/first_fragment_label"
-        tools:layout="@layout/fragment_first">
-        <action
-            android:id="@+id/action_FirstFragment_to_school_Page"
-            app:destination="@id/school_Page"
-            app:enterAnim="@anim/fragment_fade_enter"
-            app:exitAnim="@anim/fragment_fade_exit" />
-    </fragment>
     <activity
         android:id="@+id/afternoonActivitiesPage"
         android:name="com.example2.schoolguider.AfternoonActivitiesPage"
@@ -146,4 +107,93 @@
         android:name="com.example2.schoolguider.Mindfulness_Reading"
         android:label="mindfulness_reading_fragment"
         tools:layout="@layout/mindfulness_reading_fragment" />
+    <fragment
+        android:id="@+id/gradesFragment"
+        android:name="com.example2.schoolguider.GradesFragment"
+        android:label="grades_fragment"
+        tools:layout="@layout/grades_fragment" >
+        <action
+            android:id="@+id/action_gradesFragment_to_grades_Overview"
+            app:destination="@id/grades_Overview"
+            app:enterAnim="@anim/fragment_fade_enter"
+            app:exitAnim="@anim/fragment_fade_exit" />
+    </fragment>
+    <fragment
+        android:id="@+id/achievements_Fragment"
+        android:name="com.example2.schoolguider.Achievements_Fragment"
+        android:label="achievements_fragment"
+        tools:layout="@layout/achievements_fragment" >
+        <action
+            android:id="@+id/action_achievements_Fragment_to_achievements_Overview"
+            app:destination="@id/achievements_Overview" />
+    </fragment>
+    <fragment
+        android:id="@+id/grades_Overview"
+        android:name="com.example2.schoolguider.Grades_Overview"
+        android:label="grades_overview"
+        tools:layout="@layout/grades_overview" >
+        <action
+            android:id="@+id/action_grades_Overview_to_gradesFragment"
+            app:destination="@id/gradesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/achievements_Overview"
+        android:name="com.example2.schoolguider.Achievements_Overview"
+        android:label="achievements_overview"
+        tools:layout="@layout/achievements_overview" >
+        <action
+            android:id="@+id/action_achievements_Overview_to_achievements_Fragment"
+            app:destination="@id/achievements_Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/goals_Fragment"
+        android:name="com.example2.schoolguider.Goals_Fragment"
+        android:label="goals_fragment"
+        tools:layout="@layout/goals_fragment" >
+        <action
+            android:id="@+id/action_goals_Fragment_to_goals_Overview"
+            app:destination="@id/goals_Overview" />
+    </fragment>
+    <fragment
+        android:id="@+id/goals_Overview"
+        android:name="com.example2.schoolguider.Goals_Overview"
+        android:label="goals_overview"
+        tools:layout="@layout/goals_overview" >
+        <action
+            android:id="@+id/action_goals_Overview_to_goals_Fragment"
+            app:destination="@id/goals_Fragment" />
+    </fragment>
+    <activity
+        android:id="@+id/course_Grades"
+        android:name="com.example2.schoolguider.Course_Grades"
+        android:label="course_grades"
+        tools:layout="@layout/course_grades" >
+        <action
+            android:id="@+id/action_course_Grades_to_gradesFragment"
+            app:destination="@id/gradesFragment"
+            app:enterAnim="@anim/fragment_fade_enter"
+            app:exitAnim="@anim/fragment_fade_exit" />
+    </activity>
+    <activity
+        android:id="@+id/achievements_Starter"
+        android:name="com.example2.schoolguider.Achievements_Starter"
+        android:label="achievements_starter"
+        tools:layout="@layout/achievements_starter" >
+        <action
+            android:id="@+id/action_achievements_Starter_to_achievements_Overview"
+            app:destination="@id/achievements_Overview"
+            app:enterAnim="@anim/fragment_fade_enter"
+            app:exitAnim="@anim/fragment_fade_exit" />
+    </activity>
+    <activity
+        android:id="@+id/goals_Starter"
+        android:name="com.example2.schoolguider.Goals_Starter"
+        android:label="goals_starter"
+        tools:layout="@layout/goals_starter" >
+        <action
+            android:id="@+id/action_goals_Starter_to_goals_Fragment"
+            app:destination="@id/goals_Fragment"
+            app:enterAnim="@anim/fragment_fade_enter"
+            app:exitAnim="@anim/fragment_fade_exit" />
+    </activity>
 </navigation>

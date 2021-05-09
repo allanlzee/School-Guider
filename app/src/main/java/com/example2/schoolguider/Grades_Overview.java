@@ -9,7 +9,7 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.fragment.NavHostFragment;
 
-public class Fragment_School extends Fragment {
+public class Grades_Overview extends Fragment {
 
     @Override
     public View onCreateView(
@@ -17,7 +17,7 @@ public class Fragment_School extends Fragment {
             Bundle savedInstanceState
     ) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_school, container, false);
+        return inflater.inflate(R.layout.grades_overview, container, false);
     }
 
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
@@ -26,8 +26,8 @@ public class Fragment_School extends Fragment {
         view.findViewById(R.id.backToActivity).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                NavHostFragment.findNavController(Fragment_School.this)
-                        .navigate(R.id.action_Second2Fragment_to_school_Page);
+                NavHostFragment.findNavController(Grades_Overview.this)
+                        .navigate(R.id.action_goals_Overview_to_goals_Fragment);
             }
         });
     }

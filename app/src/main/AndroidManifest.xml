@@ -10,7 +10,19 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.SchoolGuider">
-        <activity android:name=".AlarmNotification"></activity>
+        <activity
+            android:name=".Goals_Starter"
+            android:label="@string/title_activity_goals_starter"
+            android:theme="@style/Theme.SchoolGuider.NoActionBar"></activity>
+        <activity
+            android:name=".Achievements_Starter"
+            android:label="@string/title_activity_achievements_starter"
+            android:theme="@style/Theme.SchoolGuider.NoActionBar" />
+        <activity
+            android:name=".Course_Grades"
+            android:label="@string/title_activity_course_grades"
+            android:theme="@style/Theme.SchoolGuider.NoActionBar" />
+        <activity android:name=".AlarmNotification" />
         <activity
             android:name=".Notification"
             android:label="@string/title_activity_notification"
@@ -65,7 +77,7 @@
             </intent-filter>
         </activity>
 
-        <receiver android:name=".ReminderBroadcast"/>
+        <receiver android:name=".ReminderBroadcast" />
     </application>
 
 </manifest>

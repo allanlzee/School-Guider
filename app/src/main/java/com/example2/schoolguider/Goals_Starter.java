@@ -48,4 +48,9 @@ public class Goals_Starter extends AppCompatActivity {
         return NavigationUI.navigateUp(navController, appBarConfiguration)
                 || super.onSupportNavigateUp();
     }
+
+    public void onGoalsClick(View view) {
+        NavController activityToFragment = Navigation.findNavController(this, R.id.action_goals_Starter_to_goals_Fragment);
+        activityToFragment.navigate(R.id.action_goals_Starter_to_goals_Fragment);
+    }
 }

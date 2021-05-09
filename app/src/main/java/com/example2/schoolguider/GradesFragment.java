@@ -9,39 +9,26 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.fragment.NavHostFragment;
 
-import com.example2.schoolguider.databinding.FragmentFirst3Binding;
-
-public class First3Fragment extends Fragment {
-
-    private FragmentFirst3Binding binding;
+public class FirstFragment extends Fragment {
 
     @Override
     public View onCreateView(
             LayoutInflater inflater, ViewGroup container,
             Bundle savedInstanceState
     ) {
-
-        binding = FragmentFirst3Binding.inflate(inflater, container, false);
-        return binding.getRoot();
-
+        // Inflate the layout for this fragment
+        return inflater.inflate(R.layout.fragment_first, container, false);
     }
 
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        binding.buttonFirst.setOnClickListener(new View.OnClickListener() {
+        view.findViewById(R.id.button_first).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                NavHostFragment.findNavController(First3Fragment.this)
-                        .navigate(R.id.action_First3Fragment_to_Second5Fragment);
+                NavHostFragment.findNavController(FirstFragment.this)
+                        .navigate(R.id.action_FirstFragment_to_school_Page);
             }
         });
     }
-
-    @Override
-    public void onDestroyView() {
-        super.onDestroyView();
-        binding = null;
-    }
-
 }

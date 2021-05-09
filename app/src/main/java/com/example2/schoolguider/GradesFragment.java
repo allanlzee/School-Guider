@@ -11,13 +11,9 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.fragment.NavHostFragment;
 
+import java.util.ArrayList;
+
 public class GradesFragment extends Fragment {
-
-    private Spinner course1;
-    private Spinner course2;
-    private Spinner course3;
-    private Spinner course4;
-
     private TextView text1;
     private TextView text2;
     private TextView text3;
@@ -42,8 +38,5 @@ public class GradesFragment extends Fragment {
                         .navigate(R.id.action_gradesFragment_to_grades_Overview);
             }
         });
-
-
-
     }
 }

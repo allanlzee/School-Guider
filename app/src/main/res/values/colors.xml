@@ -16,5 +16,19 @@
     <color name="light_blue_A200">#FF40C4FF</color>
     <color name="light_blue_A400">#FF00B0FF</color>
     <color name="black_overlay">#66000000</color>
-
+    <color name="grades">#40e0d0</color>
+    <color name="grades_intro">#8a2be2</color>
+    <color name="achievements">#ff4040</color>
+    <color name="meditate">#d3ffce</color>
+    <color name="meditate1">#b6fcd5</color>
+    <color name="schedule">#7fe5f0</color>
+    <color name="morning">#20b2aa</color>
+    <color name="afternoon">#ff6666</color>
+    <color name="evening">#407294</color>
+    <color name="morningButton">#00ffff</color>
+    <color name="afternoonButton">#ccff00</color>
+    <color name="eveningButton">#00ced1</color>
+    <color name="goals">#40e0d0</color>
+    <color name="reading">#ff7373</color>
+    <color name="music">#81d8d0</color>
 </resources>

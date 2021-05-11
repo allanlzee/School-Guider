@@ -27,7 +27,8 @@
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="20dp"
         android:textSize="12sp"
-        android:onClick="onOutlineClick"/>
+        android:onClick="onOutlineClick"
+        android:backgroundTint="@color/grades"/>
 
     <ImageView
         android:layout_width="match_parent"

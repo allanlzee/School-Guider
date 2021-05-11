@@ -11,13 +11,6 @@
         android:layout_height="wrap_content"
         android:theme="@style/Theme.SchoolGuider.AppBarOverlay">
 
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
-            app:popupTheme="@style/Theme.SchoolGuider.PopupOverlay" />
-
     </com.google.android.material.appbar.AppBarLayout>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -45,6 +38,7 @@
         android:layout_centerHorizontal="true"
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="20dp"
-        android:onClick="onGoalsClick"/>
+        android:onClick="onGoalsClick"
+        android:backgroundTint="@color/goals"/>
 
 </RelativeLayout>

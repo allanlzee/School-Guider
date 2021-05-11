@@ -24,7 +24,8 @@
         android:id="@+id/appBar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:theme="@style/Theme.SchoolGuider.AppBarOverlay">
+        android:theme="@style/Theme.SchoolGuider.AppBarOverlay"
+        android:backgroundTint="@color/grades">
 
         <TextView
             android:id="@+id/title"
@@ -53,7 +54,8 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="5dp"
-        android:text="Curricular Overview" />
+        android:text="Curricular Overview"
+        android:backgroundTint="@color/grades"/>
 
     <androidx.gridlayout.widget.GridLayout
         android:layout_width="match_parent"

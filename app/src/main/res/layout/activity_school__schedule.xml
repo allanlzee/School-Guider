@@ -13,7 +13,8 @@
         android:theme="@style/Theme.SchoolGuider.AppBarOverlay"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        android:backgroundTint="@color/schedule">
 
         <TextView
             android:id="@+id/title"
@@ -42,7 +43,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
-        app:layout_constraintTop_toTopOf="@+id/appBarLayout2" />
+        app:layout_constraintTop_toTopOf="@+id/appBarLayout2"
+        android:backgroundTint="@color/schedule"/>
 
     <androidx.gridlayout.widget.GridLayout
         android:layout_width="414dp"
@@ -116,7 +118,8 @@
             android:text="Morning"
             android:textSize="10sp"
             app:layout_column="0"
-            app:layout_row="1" />
+            app:layout_row="1"
+            android:backgroundTint="@color/morning"/>
 
         <Button
             android:id="@+id/morningCourse2"
@@ -126,7 +129,8 @@
             android:text="Morning"
             android:textSize="10sp"
             app:layout_column="1"
-            app:layout_row="1" />
+            app:layout_row="1"
+            android:backgroundTint="@color/morning"/>
 
         <Button
             android:id="@+id/morningCourse3"
@@ -136,7 +140,8 @@
             android:text="Morning"
             android:textSize="10dp"
             app:layout_column="2"
-            app:layout_row="1" />
+            app:layout_row="1"
+            android:backgroundTint="@color/morning"/>
 
         <Button
             android:id="@+id/morningCourse4"
@@ -146,7 +151,8 @@
             android:text="Morning"
             android:textSize="10sp"
             app:layout_column="3"
-            app:layout_row="1" />
+            app:layout_row="1"
+            android:backgroundTint="@color/morning"/>
 
         <ImageView
             android:id="@+id/image1"
@@ -155,7 +161,8 @@
             app:layout_column="0"
             app:layout_row="2"
             tools:srcCompat="@tools:sample/backgrounds/scenic"
-            android:contentDescription="Filler"/>
+            android:contentDescription="Filler"
+            />
 
         <ImageView
             android:id="@+id/image2"
@@ -192,7 +199,8 @@
             android:text="Afternoon"
             android:textSize="10sp"
             app:layout_column="0"
-            app:layout_row="3" />
+            app:layout_row="3"
+            android:backgroundTint="@color/afternoon"/>
 
         <Button
             android:id="@+id/afternoonCourse2"
@@ -202,7 +210,8 @@
             android:text="Afternoon"
             android:textSize="10sp"
             app:layout_column="1"
-            app:layout_row="3" />
+            app:layout_row="3"
+            android:backgroundTint="@color/afternoon"/>
 
         <Button
             android:id="@+id/afternoonCourse3"
@@ -212,7 +221,8 @@
             android:text="Afternoon"
             android:textSize="10sp"
             app:layout_column="2"
-            app:layout_row="3" />
+            app:layout_row="3"
+            android:backgroundTint="@color/afternoon"/>
 
         <Button
             android:id="@+id/afternoonCourse4"
@@ -222,7 +232,8 @@
             android:text="Afternoon"
             android:textSize="10sp"
             app:layout_column="3"
-            app:layout_row="3" />
+            app:layout_row="3"
+            android:backgroundTint="@color/afternoon"/>
 
         <ImageView
             android:id="@+id/image5"
@@ -268,7 +279,8 @@
             android:text="Evening"
             android:textSize="10sp"
             app:layout_column="0"
-            app:layout_row="5" />
+            app:layout_row="5"
+            android:backgroundTint="@color/evening"/>
 
         <Button
             android:id="@+id/eveningCourse1"
@@ -278,7 +290,8 @@
             android:text="Evening"
             android:textSize="10dp"
             app:layout_column="1"
-            app:layout_row="5" />
+            app:layout_row="5"
+            android:backgroundTint="@color/evening"/>
 
         <Button
             android:id="@+id/eveningCourse2"
@@ -288,7 +301,8 @@
             android:text="Evening"
             android:textSize="10dp"
             app:layout_column="2"
-            app:layout_row="5" />
+            app:layout_row="5"
+            android:backgroundTint="@color/evening"/>
 
         <Button
             android:id="@+id/eveningCourse3"
@@ -298,7 +312,8 @@
             android:text="Evening"
             android:textSize="10dp"
             app:layout_column="3"
-            app:layout_row="5" />
+            app:layout_row="5"
+            android:backgroundTint="@color/evening"/>
 
         <ImageView
             android:id="@+id/image9"

@@ -13,7 +13,8 @@
         android:theme="@style/Theme.SchoolGuider.AppBarOverlay"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        android:backgroundTint="@color/music">
 
         <TextView
             android:id="@+id/title"
@@ -116,7 +117,8 @@
             android:text="Radiohead"
             android:textSize="10sp"
             app:layout_column="0"
-            app:layout_row="1" />
+            app:layout_row="1"
+            android:backgroundTint="@color/morning"/>
 
         <Button
             android:id="@+id/morningCourse2"
@@ -126,7 +128,8 @@
             android:text="Green Day"
             android:textSize="10sp"
             app:layout_column="1"
-            app:layout_row="1" />
+            app:layout_row="1"
+            android:backgroundTint="@color/morning"/>
 
         <Button
             android:id="@+id/morningCourse3"
@@ -136,7 +139,8 @@
             android:text="Coldplay"
             android:textSize="10dp"
             app:layout_column="2"
-            app:layout_row="1" />
+            app:layout_row="1"
+            android:backgroundTint="@color/morning"/>
 
         <Button
             android:id="@+id/morningCourse4"
@@ -146,7 +150,8 @@
             android:text="Lo-Fi"
             android:textSize="10sp"
             app:layout_column="3"
-            app:layout_row="1" />
+            app:layout_row="1"
+            android:backgroundTint="@color/morning"/>
 
         <ImageView
             android:id="@+id/image1"
@@ -192,7 +197,8 @@
             android:text="Post Malone"
             android:textSize="8sp"
             app:layout_column="0"
-            app:layout_row="3" />
+            app:layout_row="3"
+            android:backgroundTint="@color/afternoon"/>
 
         <Button
             android:id="@+id/afternoonCourse2"
@@ -202,7 +208,8 @@
             android:text="Nirvana"
             android:textSize="10sp"
             app:layout_column="1"
-            app:layout_row="3" />
+            app:layout_row="3"
+            android:backgroundTint="@color/afternoon"/>
 
         <Button
             android:id="@+id/afternoonCourse3"
@@ -212,7 +219,8 @@
             android:text="DAY6"
             android:textSize="10sp"
             app:layout_column="2"
-            app:layout_row="3" />
+            app:layout_row="3"
+            android:backgroundTint="@color/afternoon"/>
 
         <Button
             android:id="@+id/afternoonCourse4"
@@ -222,7 +230,8 @@
             android:text="Arctic Monkeys"
             android:textSize="8sp"
             app:layout_column="3"
-            app:layout_row="3" />
+            app:layout_row="3"
+            android:backgroundTint="@color/afternoon"/>
 
         <ImageView
             android:id="@+id/image5"
@@ -268,7 +277,8 @@
             android:text="Joji"
             android:textSize="10sp"
             app:layout_column="0"
-            app:layout_row="5" />
+            app:layout_row="5"
+            android:backgroundTint="@color/eveningButton"/>
 
         <Button
             android:id="@+id/eveningCourse1"
@@ -278,7 +288,8 @@
             android:text="Guns N' Roses"
             android:textSize="8sp"
             app:layout_column="1"
-            app:layout_row="5" />
+            app:layout_row="5"
+            android:backgroundTint="@color/eveningButton"/>
 
         <Button
             android:id="@+id/eveningCourse2"
@@ -288,7 +299,8 @@
             android:text="Weezer"
             android:textSize="10dp"
             app:layout_column="2"
-            app:layout_row="5" />
+            app:layout_row="5"
+            android:backgroundTint="@color/eveningButton"/>
 
         <Button
             android:id="@+id/eveningCourse3"
@@ -298,7 +310,8 @@
             android:text="The Beatles"
             android:textSize="8dp"
             app:layout_column="3"
-            app:layout_row="5" />
+            app:layout_row="5"
+            android:backgroundTint="@color/eveningButton"/>
 
         <Button
             android:id="@+id/chill4"
@@ -308,7 +321,8 @@
             android:text="The Beatles"
             android:textSize="8dp"
             app:layout_column="0"
-            app:layout_row="7" />
+            app:layout_row="7"
+            android:backgroundTint="@color/grades_intro"/>
 
         <Button
             android:id="@+id/energy4"
@@ -318,7 +332,8 @@
             android:text="The Beatles"
             android:textSize="8dp"
             app:layout_column="1"
-            app:layout_row="7" />
+            app:layout_row="7"
+            android:backgroundTint="@color/grades_intro"/>
 
         <Button
             android:id="@+id/happy4"
@@ -328,7 +343,8 @@
             android:text="The Beatles"
             android:textSize="8dp"
             app:layout_column="2"
-            app:layout_row="7" />
+            app:layout_row="7"
+            android:backgroundTint="@color/grades_intro"/>
 
         <Button
             android:id="@+id/light4"
@@ -338,7 +354,8 @@
             android:text="The Beatles"
             android:textSize="8dp"
             app:layout_column="3"
-            app:layout_row="7" />
+            app:layout_row="7"
+            android:backgroundTint="@color/grades_intro"/>
 
         <ImageView
             android:id="@+id/image9"

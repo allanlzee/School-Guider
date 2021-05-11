@@ -20,7 +20,8 @@
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:background="?attr/colorPrimary"
-            app:popupTheme="@style/Theme.SchoolGuider.PopupOverlay" />
+            app:popupTheme="@style/Theme.SchoolGuider.PopupOverlay"
+            android:backgroundTint="@color/grades_intro" />
 
     </com.google.android.material.appbar.AppBarLayout>
 
@@ -58,7 +59,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/appBarLayout"
         app:layout_constraintVertical_bias="0.028"
-        android:onClick="onGradesClick"/>
+        android:onClick="onGradesClick"
+        android:backgroundTint="@color/grades_intro"/>
 
     <ImageView
         android:id="@+id/gradesIcon"
@@ -71,7 +73,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/gradesButton"
         app:layout_constraintVertical_bias="0.321"
-        android:contentDescription="Star"/>
+        android:contentDescription="Star"
+        />
 
     <Button
         android:id="@+id/achievementsButton"
@@ -86,7 +89,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/gradesButton"
         app:layout_constraintVertical_bias="0.203"
-        android:onClick="onAchievementsClick"/>
+        android:onClick="onAchievementsClick"
+        android:backgroundTint="@color/grades_intro"/>
 
     <ImageView
         android:layout_width="100dp"
@@ -112,7 +116,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/achievementsButton"
         app:layout_constraintVertical_bias="0.403"
-        android:onClick="onGoalsClick"/>
+        android:onClick="onGoalsClick"
+        android:backgroundTint="@color/grades_intro"/>
 
     <ImageView
         android:layout_width="100dp"

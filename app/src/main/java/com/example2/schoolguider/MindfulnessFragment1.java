@@ -7,6 +7,9 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.NavController;
+import androidx.navigation.Navigation;
+import androidx.navigation.fragment.NavHostFragment;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -122,7 +125,6 @@ public class MindfulnessFragment1 extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         mVisible = true;
 
-        mControlsView = binding.fullscreenContentControls;
         mContentView = binding.fullscreenContent;
 
         // Set up the user interaction to manually show or hide the system UI.
@@ -233,4 +235,9 @@ public class MindfulnessFragment1 extends Fragment {
         super.onDestroyView();
         binding = null;
     }
+
+    public void onMeditationStart(View view) {
+        NavHostFragment.findNavController(MindfulnessFragment1.this).navigate(R.id.action_mindfulnessFragment1_to_meditationFragment);
+    }
+
 }

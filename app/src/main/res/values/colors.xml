@@ -31,4 +31,5 @@
     <color name="goals">#40e0d0</color>
     <color name="reading">#ff7373</color>
     <color name="music">#81d8d0</color>
+    <color name="goalsButton">#66cdaa</color>
 </resources>

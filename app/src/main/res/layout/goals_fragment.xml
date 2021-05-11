@@ -1,28 +1,150 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Goals_Fragment">
 
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/grades"
+        android:theme="@style/Theme.SchoolGuider.AppBarOverlay">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="65dp"
+            android:gravity="center"
+            android:minHeight="?actionBarSize"
+            android:padding="@dimen/appbar_padding"
+            android:text="@string/app_name"
+            android:textAppearance="@style/TextAppearance.Widget.AppCompat.Toolbar.Title"
+            android:textSize="40sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="85dp"
+            android:padding="16dp"
+            android:text="Goals Overview"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+    </com.google.android.material.appbar.AppBarLayout>
+
     <TextView
-        android:id="@+id/textview_first"
+        android:id="@+id/quote1"
+        android:layout_width="340dp"
+        android:layout_height="190dp"
+        android:layout_below="@id/appBar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="1dp"
+        android:fontFamily="cursive"
+        android:padding="20dp"
+        android:text="@string/quote1"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textStyle="italic|bold" />
+
+    <TextView
+        android:id="@+id/quoteBold1"
+        android:layout_width="340dp"
+        android:layout_height="190dp"
+        android:layout_below="@id/appBar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="1dp"
+        android:fontFamily="cursive"
+        android:padding="20dp"
+        android:text="@string/quote1"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textStyle="italic|bold" />
+
+    <TextView
+        android:id="@+id/author1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/hello_first_fragment"
-        app:layout_constraintBottom_toTopOf="@id/button_first"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_below="@+id/quote1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="1dp"
+        android:fontFamily="cursive"
+        android:padding="20dp"
+        android:text="@string/author1"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textStyle="italic|bold"
+        android:textColor="@color/black"/>
+
+    <TextView
+        android:id="@+id/quote2"
+        android:layout_width="340dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/author1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="1dp"
+        android:fontFamily="cursive"
+        android:padding="20dp"
+        android:text='"There is a powerful driving force inside every human being that, once unleashed, can make any vision, dream, or desire a reality."'
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textStyle="italic|bold" />
+
+    <TextView
+        android:id="@+id/quoteBold2"
+        android:layout_width="340dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/author1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="1dp"
+        android:fontFamily="cursive"
+        android:padding="20dp"
+        android:text="@string/quote2"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textStyle="italic|bold" />
+
+    <TextView
+        android:id="@+id/quoteBold4"
+        android:layout_width="340dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/author1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="1dp"
+        android:fontFamily="cursive"
+        android:padding="20dp"
+        android:text="@string/quote2"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textStyle="italic|bold" />
+
+
+    <TextView
+        android:id="@+id/author2"
+        android:layout_width="340dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/quoteBold4"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="cursive"
+        android:padding="20dp"
+        android:text="@string/author2"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textStyle="italic|bold"
+        android:textColor="@color/black"/>
 
     <Button
         android:id="@+id/button_first"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/next"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textview_first" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="@color/goals"
+        android:text="Make Your Goals!" />
+
+</RelativeLayout>

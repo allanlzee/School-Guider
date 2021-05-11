@@ -145,4 +145,8 @@
     <string name="title_activity_achievements_starter">Achievements_Starter</string>
     <string name="title_activity_goals_starter">Goals_Starter</string>
     <string name="title_activity_grades_input">GradesInput</string>
+    <string name="quote1">"There are two types of people who will tell you that you cannot make a difference in this world: those who are afraid to try and those who are afraid you will succeed."</string>
+    <string name="author1">-Ray Goforth</string>
+    <string name="quote2">"There is a powerful driving force inside every human being that, once unleashed, can make any vision, dream, or desire a reality."</string>
+    <string name="author2">-Anthony Robbins</string>
 </resources>

@@ -10,6 +10,7 @@ import androidx.fragment.app.Fragment;
 import androidx.navigation.fragment.NavHostFragment;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.LayoutInflater;
@@ -224,7 +225,8 @@ public class Morning_Fragment extends Fragment {
     }
 
     public void onMorningActivitiesClick(View view) {
-        NavHostFragment.findNavController(Morning_Fragment.this).navigate(R.id.action_morning_Fragment_to_morningActivitiesPage);
+        Intent intent = new Intent(getActivity(), MorningActivitiesPage.class);
+        startActivity(intent);
     }
 
 }

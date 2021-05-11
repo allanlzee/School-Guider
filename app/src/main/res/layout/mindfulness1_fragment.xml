@@ -40,25 +40,12 @@
             style="?android:attr/progressBarStyle"
             android:layout_width="70dp"
             android:layout_height="70dp"
-
+            android:layout_marginBottom="140dp"
             app:layout_constraintBottom_toTopOf="@+id/dummy_button"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/fullscreen_content_controls"
             app:layout_constraintVertical_bias="0.705" />
-
-        <LinearLayout
-            android:id="@+id/fullscreen_content_controls"
-            style="@style/Widget.Theme.SchoolGuider.ButtonBar.Fullscreen"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom|center_horizontal"
-            android:orientation="horizontal"
-            tools:ignore="UselessParent">
-
-
-        </LinearLayout>
 
         <Button
             android:id="@+id/dummy_button"
@@ -68,6 +55,7 @@
             android:layout_weight="1"
             android:text="Start Meditation"
             android:textColor="@color/white"
+            android:onClick="onMeditationStart"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"

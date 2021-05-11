@@ -96,7 +96,11 @@
         android:id="@+id/mindfulnessFragment1"
         android:name="com.example2.schoolguider.MindfulnessFragment1"
         android:label="mindfulness1_fragment"
-        tools:layout="@layout/mindfulness1_fragment" />
+        tools:layout="@layout/mindfulness1_fragment" >
+        <action
+            android:id="@+id/action_mindfulnessFragment1_to_meditationFragment"
+            app:destination="@id/meditationFragment" />
+    </fragment>
     <fragment
         android:id="@+id/music_Mindfulness"
         android:name="com.example2.schoolguider.Music_Mindfulness"
@@ -201,4 +205,8 @@
             app:enterAnim="@anim/fragment_fade_enter"
             app:exitAnim="@anim/fragment_fade_exit" />
     </activity>
+    <fragment
+        android:id="@+id/meditationFragment"
+        android:name="com.example2.schoolguider.MeditationFragment"
+        android:label="MeditationFragment" />
 </navigation>

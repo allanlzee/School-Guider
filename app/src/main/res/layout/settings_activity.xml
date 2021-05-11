@@ -50,7 +50,7 @@
             android:id="@+id/notifications"
             android:layout_width="250dp"
             android:layout_height="100dp"
-            android:layout_marginStart="75dp"
+            android:layout_marginStart="20dp"
             android:fontFamily="casual"
             android:padding="25dp"
             android:text="Notifications"
@@ -65,13 +65,14 @@
             android:layout_height="wrap_content"
             android:textSize="20sp"
             app:layout_column="1"
-            app:layout_row="0" />
+            app:layout_row="0"
+            tools:ignore="UseSwitchCompatOrMaterialXml"/>
 
         <TextView
             android:id="@+id/customNotifications"
             android:layout_width="250dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="75dp"
+            android:layout_marginStart="20dp"
             android:fontFamily="casual"
             android:padding="25dp"
             android:text="Custom Notifications"
@@ -93,6 +94,27 @@
             android:layout_width="wrap_content"
             android:id="@+id/notification"
             />
+
+        <TextView
+            android:id="@+id/nightMode"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:fontFamily="casual"
+            android:padding="25dp"
+            android:text="Night Mode"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_column="0"
+            app:layout_row="2" />
+
+        <Switch
+            android:id="@+id/switch2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_column="1"
+            app:layout_row="2"
+            tools:ignore="UseSwitchCompatOrMaterialXml" />
 
 
     </androidx.gridlayout.widget.GridLayout>

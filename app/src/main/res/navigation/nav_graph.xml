@@ -167,13 +167,7 @@
         android:id="@+id/course_Grades"
         android:name="com.example2.schoolguider.Course_Grades"
         android:label="course_grades"
-        tools:layout="@layout/course_grades" >
-        <action
-            android:id="@+id/action_course_Grades_to_gradesFragment"
-            app:destination="@id/gradesFragment"
-            app:enterAnim="@anim/fragment_fade_enter"
-            app:exitAnim="@anim/fragment_fade_exit" />
-    </activity>
+        tools:layout="@layout/course_grades" />
     <activity
         android:id="@+id/achievements_Starter"
         android:name="com.example2.schoolguider.Achievements_Starter"
@@ -193,6 +187,17 @@
         <action
             android:id="@+id/action_goals_Starter_to_goals_Fragment"
             app:destination="@id/goals_Fragment"
+            app:enterAnim="@anim/fragment_fade_enter"
+            app:exitAnim="@anim/fragment_fade_exit" />
+    </activity>
+    <activity
+        android:id="@+id/gradesInput"
+        android:name="com.example2.schoolguider.GradesInput"
+        android:label="grades_input"
+        tools:layout="@layout/grades_input" >
+        <action
+            android:id="@+id/action_gradesInput_to_gradesFragment"
+            app:destination="@id/gradesFragment"
             app:enterAnim="@anim/fragment_fade_enter"
             app:exitAnim="@anim/fragment_fade_exit" />
     </activity>

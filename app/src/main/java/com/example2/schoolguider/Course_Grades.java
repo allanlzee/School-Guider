@@ -1,5 +1,6 @@
 package com.example2.schoolguider;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import com.google.android.material.snackbar.Snackbar;
@@ -27,10 +28,6 @@ public class Course_Grades extends AppCompatActivity {
         binding = CourseGradesBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        NavController navController = Navigation.findNavController(this, R.id.action_course_Grades_to_gradesFragment);
-        appBarConfiguration = new AppBarConfiguration.Builder(navController.getGraph()).build();
-        NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
-
         binding.fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -42,13 +39,11 @@ public class Course_Grades extends AppCompatActivity {
 
     @Override
     public boolean onSupportNavigateUp() {
-        NavController navController = Navigation.findNavController(this, R.id.action_course_Grades_to_gradesFragment);
-        return NavigationUI.navigateUp(navController, appBarConfiguration)
-                || super.onSupportNavigateUp();
+        startActivity(new Intent(Course_Grades.this, GradesInput.class));
+        return true;
     }
 
     public void onOutlineClick(View view) {
-        NavController navController = Navigation.findNavController(this, R.id.action_course_Grades_to_gradesFragment);
-        navController.navigate(R.id.action_course_Grades_to_gradesFragment);
+        startActivity(new Intent(Course_Grades.this, GradesInput.class));
     }
 }

@@ -144,4 +144,5 @@
     <string name="title_activity_course_grades">Course_Grades</string>
     <string name="title_activity_achievements_starter">Achievements_Starter</string>
     <string name="title_activity_goals_starter">Goals_Starter</string>
+    <string name="title_activity_grades_input">GradesInput</string>
 </resources>

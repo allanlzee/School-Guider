@@ -11,9 +11,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SchoolGuider">
         <activity
+            android:name=".GradesInput"
+            android:label="@string/title_activity_grades_input"
+            android:theme="@style/Theme.SchoolGuider.NoActionBar"></activity>
+        <activity
             android:name=".Goals_Starter"
             android:label="@string/title_activity_goals_starter"
-            android:theme="@style/Theme.SchoolGuider.NoActionBar"></activity>
+            android:theme="@style/Theme.SchoolGuider.NoActionBar" />
         <activity
             android:name=".Achievements_Starter"
             android:label="@string/title_activity_achievements_starter"

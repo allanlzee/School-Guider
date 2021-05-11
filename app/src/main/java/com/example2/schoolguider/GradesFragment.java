@@ -14,10 +14,14 @@ import androidx.navigation.fragment.NavHostFragment;
 import java.util.ArrayList;
 
 public class GradesFragment extends Fragment {
-    private TextView text1;
-    private TextView text2;
-    private TextView text3;
-    private TextView text4;
+    private TextView grade1;
+    private TextView grade2;
+    private TextView grade3;
+    private TextView grade4;
+    private TextView grade5;
+    private TextView grade6;
+    private TextView grade7;
+    private TextView grade8;
 
     @Override
     public View onCreateView(

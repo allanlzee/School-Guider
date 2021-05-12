@@ -29,10 +29,12 @@ public class School_Page extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         FloatingActionButton fab = findViewById(R.id.fab);
+
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+        // TODO: add functionality that displays a message and immediately returns the user to the home activity
+                Snackbar.make(view, "Returning to home page", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
             }
         });
@@ -80,18 +82,13 @@ public class School_Page extends AppCompatActivity {
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
-        //noinspection SimplifiableIfStatement
         switch (id) {
             case R.id.nav_home:
                 Toast.makeText(School_Page.this, "Settings", Toast.LENGTH_SHORT).show();
                 startActivity(new Intent(School_Page.this, SettingsActivity.class));
-                /* Intent intent = new Intent(MainActivity.this, SettingsActivity.class);
-                ActivityOptions transition = ActivityOptions.makeSceneTransitionAnimation(this, transitionActivity.toBundle());
-                startActivity(intent, transition.toBundle()); */
                 return true;
             case R.id.nav_school:
                 Toast.makeText(School_Page.this, "School", Toast.LENGTH_SHORT).show();
-                // Bring User to School Pages
                 startActivity(new Intent(School_Page.this, School_Page.class));
                 return true;
             case R.id.nav_schedule:
@@ -120,9 +117,6 @@ public class School_Page extends AppCompatActivity {
     }
 
     public void onGradesClick(View view) {
-         //NavController activityToGrades = Navigation.findNavController(School_Page.this, R.id.action_school_Page_to_gradesFragment);
-         //activityToGrades.navigate(R.id.action_school_Page_to_gradesFragment);
-
          startActivity(new Intent(School_Page.this, Course_Grades.class));
     }
 

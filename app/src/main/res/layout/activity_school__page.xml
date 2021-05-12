@@ -45,7 +45,8 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@android:drawable/ic_dialog_email"
-        android:contentDescription="Email Button"/>
+        android:contentDescription="Email Button"
+        android:onClick=""/>
 
     <Button
         android:id="@+id/gradesButton"

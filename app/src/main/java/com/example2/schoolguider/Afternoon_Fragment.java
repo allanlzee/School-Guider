@@ -7,6 +7,8 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.NavHostController;
+import androidx.navigation.fragment.NavHostFragment;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -132,7 +134,15 @@ public class Afternoon_Fragment extends Fragment {
         // Upon interacting with UI controls, delay any scheduled hide()
         // operations to prevent the jarring behavior of controls going away
         // while interacting with the UI.
-        view.findViewById(R.id.afternoonActivities).setOnTouchListener(mDelayHideTouchListener);
+
+        view.findViewById(R.id.afternoonActivitiesButton).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                NavHostFragment.findNavController(Afternoon_Fragment.this).navigate(R.id.action_afternoon_Fragment_to_afternoonActivitiesPage);
+            }
+        });
+
+        //action_afternoon_Fragment_to_afternoonActivitiesPage
     }
 
     @Override
@@ -222,10 +232,5 @@ public class Afternoon_Fragment extends Fragment {
             actionBar = activity.getSupportActionBar();
         }
         return actionBar;
-    }
-
-    public void onAfternoonActivitiesClick(View view) {
-        Intent intent = new Intent(getActivity(), AfternoonActivitiesPage.class);
-        startActivity(intent);
     }
 }

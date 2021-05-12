@@ -237,6 +237,7 @@ public class MindfulnessFragment1 extends Fragment {
     }
 
     public void onMeditationStart(View view) {
+        // TODO: rework the navigation system
         NavHostFragment.findNavController(MindfulnessFragment1.this).navigate(R.id.action_mindfulnessFragment1_to_meditationFragment);
     }
 

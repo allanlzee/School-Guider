@@ -62,17 +62,31 @@
         android:id="@+id/morning_Fragment"
         android:name="com.example2.schoolguider.Morning_Fragment"
         android:label="fragment_morning_"
-        tools:layout="@layout/fragment_morning_"/>
+        tools:layout="@layout/fragment_morning_">
+        <action
+            android:id="@+id/action_morning_Fragment_to_morningActivitiesPage"
+            app:destination="@id/morningActivitiesPage"
+            app:enterAnim="@anim/fragment_fade_enter"
+            app:exitAnim="@anim/fragment_fade_exit" />
+    </fragment>
     <fragment
         android:id="@+id/afternoon_Fragment"
         android:name="com.example2.schoolguider.Afternoon_Fragment"
         android:label="fragment_afternoon_"
-        tools:layout="@layout/fragment_afternoon_" />
+        tools:layout="@layout/fragment_afternoon_" >
+        <action
+            android:id="@+id/action_afternoon_Fragment_to_afternoonActivitiesPage"
+            app:destination="@id/afternoonActivitiesPage" />
+    </fragment>
     <fragment
         android:id="@+id/evening_Fragment"
         android:name="com.example2.schoolguider.Evening_Fragment"
         android:label="fragment_evening_"
-        tools:layout="@layout/fragment_evening_"/>
+        tools:layout="@layout/fragment_evening_">
+        <action
+            android:id="@+id/action_evening_Fragment_to_eveningActivitiesPage"
+            app:destination="@id/eveningActivitiesPage" />
+    </fragment>
     <activity
         android:id="@+id/settingsActivity"
         android:name="com.example2.schoolguider.SettingsActivity"
@@ -96,11 +110,7 @@
         android:id="@+id/mindfulnessFragment1"
         android:name="com.example2.schoolguider.MindfulnessFragment1"
         android:label="mindfulness1_fragment"
-        tools:layout="@layout/mindfulness1_fragment" >
-        <action
-            android:id="@+id/action_mindfulnessFragment1_to_meditationFragment"
-            app:destination="@id/meditationFragment" />
-    </fragment>
+        tools:layout="@layout/mindfulness1_fragment" />
     <fragment
         android:id="@+id/music_Mindfulness"
         android:name="com.example2.schoolguider.Music_Mindfulness"
@@ -205,8 +215,4 @@
             app:enterAnim="@anim/fragment_fade_enter"
             app:exitAnim="@anim/fragment_fade_exit" />
     </activity>
-    <fragment
-        android:id="@+id/meditationFragment"
-        android:name="com.example2.schoolguider.MeditationFragment"
-        android:label="MeditationFragment" />
 </navigation>

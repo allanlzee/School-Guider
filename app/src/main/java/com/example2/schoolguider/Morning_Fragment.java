@@ -132,7 +132,12 @@ public class Morning_Fragment extends Fragment {
         // Upon interacting with UI controls, delay any scheduled hide()
         // operations to prevent the jarring behavior of controls going away
         // while interacting with the UI.
-        view.findViewById(R.id.dummy_button).setOnTouchListener(mDelayHideTouchListener);
+        view.findViewById(R.id.morningActivitiesPage).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                NavHostFragment.findNavController(Morning_Fragment.this).navigate(R.id.action_morning_Fragment_to_morningActivitiesPage);
+            }
+        });
     }
 
     @Override
@@ -223,10 +228,4 @@ public class Morning_Fragment extends Fragment {
         }
         return actionBar;
     }
-
-    public void onMorningActivitiesClick(View view) {
-        Intent intent = new Intent(getActivity(), MorningActivitiesPage.class);
-        startActivity(intent);
-    }
-
 }

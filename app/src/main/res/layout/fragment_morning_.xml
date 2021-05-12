@@ -16,7 +16,7 @@
         android:layout_height="match_parent"
         android:gravity="center"
         android:keepScreenOn="true"
-        android:text="Make your morning relaxing..."
+        android:text="@string/morningRelax"
         android:textColor="?attr/fullscreenTextColor"
         android:textSize="50sp"
         android:textStyle="bold" />
@@ -38,14 +38,14 @@
             tools:ignore="UselessParent">
 
             <Button
-                android:id="@+id/morningActivitiesButton"
+                android:id="@+id/morningActivitiesPage"
                 style="?android:attr/buttonBarButtonStyle"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:textColor="@color/white"
-                android:text="Cleansing Morning Activities"
-                android:onClick="onMorningActivitiesClick"/>
+                android:text="@string/morningButton" />
+
 
         </LinearLayout>
 

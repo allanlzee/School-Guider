@@ -32,4 +32,5 @@
     <color name="reading">#ff7373</color>
     <color name="music">#81d8d0</color>
     <color name="goalsButton">#66cdaa</color>
+    <color name="buttonColor">#003366</color>
 </resources>

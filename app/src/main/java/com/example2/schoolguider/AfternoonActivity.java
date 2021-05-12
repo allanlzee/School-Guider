@@ -98,7 +98,8 @@ public class AfternoonActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        setContentView(R.layout.activity_afternoon);
+        // setContentView(R.layout.appBarLayout);
+        // TODO: check this out when working with XML file
 
         mVisible = true;
         mControlsView = findViewById(R.id.fullscreen_content_controls);

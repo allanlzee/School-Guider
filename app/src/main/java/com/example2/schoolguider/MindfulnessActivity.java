@@ -1,5 +1,6 @@
 package com.example2.schoolguider;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -15,8 +16,10 @@ import androidx.viewpager.widget.ViewPager;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Toast;
 
 import com.example2.schoolguider.ui.main.ui.main.SectionsPagerAdapter;
 
@@ -46,6 +49,55 @@ public class MindfulnessActivity extends AppCompatActivity {
         manager.beginTransaction().replace(R.id.mainLayout, reading).commit(); */
     }
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu_main, menu);
+        return true;
+    }
+
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+
+        //noinspection SimplifiableIfStatement
+        switch (id) {
+            case R.id.nav_home:
+                Toast.makeText(MindfulnessActivity.this, "Settings", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(MindfulnessActivity.this, SettingsActivity.class));
+                /* Intent intent = new Intent(MainActivity.this, SettingsActivity.class);
+                ActivityOptions transition = ActivityOptions.makeSceneTransitionAnimation(this, transitionActivity.toBundle());
+                startActivity(intent, transition.toBundle()); */
+                return true;
+            case R.id.nav_school:
+                Toast.makeText(MindfulnessActivity.this, "School", Toast.LENGTH_SHORT).show();
+                // Bring User to School Pages
+                startActivity(new Intent(MindfulnessActivity.this, School_Page.class));
+                return true;
+            case R.id.nav_schedule:
+                Toast.makeText(MindfulnessActivity.this, "Schedule", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(MindfulnessActivity.this, School_Schedule.class));
+                return true;
+            case R.id.nav_mindfulness:
+                Toast.makeText(MindfulnessActivity.this, "Mindfulness", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(MindfulnessActivity.this, MindfulnessActivity.class));
+                return true;
+            case R.id.nav_Morning:
+                Toast.makeText(MindfulnessActivity.this, "Good Morning!", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(MindfulnessActivity.this, MorningActivitiesPage.class));
+                return true;
+            case R.id.nav_Afternoon:
+                Toast.makeText(MindfulnessActivity.this, "Good Afternoon!", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(MindfulnessActivity.this, AfternoonActivitiesPage.class));
+                return true;
+            case R.id.nav_Evening:
+                Toast.makeText(MindfulnessActivity.this, "Good Evening!", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(MindfulnessActivity.this, EveningActivitiesPage.class));
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
+
     public void onMeditationClick(View view) {
         NavController activityToMeditation = Navigation.findNavController(MindfulnessActivity.this,
                 R.id.action_mindfulnessActivity_to_mindfulnessFragment1);
@@ -62,7 +114,6 @@ public class MindfulnessActivity extends AppCompatActivity {
 
     public void onReadingClick(View view) {
         NavController activityToReading =  Navigation.findNavController(MindfulnessActivity.this,
-                // TODO: add reading fragments
                 R.id.action_mindfulnessActivity_to_mindfulness_Reading);
         activityToReading.navigateUp();
         activityToReading.navigate(R.id.action_mindfulnessActivity_to_mindfulness_Reading);

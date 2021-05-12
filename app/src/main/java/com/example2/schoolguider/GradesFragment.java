@@ -23,6 +23,8 @@ public class GradesFragment extends Fragment {
     private TextView grade7;
     private TextView grade8;
 
+    // TODO: use these TextViews for editing
+
     @Override
     public View onCreateView(
             LayoutInflater inflater, ViewGroup container,

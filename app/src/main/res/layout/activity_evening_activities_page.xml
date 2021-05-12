@@ -33,7 +33,7 @@
             android:textSize="30sp"
             android:textStyle="bold|italic"
             android:textColor="@color/light_blue_A400"
-            android:text="Evening Activities"/>
+            android:text="@string/eveAct"/>
 
     </com.google.android.material.appbar.AppBarLayout>
 
@@ -41,7 +41,8 @@
         android:id="@+id/view_pager"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:contentDescription="@string/filler"/>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab"
@@ -51,7 +52,8 @@
         android:layout_margin="@dimen/fab_margin"
         app:srcCompat="@android:drawable/ic_dialog_email"
         android:layout_alignParentRight="true"
-        android:layout_alignParentBottom="true"/>
+        android:layout_alignParentBottom="true"
+        android:contentDescription="@string/filler"/>
 
     <androidx.gridlayout.widget.GridLayout
         android:layout_width="match_parent"
@@ -64,7 +66,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="15dp"
-            android:text="Violin"
+            android:text="@string/violin"
             android:textSize="20sp"
             app:layout_column="0"
             app:layout_row="0"
@@ -75,7 +77,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="20sp"
-            android:text="Coding"
+            android:text="@string/coding"
             android:padding="15dp"
             app:layout_row="1"
             app:layout_column="0"
@@ -87,7 +89,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="20sp"
-            android:text="Dinner"
+            android:text="@string/dinner"
             android:padding="15dp"
             app:layout_row="2"
             app:layout_column="0"
@@ -98,7 +100,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="20sp"
-            android:text="Basketball"
+            android:text="@string/basketball"
             android:padding="15dp"
             app:layout_row="3"
             app:layout_column="0"
@@ -112,7 +114,7 @@
             app:layout_column="1"
             android:layout_marginStart="50dp"
             android:src="@drawable/violin"
-            android:contentDescription="Violin"
+            android:contentDescription="@string/violin"
             />
 
         <ImageView
@@ -123,7 +125,7 @@
             app:layout_column="1"
             app:layout_row="1"
             android:layout_marginBottom="30dp"
-            android:contentDescription="Coding"/>
+            android:contentDescription="@string/coding"/>
 
         <ImageView
             android:layout_width="125dp"
@@ -132,7 +134,7 @@
             app:layout_column="1"
             android:layout_marginStart="50dp"
             android:src="@drawable/dinner"
-            android:contentDescription="Dinner"
+            android:contentDescription="@string/dinner"
             />
 
         <ImageView
@@ -143,7 +145,7 @@
             android:src="@drawable/basketball"
             app:layout_column="1"
             app:layout_row="3"
-            android:contentDescription="Basketball Net"/>
+            android:contentDescription="@string/basketball"/>
 
     </androidx.gridlayout.widget.GridLayout>
 

@@ -27,7 +27,8 @@ public class Goals_Starter extends AppCompatActivity {
         binding = GoalsStarterBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        setSupportActionBar(binding.toolbar);
+        // setSupportActionBar(binding.toolbar);
+        // TODO: revise the tab bar
 
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_goals_starter);
         appBarConfiguration = new AppBarConfiguration.Builder(navController.getGraph()).build();

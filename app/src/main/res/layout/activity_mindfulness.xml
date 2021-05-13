@@ -26,7 +26,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Just Chillax Dude..."
+            android:text="@string/chill"
             android:textSize="30sp"
             android:padding="16dp"
             android:textColor="@color/light_blue_A400"
@@ -46,7 +46,8 @@
         android:layout_gravity="bottom|end"
         android:layout_margin="@dimen/fab_margin"
         app:srcCompat="@android:drawable/ic_dialog_email"
-        android:backgroundTint="@color/meditate1"/>
+        android:backgroundTint="@color/meditate1"
+        android:contentDescription="@string/filler"/>
 
     <androidx.gridlayout.widget.GridLayout
         android:layout_width="match_parent"
@@ -60,7 +61,7 @@
             android:layout_marginStart="16dp"
             app:layout_column="0"
             app:layout_row="0"
-            android:text="Meditation"
+            android:text="@string/meditation"
             android:onClick="onMeditationClick"
             android:backgroundTint="@color/meditate1"
             />
@@ -73,7 +74,7 @@
             android:layout_marginStart="16dp"
             app:layout_column="0"
             app:layout_row="1"
-            android:text="Music"
+            android:text="@string/music"
             android:onClick="onMusicClick"
             android:backgroundTint="@color/meditate1"
             />
@@ -86,7 +87,7 @@
             android:layout_marginStart="16dp"
             app:layout_column="0"
             app:layout_row="2"
-            android:text="Reading"
+            android:text="@string/reading"
             android:onClick="onReadingClick"
             android:backgroundTint="@color/meditate1"
             />
@@ -94,30 +95,33 @@
         <ImageView
             android:layout_width="200dp"
             android:layout_height="150dp"
-            android:layout_marginLeft="25dp"
+            android:layout_marginStart="25dp"
             android:layout_marginTop="195dp"
             android:src="@tools:sample/backgrounds/scenic"
             app:layout_column="1"
-            app:layout_row="0" />
+            app:layout_row="0"
+            android:contentDescription="@string/filler"/>
 
         <ImageView
             android:layout_width="200dp"
             android:layout_height="150dp"
-            android:layout_marginLeft="25dp"
+            android:layout_marginStart="25dp"
             android:layout_marginTop="20dp"
             android:src="@tools:sample/backgrounds/scenic"
             app:layout_column="1"
             app:layout_row="1"
+            android:contentDescription="@string/filler"
             />
 
         <ImageView
             android:layout_width="200dp"
             android:layout_height="150dp"
-            android:layout_marginLeft="25dp"
+            android:layout_marginStart="25dp"
             android:layout_marginTop="20dp"
             android:src="@tools:sample/backgrounds/scenic"
             app:layout_column="1"
             app:layout_row="2"
+            android:contentDescription="@string/filler"
             />
 
     </androidx.gridlayout.widget.GridLayout>

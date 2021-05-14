@@ -2,10 +2,12 @@ package com.example2.schoolguider;
 
 import android.app.ActivityOptions;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.transition.Explode;
 import android.transition.Fade;
@@ -18,9 +20,12 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.material.snackbar.Snackbar;
+
 public class MainActivity extends AppCompatActivity {
 
     private String userName;
+    private ConstraintLayout parent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +33,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        parent = findViewById(R.id.mainActivity);
     }
 
     @Override
@@ -49,9 +56,7 @@ public class MainActivity extends AppCompatActivity {
             case R.id.nav_home:
                 Toast.makeText(MainActivity.this, "Settings", Toast.LENGTH_SHORT).show();
                 startActivity(new Intent(MainActivity.this, SettingsActivity.class));
-                /* Intent intent = new Intent(MainActivity.this, SettingsActivity.class);
-                ActivityOptions transition = ActivityOptions.makeSceneTransitionAnimation(this, transitionActivity.toBundle());
-                startActivity(intent, transition.toBundle()); */
+                showSnackBar();
                 return true;
             case R.id.nav_school:
                 Toast.makeText(MainActivity.this, "School", Toast.LENGTH_SHORT).show();
@@ -88,5 +93,19 @@ public class MainActivity extends AppCompatActivity {
         EditText inputName = findViewById(R.id.inputName);
         greetingMsg.setText("Greetings " + inputName.getText().toString());
         userName = inputName.getText().toString();
+    }
+
+    public void showSnackBar() {
+        Snackbar.make(parent, "Going to Settings", Snackbar.LENGTH_INDEFINITE)
+                .setAction("Stop", new View.OnClickListener() {
+
+                    @Override
+                    public void onClick(View v) {
+                        startActivity(new Intent(MainActivity.this, MainActivity.class));
+                    }
+                })
+                .setActionTextColor(getResources().getColor(R.color.morningButton))
+                .setTextColor(Color.BLUE)
+                .show();
     }
 }

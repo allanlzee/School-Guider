@@ -3,11 +3,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.example2.schoolguider.MainActivity"
     tools:showIn="navigation_view">
+
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_home"
             android:icon="@drawable/ic_action_home"
-            android:title="@string/menu_home" />
+            android:title="Settings" />
 
         <item
             android:id="@+id/nav_schedule"

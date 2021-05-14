@@ -223,5 +223,8 @@
     <string name="coldplay">Coldplay</string>
     <string name="lofi">Lo-Fi</string>
     <string name="arctic">Arctic Monkeys</string>
+    <string name="notifications">Notifications</string>
+    <string name="customNotifications">Custom Notifications</string>
+    <string name="nightMode">Night Mode</string>
 
 </resources>

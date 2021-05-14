@@ -100,7 +100,13 @@
         android:id="@+id/afternoonActivitiesPage"
         android:name="com.example2.schoolguider.AfternoonActivitiesPage"
         android:label="activity_afternoon_activities_page"
-        tools:layout="@layout/activity_afternoon_activities_page" />
+        tools:layout="@layout/activity_afternoon_activities_page" >
+        <action
+            android:id="@+id/action_afternoonActivitiesPage_to_codingFragment"
+            app:destination="@id/codingFragment"
+            app:enterAnim="@anim/fragment_fade_enter"
+            app:exitAnim="@anim/fragment_fade_exit" />
+    </activity>
     <activity
         android:id="@+id/eveningActivitiesPage"
         android:name="com.example2.schoolguider.EveningActivitiesPage"
@@ -215,4 +221,9 @@
             app:enterAnim="@anim/fragment_fade_enter"
             app:exitAnim="@anim/fragment_fade_exit" />
     </activity>
+    <fragment
+        android:id="@+id/codingFragment"
+        android:name="com.example2.schoolguider.CodingFragment"
+        android:label="coding_fragment"
+        tools:layout="@layout/coding_fragment" />
 </navigation>

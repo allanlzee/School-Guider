@@ -176,7 +176,6 @@ public class School_Schedule extends AppCompatActivity {
 
         NavController activityToMorning = Navigation.findNavController(School_Schedule.this,
                 R.id.action_school_Schedule_to_morning_Fragment);
-        activityToMorning.navigateUp();
         activityToMorning.navigate(R.id.action_school_Schedule_to_morning_Fragment);
     }
 

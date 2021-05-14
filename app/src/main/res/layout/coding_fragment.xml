@@ -4,17 +4,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CodingFragment">
+    tools:context=".CodingFragment"
+    android:id="@+id/codingFragment">
 
     <!-- TODO: Update blank fragment layout -->
     <com.google.android.material.card.MaterialCardView
-        android:layout_width="300dp"
+        android:id="@+id/materialCardView"
+        android:layout_width="310dp"
         android:layout_height="450dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        >
+        app:layout_constraintTop_toTopOf="parent">
 
         <RelativeLayout
             android:layout_width="wrap_content"
@@ -22,59 +23,64 @@
 
             <TextView
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                />
+                android:layout_height="wrap_content" />
 
-        <ImageView
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:contentDescription="@string/filler"
-            android:src="@drawable/javascript" />
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:contentDescription="@string/filler"
+                android:src="@drawable/javascript" />
 
-        <ImageView
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:src="@drawable/cplusplus"
-            android:contentDescription="@string/filler"
-            android:layout_marginStart="150dp"
-            />
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_marginStart="160dp"
+                android:contentDescription="@string/filler"
+                android:src="@drawable/cplusplus" />
 
-        <ImageView
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:src="@drawable/java2"
-            android:contentDescription="@string/filler"
-            android:layout_marginTop="150dp"
-            />
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_marginTop="150dp"
+                android:contentDescription="@string/filler"
+                android:src="@drawable/java2" />
 
-        <ImageView
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:src="@drawable/htmlcss"
-            android:contentDescription="@string/filler"
-            android:layout_margin="150dp"
-            />
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_marginStart="160dp"
+                android:layout_marginTop="150dp"
+                android:contentDescription="@string/filler"
+                android:src="@drawable/htmlcss" />
 
-        <ImageView
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:src="@drawable/python"
-            android:contentDescription="@string/filler"
-            android:layout_marginTop="300dp"
-            />
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_marginTop="300dp"
+                android:contentDescription="@string/filler"
+                android:src="@drawable/python" />
 
-        <ImageView
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:src="@drawable/ccode"
-            android:contentDescription="@string/filler"
-            android:layout_marginStart="150dp"
-            android:layout_marginTop="300dp"
-            />
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_marginStart="160dp"
+                android:layout_marginTop="300dp"
+                android:contentDescription="@string/filler"
+                android:src="@drawable/ccode" />
 
         </RelativeLayout>
 
-
     </com.google.android.material.card.MaterialCardView>
+
+    <Button
+        android:id="@+id/projects"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/projects"
+        android:backgroundTint="@color/achievements"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/materialCardView" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

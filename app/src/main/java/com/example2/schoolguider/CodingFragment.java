@@ -2,11 +2,16 @@ package com.example2.schoolguider;
 
 import android.os.Bundle;
 
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.Toast;
+
+import com.google.android.material.snackbar.Snackbar;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -23,6 +28,8 @@ public class CodingFragment extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+    private ConstraintLayout parent;
+    private Button projects;
 
     public CodingFragment() {
         // Required empty public constructor
@@ -58,7 +65,37 @@ public class CodingFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        View view = inflater.inflate(R.layout.coding_fragment, container, false);
+        projects = view.findViewById(R.id.projects);
+        parent = view.findViewById(R.id.codingFragment);
+        projects.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                showSnackBar();
+            }
+        });
+
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.coding_fragment, container, false);
+        return view;
     }
-}
+
+    public void showSnackBar() {
+        Snackbar.make(parent, "GitHub Repositories: @allanlzee", Snackbar.LENGTH_INDEFINITE)
+                .setAction("Go", new View.OnClickListener() {
+
+                    @Override
+                    public void onClick(View v) {
+                        showGitHub();
+                    }
+                })
+                .setActionTextColor(getResources().getColor(R.color.achievements))
+                .setTextColor(getResources().getColor(R.color.schedule))
+                .show();
+    }
+
+    public void showGitHub() {
+        Snackbar.make(parent, "https://github.com/allanlzee", Snackbar.LENGTH_INDEFINITE)
+                .setTextColor(getResources().getColor(R.color.eveningButton))
+                .show();
+    }

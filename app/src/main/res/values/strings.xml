@@ -226,5 +226,6 @@
     <string name="notifications">Notifications</string>
     <string name="customNotifications">Custom Notifications</string>
     <string name="nightMode">Night Mode</string>
+    <string name="projects">See Projects</string>
 
 </resources>

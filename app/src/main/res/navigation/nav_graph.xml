@@ -122,7 +122,11 @@
         android:id="@+id/mindfulnessFragment1"
         android:name="com.example2.schoolguider.MindfulnessFragment1"
         android:label="mindfulness1_fragment"
-        tools:layout="@layout/mindfulness1_fragment" />
+        tools:layout="@layout/mindfulness1_fragment" >
+        <action
+            android:id="@+id/action_mindfulnessFragment1_to_notification2"
+            app:destination="@id/notification2" />
+    </fragment>
     <fragment
         android:id="@+id/music_Mindfulness"
         android:name="com.example2.schoolguider.Music_Mindfulness"
@@ -240,4 +244,9 @@
         android:name="com.example2.schoolguider.CodingFragment"
         android:label="coding_fragment"
         tools:layout="@layout/coding_fragment" />
+    <activity
+        android:id="@+id/notification2"
+        android:name="com.example2.schoolguider.Notification"
+        android:label="notification_activity"
+        tools:layout="@layout/notification_activity" />
 </navigation>

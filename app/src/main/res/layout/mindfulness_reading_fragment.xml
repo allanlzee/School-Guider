@@ -6,7 +6,15 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".Mindfulness_Reading">
 
-    <!-- TODO: Update blank fragment layout -->
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/fab_margin"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/ic_action_home"
+            />
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -35,7 +43,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Reading"
+            android:text="@string/readingTitle"
             android:textSize="30sp"
             android:padding="16dp"
             android:textColor="@color/light_blue_A400"
@@ -48,8 +56,7 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:textAlignment="center"
-        android:text="The greatest glory in living lies not in never falling, but in rising every
-time we fall. \n\n~Nelson Mandela"
+        android:text="@string/readingQuote"
         android:textStyle="italic|bold"
         android:layout_below="@id/appBar"
         android:padding="16dp"
@@ -64,7 +71,7 @@ time we fall. \n\n~Nelson Mandela"
         <TextView
             android:layout_height="125dp"
             android:layout_width="150dp"
-            android:text="The Subtle Art of Not Giving A F*ck"
+            android:text="@string/book1"
             app:layout_row="0"
             app:layout_column="0"
             android:fontFamily="monospace"
@@ -79,7 +86,7 @@ time we fall. \n\n~Nelson Mandela"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:padding="16dp"
-            android:text="The Fault in Our Stars"
+            android:text="@string/book2"
             android:fontFamily="monospace"
             android:textAlignment="center"
             android:textColor="@color/green"
@@ -91,7 +98,7 @@ time we fall. \n\n~Nelson Mandela"
         <TextView
             android:layout_height="wrap_content"
             android:layout_width="150dp"
-            android:text="Harry Potter"
+            android:text="@string/book3"
             android:fontFamily="monospace"
             android:padding="16dp"
             android:textSize="20sp"
@@ -110,7 +117,7 @@ time we fall. \n\n~Nelson Mandela"
             app:layout_column="1"
             android:src="@drawable/book1"
             android:padding="16dp"
-            android:contentDescription="Book"
+            android:contentDescription="@string/book"
             />
 
         <ImageView
@@ -119,7 +126,7 @@ time we fall. \n\n~Nelson Mandela"
             app:layout_row="1"
             app:layout_column="1"
             android:src="@drawable/tfios"
-            android:contentDescription="book"
+            android:contentDescription="@string/book"
             />
 
         <ImageView
@@ -129,7 +136,7 @@ time we fall. \n\n~Nelson Mandela"
             app:layout_column="1"
             android:src="@drawable/harrypotter"
             android:layout_marginStart="14dp"
-            android:contentDescription="book"
+            android:contentDescription="@string/book"
             />
 
         <TextView
@@ -175,21 +182,5 @@ time we fall. \n\n~Nelson Mandela"
             android:textColor="@color/blue"
             />
     </androidx.gridlayout.widget.GridLayout>
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="100dp">
-
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/fab"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/fab_margin"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/ic_action_home"
-            />
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </RelativeLayout>

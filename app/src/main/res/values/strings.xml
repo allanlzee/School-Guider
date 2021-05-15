@@ -227,5 +227,12 @@
     <string name="customNotifications">Custom Notifications</string>
     <string name="nightMode">Night Mode</string>
     <string name="projects">See Projects</string>
+    <string name="book">Book</string>
+    <string name="readingTitle">Reading</string>
+    <string name="readingQuote">"The greatest glory in living lies not in never falling, but in rising every
+time we fall." ~Nelson Mandela</string>
+    <string name="book1">The Subtle Art of Not Giving A F*ck</string>
+    <string name="book2">The Fault in Our Stars</string>
+    <string name="book3">Harry Potter</string>
 
 </resources>

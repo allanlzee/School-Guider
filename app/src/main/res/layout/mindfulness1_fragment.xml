@@ -41,21 +41,20 @@
             android:layout_width="70dp"
             android:layout_height="70dp"
             android:layout_marginBottom="140dp"
-            app:layout_constraintBottom_toTopOf="@+id/dummy_button"
+            app:layout_constraintBottom_toTopOf="@+id/startMeditation"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintVertical_bias="0.705" />
 
         <Button
-            android:id="@+id/dummy_button"
+            android:id="@+id/startMeditation"
             style="?android:attr/buttonBarButtonStyle"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Start Meditation"
             android:textColor="@color/white"
-            android:onClick="onMeditationStart"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"

@@ -8,6 +8,7 @@ import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.NavController;
+import androidx.navigation.NavHost;
 import androidx.navigation.Navigation;
 import androidx.navigation.fragment.NavHostFragment;
 
@@ -19,6 +20,7 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
+import android.widget.Button;
 
 import com.example2.schoolguider.databinding.Mindfulness1FragmentBinding;
 
@@ -125,6 +127,8 @@ public class MindfulnessFragment1 extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         mVisible = true;
 
+        Button meditation = view.findViewById(R.id.startMeditation);
+
         mContentView = binding.fullscreenContent;
 
         // Set up the user interaction to manually show or hide the system UI.
@@ -138,7 +142,13 @@ public class MindfulnessFragment1 extends Fragment {
         // Upon interacting with UI controls, delay any scheduled hide()
         // operations to prevent the jarring behavior of controls going away
         // while interacting with the UI.
-        binding.dummyButton.setOnTouchListener(mDelayHideTouchListener);
+        meditation.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                NavHostFragment.findNavController(MindfulnessFragment1.this).navigate(R.id.action_mindfulnessFragment1_to_notification2);
+            }
+        });
     }
 
     @Override
@@ -235,10 +245,4 @@ public class MindfulnessFragment1 extends Fragment {
         super.onDestroyView();
         binding = null;
     }
-
-    public void onMeditationStart(View view) {
-        // TODO: rework the navigation system
-        NavHostFragment.findNavController(MindfulnessFragment1.this).navigate(R.id.action_mindfulnessFragment1_to_meditationFragment);
-    }
-
 }

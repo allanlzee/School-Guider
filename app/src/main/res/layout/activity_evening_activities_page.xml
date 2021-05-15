@@ -50,7 +50,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
         android:layout_margin="@dimen/fab_margin"
-        app:srcCompat="@android:drawable/ic_dialog_email"
+        app:srcCompat="@drawable/ic_action_home"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
         android:contentDescription="@string/filler"/>
@@ -74,6 +74,7 @@
             android:backgroundTint="@color/eveningButton"/>
 
         <Button
+            android:id="@+id/codingButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="20sp"

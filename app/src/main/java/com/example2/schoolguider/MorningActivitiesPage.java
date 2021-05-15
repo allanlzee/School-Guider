@@ -1,5 +1,6 @@
 package com.example2.schoolguider;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -31,8 +32,17 @@ public class MorningActivitiesPage extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                Snackbar.make(view, "Back to Home", Snackbar.LENGTH_LONG)
+                        .setAction("Continue", new View.OnClickListener() {
+
+                            @Override
+                            public void onClick(View v) {
+                                startActivity(new Intent(MorningActivitiesPage.this, MainActivity.class));
+                            }
+                        })
+                        .setActionTextColor(getResources().getColor(R.color.morningButton))
+                        .setTextColor(getResources().getColor(R.color.meditate))
+                        .show();
             }
         });
     }

@@ -33,9 +33,17 @@ public class School_Page extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-        // TODO: add functionality that displays a message and immediately returns the user to the home activity
-                Snackbar.make(view, "Returning to home page", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                Snackbar.make(view, "Return to Home Page", Snackbar.LENGTH_LONG)
+                        .setAction("Continue", new View.OnClickListener() {
+
+                            @Override
+                            public void onClick(View v) {
+                                startActivity(new Intent(School_Page.this, MainActivity.class));
+                            }
+                        })
+                        .setActionTextColor(getResources().getColor(R.color.music))
+                        .setTextColor(getResources().getColor(R.color.afternoonButton))
+                        .show();
             }
         });
 

@@ -16,7 +16,7 @@
         app:srcCompat="@drawable/ic_action_home"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
-        android:contentDescription="Home Button"/>
+        android:contentDescription="@string/filler"/>
 
     <Button
         android:id="@+id/button"

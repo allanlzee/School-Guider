@@ -1,5 +1,6 @@
 package com.example2.schoolguider;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import com.google.android.material.snackbar.Snackbar;
@@ -37,8 +38,17 @@ public class Goals_Starter extends AppCompatActivity {
         binding.fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                Snackbar.make(view, "Back to Home", Snackbar.LENGTH_LONG)
+                        .setAction("Continue", new View.OnClickListener() {
+
+                            @Override
+                            public void onClick(View v) {
+                                startActivity(new Intent(Goals_Starter.this, MainActivity.class));
+                            }
+                        })
+                        .setActionTextColor(getResources().getColor(R.color.schedule))
+                        .setTextColor(getResources().getColor(R.color.orange))
+                        .show();
             }
         });
     }

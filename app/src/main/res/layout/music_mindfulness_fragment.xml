@@ -318,7 +318,7 @@
             android:layout_width="100sp"
             android:layout_height="wrap_content"
             android:onClick="onBtnClick"
-            android:text="The Beatles"
+            android:text="@string/beatles"
             android:textSize="8dp"
             app:layout_column="0"
             app:layout_row="7"
@@ -329,7 +329,7 @@
             android:layout_width="100sp"
             android:layout_height="wrap_content"
             android:onClick="onBtnClick"
-            android:text="The Beatles"
+            android:text="@string/beatles"
             android:textSize="8dp"
             app:layout_column="1"
             app:layout_row="7"
@@ -340,7 +340,7 @@
             android:layout_width="100sp"
             android:layout_height="wrap_content"
             android:onClick="onBtnClick"
-            android:text="The Beatles"
+            android:text="@string/beatles"
             android:textSize="8dp"
             app:layout_column="2"
             app:layout_row="7"
@@ -351,7 +351,7 @@
             android:layout_width="100sp"
             android:layout_height="wrap_content"
             android:onClick="onBtnClick"
-            android:text="The Beatles"
+            android:text="@string/beatles"
             android:textSize="8dp"
             app:layout_column="3"
             app:layout_row="7"
@@ -439,6 +439,7 @@
         android:layout_margin="@dimen/fab_margin"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_action_home" />
+        app:srcCompat="@drawable/ic_action_home"
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -39,8 +39,17 @@ public class MindfulnessActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                Snackbar.make(view, "Back to Home", Snackbar.LENGTH_LONG)
+                        .setAction("Continue", new View.OnClickListener() {
+
+                            @Override
+                            public void onClick(View v) {
+                                startActivity(new Intent(MindfulnessActivity.this, MainActivity.class));
+                            }
+                        })
+                        .setActionTextColor(getResources().getColor(R.color.goalsButton))
+                        .setTextColor(getResources().getColor(R.color.reading))
+                        .show();
             }
         });
 
@@ -64,9 +73,6 @@ public class MindfulnessActivity extends AppCompatActivity {
             case R.id.nav_home:
                 Toast.makeText(MindfulnessActivity.this, "Settings", Toast.LENGTH_SHORT).show();
                 startActivity(new Intent(MindfulnessActivity.this, SettingsActivity.class));
-                /* Intent intent = new Intent(MainActivity.this, SettingsActivity.class);
-                ActivityOptions transition = ActivityOptions.makeSceneTransitionAnimation(this, transitionActivity.toBundle());
-                startActivity(intent, transition.toBundle()); */
                 return true;
             case R.id.nav_school:
                 Toast.makeText(MindfulnessActivity.this, "School", Toast.LENGTH_SHORT).show();

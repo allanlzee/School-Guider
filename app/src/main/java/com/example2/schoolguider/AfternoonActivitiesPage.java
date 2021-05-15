@@ -26,8 +26,8 @@ public class AfternoonActivitiesPage extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Back to Home?", Snackbar.LENGTH_LONG)
-                        .setAction("Go", new View.OnClickListener() {
+                Snackbar.make(view, "Back to Home", Snackbar.LENGTH_LONG)
+                        .setAction("Continue", new View.OnClickListener() {
 
                             @Override
                             public void onClick(View v) {

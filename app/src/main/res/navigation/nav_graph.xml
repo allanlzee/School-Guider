@@ -111,7 +111,13 @@
         android:id="@+id/eveningActivitiesPage"
         android:name="com.example2.schoolguider.EveningActivitiesPage"
         android:label="activity_evening_activities_page"
-        tools:layout="@layout/activity_evening_activities_page" />
+        tools:layout="@layout/activity_evening_activities_page" >
+        <action
+            android:id="@+id/action_eveningActivitiesPage_to_codingFragment"
+            app:destination="@id/codingFragment"
+            app:enterAnim="@anim/fragment_fade_enter"
+            app:exitAnim="@anim/fragment_fade_exit" />
+    </activity>
     <fragment
         android:id="@+id/mindfulnessFragment1"
         android:name="com.example2.schoolguider.MindfulnessFragment1"
@@ -121,12 +127,20 @@
         android:id="@+id/music_Mindfulness"
         android:name="com.example2.schoolguider.Music_Mindfulness"
         android:label="music_mindfulness_fragment"
-        tools:layout="@layout/music_mindfulness_fragment" />
+        tools:layout="@layout/music_mindfulness_fragment" >
+        <action
+            android:id="@+id/action_music_Mindfulness_to_mindfulnessActivity"
+            app:destination="@id/mindfulnessActivity" />
+    </fragment>
     <fragment
         android:id="@+id/mindfulness_Reading"
         android:name="com.example2.schoolguider.Mindfulness_Reading"
         android:label="mindfulness_reading_fragment"
-        tools:layout="@layout/mindfulness_reading_fragment" />
+        tools:layout="@layout/mindfulness_reading_fragment" >
+        <action
+            android:id="@+id/action_mindfulness_Reading_to_mindfulnessActivity"
+            app:destination="@id/mindfulnessActivity" />
+    </fragment>
     <fragment
         android:id="@+id/gradesFragment"
         android:name="com.example2.schoolguider.GradesFragment"

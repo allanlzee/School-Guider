@@ -9,10 +9,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.view.View;
 
-import androidx.navigation.NavController;
-import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
-import androidx.navigation.ui.NavigationUI;
 
 import com.example2.schoolguider.databinding.CourseGradesBinding;
 
@@ -31,8 +28,17 @@ public class Course_Grades extends AppCompatActivity {
         binding.fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                Snackbar.make(view, "Back to Home", Snackbar.LENGTH_LONG)
+                        .setAction("Continue", new View.OnClickListener() {
+
+                            @Override
+                            public void onClick(View v) {
+                                startActivity(new Intent(Course_Grades.this, MainActivity.class));
+                            }
+                        })
+                        .setActionTextColor(getResources().getColor(R.color.goalsButton))
+                        .setTextColor(getResources().getColor(R.color.teal_200))
+                        .show();
             }
         });
     }

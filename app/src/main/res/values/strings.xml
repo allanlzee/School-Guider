@@ -234,5 +234,9 @@ time we fall." ~Nelson Mandela</string>
     <string name="book1">The Subtle Art of Not Giving A F*ck</string>
     <string name="book2">The Fault in Our Stars</string>
     <string name="book3">Harry Potter</string>
+    <string name="title_activity_daily_notification">DailyNotification</string>
+    <string name="notification">Daily Notifications</string>
+    <string name="alarm_cancel">Alarm Cancelled</string>
+    <string name="title_activity_evening_activites_page">Evening Activities Page</string>
 
 </resources>

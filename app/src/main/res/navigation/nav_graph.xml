@@ -249,4 +249,9 @@
         android:name="com.example2.schoolguider.Notification"
         android:label="notification_activity"
         tools:layout="@layout/notification_activity" />
+    <activity
+        android:id="@+id/dailyNotification"
+        android:name="com.example2.schoolguider.DailyNotification"
+        android:label="daily_notification"
+        tools:layout="@layout/daily_notification" />
 </navigation>

@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example2.schoolguider"
->
+    package="com.example2.schoolguider">
 
     <application
         android:allowBackup="true"
@@ -12,9 +11,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SchoolGuider">
         <activity
+            android:name=".DailyNotification"
+            android:label="@string/title_activity_daily_notification"
+            android:theme="@style/Theme.SchoolGuider.NoActionBar" />
+
+        <receiver android:name=".AlertReceiver"/>
+
+        <activity
             android:name=".GradesInput"
             android:label="@string/title_activity_grades_input"
-            android:theme="@style/Theme.SchoolGuider.NoActionBar"></activity>
+            android:theme="@style/Theme.SchoolGuider.NoActionBar" />
         <activity
             android:name=".Goals_Starter"
             android:label="@string/title_activity_goals_starter"
@@ -83,6 +89,7 @@
         </activity>
 
         <receiver android:name=".ReminderBroadcast" />
+
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />

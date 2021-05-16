@@ -239,4 +239,8 @@ time we fall." ~Nelson Mandela</string>
     <string name="alarm_cancel">Alarm Cancelled</string>
     <string name="title_activity_evening_activites_page">Evening Activities Page</string>
 
+    <string name="setAlarmMeditation">Set a Meditation Reminder</string>
+    <string name="cancelAlarmMeditation">Cancel Meditation Reminder</string>
+
+
 </resources>

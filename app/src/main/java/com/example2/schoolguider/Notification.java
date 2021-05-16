@@ -1,7 +1,9 @@
 package com.example2.schoolguider;
 
+import android.app.AlarmManager;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
+import android.app.TimePickerDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -12,8 +14,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.view.View;
 import android.widget.Button;
+import android.widget.TimePicker;
+import android.widget.Toast;
 
 import androidx.core.app.NotificationCompat;
+import androidx.fragment.app.DialogFragment;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
@@ -21,7 +26,10 @@ import androidx.navigation.ui.NavigationUI;
 
 import com.example2.schoolguider.databinding.NotificationActivityBinding;
 
-public class Notification extends AppCompatActivity {
+import java.text.DateFormat;
+import java.util.Calendar;
+
+public class Notification extends AppCompatActivity implements TimePickerDialog.OnTimeSetListener {
 
     private AppBarConfiguration appBarConfiguration;
     private NotificationActivityBinding binding;
@@ -35,8 +43,8 @@ public class Notification extends AppCompatActivity {
         binding = NotificationActivityBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        /*
-        setSupportActionBar(binding.toolbar);
+
+        // setSupportActionBar(binding.toolbar);
 
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_notification);
         appBarConfiguration = new AppBarConfiguration.Builder(navController.getGraph()).build();
@@ -48,39 +56,32 @@ public class Notification extends AppCompatActivity {
                 Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
             }
-        });*/
+        });
 
-        notification = findViewById(R.id.notificationButton);
+        Button setMeditationAlarm = findViewById(R.id.setReminder);
+        Button cancelMeditationAlarm = findViewById(R.id.cancelReminder);
 
-        notification.setOnClickListener(new View.OnClickListener() {
+        setMeditationAlarm.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
-                String message = "Notification Enabled: ";
-                NotificationCompat.Builder builder = new NotificationCompat.Builder(
-                        Notification.this
-                )
-                        .setSmallIcon(R.drawable.ic_baseline_circle_notifications_24)
-                        .setContentTitle("Notification: School Guider")
-                        .setContentText(message)
-                        .setAutoCancel(true);
+                final Calendar calendar = Calendar.getInstance();
+                int hour = calendar.get(Calendar.HOUR_OF_DAY);
+                int minute = calendar.get(Calendar.MINUTE);
 
-                Intent intent = new Intent(Notification.this,
-                        SettingsActivity.class);
-                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                intent.putExtra("message", message);
-
-                PendingIntent pendingIntent = PendingIntent.getActivity(Notification.this, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT);
-
-                builder.setContentIntent(pendingIntent);
-
-                NotificationManager notificationManager = (NotificationManager)getSystemService(
-                        Context.NOTIFICATION_SERVICE
-                );
-
-                notificationManager.notify(0, builder.build());
+                DialogFragment timePicker = new TimePickerFragment();
+                timePicker.show(getSupportFragmentManager(), "Time Picker");
             }
         });
+
+        cancelMeditationAlarm.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                cancelAlarm();
+            }
+        });
+
     }
 
     @Override
@@ -88,5 +89,45 @@ public class Notification extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_notification);
         return NavigationUI.navigateUp(navController, appBarConfiguration)
                 || super.onSupportNavigateUp();
+    }
+
+    @Override
+    public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
+        Calendar calendar = Calendar.getInstance();
+        calendar.set(Calendar.HOUR_OF_DAY, hourOfDay);
+        calendar.set(Calendar.MINUTE, minute);
+        calendar.set(Calendar.SECOND, 0);
+
+        // Update TextView
+        updateTimeText(calendar);
+        startAlarm(calendar);
+    }
+
+    public void updateTimeText(Calendar calendar) {
+        String timeText = "Alarm Set for Time: ";
+        timeText += DateFormat.getTimeInstance(DateFormat.SHORT).format(calendar.getTime());
+
+        Toast.makeText(Notification.this, timeText, Toast.LENGTH_LONG).show();
+    }
+
+    public void startAlarm(Calendar calendar) {
+        AlarmManager alarmManager = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
+        Intent intent = new Intent(this, AlertReceiver.class);
+        PendingIntent pendingIntent = PendingIntent.getBroadcast(this, 1, intent, 0);
+
+        if (calendar.before(Calendar.getInstance())) {
+            calendar.add(Calendar.DATE, 1);
+        }
+
+        alarmManager.setExact(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), pendingIntent);
+    }
+
+    public void cancelAlarm() {
+        AlarmManager alarmManager = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
+        Intent intent = new Intent(this, AlertReceiver.class);
+        PendingIntent pendingIntent = PendingIntent.getBroadcast(this, 1, intent, 0);
+
+        alarmManager.cancel(pendingIntent);
+        Toast.makeText(Notification.this, getResources().getString(R.string.alarm_cancel), Toast.LENGTH_LONG).show();
     }
 }

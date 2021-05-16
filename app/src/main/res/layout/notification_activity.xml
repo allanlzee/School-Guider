@@ -6,14 +6,35 @@
     android:layout_height="match_parent"
     tools:context=".Notification">
 
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/meditation_wallpaper"
+        />
+
+
     <Button
-        android:id="@+id/notificationButton"
+        android:id="@+id/setReminder"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/title_activity_notification"
+        android:backgroundTint="@color/morning"
+        android:text="@string/setAlarmMeditation"
         android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"/>
+        android:layout_marginTop="150dp"
+        android:textSize="12sp"
+        />
 
+    <Button
+        android:id="@+id/cancelReminder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/morning"
+        android:text="@string/cancelAlarmMeditation"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/setReminder"
+        android:layout_marginTop="20dp"
+        android:textSize="12sp"
+        />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab"

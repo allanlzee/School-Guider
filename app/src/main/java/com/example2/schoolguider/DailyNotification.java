@@ -89,12 +89,9 @@ public class DailyNotification extends AppCompatActivity implements TimePickerDi
 
             @Override
             public void onClick(View v) {
-                // TODO: create method
                 cancelAlarm();
             }
         });
-
-
     }
 
     @Override
@@ -112,8 +109,6 @@ public class DailyNotification extends AppCompatActivity implements TimePickerDi
         calendar.set(Calendar.MINUTE, minute);
         calendar.set(Calendar.SECOND, 0);
 
-        // Update TextView
-        // TODO: add following methods
         updateTimeText(calendar);
         startAlarm(calendar);
     }

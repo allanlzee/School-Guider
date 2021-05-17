@@ -4,6 +4,7 @@ import android.os.Bundle;
 
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.fragment.NavHostFragment;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,6 +12,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 
 /**
@@ -76,6 +78,14 @@ public class CodingFragment extends Fragment {
             }
         });
 
+        FloatingActionButton backToHome = view.findViewById(R.id.backToHome);
+        backToHome.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                NavHostFragment.findNavController(CodingFragment.this).navigate(R.id.action_codingFragment_to_school_Schedule2);
+            }
+        });
+
         // Inflate the layout for this fragment
         return view;
     }
@@ -99,3 +109,4 @@ public class CodingFragment extends Fragment {
                 .setTextColor(getResources().getColor(R.color.eveningButton))
                 .show();
     }
+}

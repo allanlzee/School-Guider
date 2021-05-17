@@ -137,7 +137,7 @@
             android:layout_height="50dp"
             android:onClick="onBtnClick"
             android:text="@string/coldplay"
-            android:textSize="10dp"
+            android:textSize="10sp"
             app:layout_column="2"
             app:layout_row="1"
             android:backgroundTint="@color/morning"/>
@@ -297,7 +297,7 @@
             android:layout_height="wrap_content"
             android:onClick="onBtnClick"
             android:text="@string/weezer"
-            android:textSize="10dp"
+            android:textSize="10sp"
             app:layout_column="2"
             app:layout_row="5"
             android:backgroundTint="@color/eveningButton"/>
@@ -308,7 +308,7 @@
             android:layout_height="wrap_content"
             android:onClick="onBtnClick"
             android:text="@string/beatles"
-            android:textSize="8dp"
+            android:textSize="8sp"
             app:layout_column="3"
             app:layout_row="5"
             android:backgroundTint="@color/eveningButton"/>
@@ -318,8 +318,8 @@
             android:layout_width="100sp"
             android:layout_height="wrap_content"
             android:onClick="onBtnClick"
-            android:text="@string/beatles"
-            android:textSize="8dp"
+            android:text="@string/bts"
+            android:textSize="8sp"
             app:layout_column="0"
             app:layout_row="7"
             android:backgroundTint="@color/grades_intro"/>
@@ -329,8 +329,8 @@
             android:layout_width="100sp"
             android:layout_height="wrap_content"
             android:onClick="onBtnClick"
-            android:text="@string/beatles"
-            android:textSize="8dp"
+            android:text="@string/snowPatrol"
+            android:textSize="8sp"
             app:layout_column="1"
             app:layout_row="7"
             android:backgroundTint="@color/grades_intro"/>
@@ -340,8 +340,8 @@
             android:layout_width="100sp"
             android:layout_height="wrap_content"
             android:onClick="onBtnClick"
-            android:text="@string/beatles"
-            android:textSize="8dp"
+            android:text="@string/fray"
+            android:textSize="8sp"
             app:layout_column="2"
             app:layout_row="7"
             android:backgroundTint="@color/grades_intro"/>
@@ -351,8 +351,8 @@
             android:layout_width="100sp"
             android:layout_height="wrap_content"
             android:onClick="onBtnClick"
-            android:text="@string/beatles"
-            android:textSize="8dp"
+            android:text="@string/queen"
+            android:textSize="8sp"
             app:layout_column="3"
             app:layout_row="7"
             android:backgroundTint="@color/grades_intro"/>
@@ -440,6 +440,7 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_action_home"
+        android:contentDescription="@string/menu_home"
         />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

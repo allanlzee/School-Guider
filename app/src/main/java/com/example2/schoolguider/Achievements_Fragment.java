@@ -1,15 +1,25 @@
 package com.example2.schoolguider;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
+import android.widget.Spinner;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.NavHost;
 import androidx.navigation.fragment.NavHostFragment;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
+import java.util.ArrayList;
+
 public class Achievements_Fragment extends Fragment {
+
+    private Spinner achievementSelector;
 
     @Override
     public View onCreateView(
@@ -23,12 +33,35 @@ public class Achievements_Fragment extends Fragment {
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        view.findViewById(R.id.button_first).setOnClickListener(new View.OnClickListener() {
+        FloatingActionButton backToHome = view.findViewById(R.id.backToHome);
+        backToHome.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                NavHostFragment.findNavController(Achievements_Fragment.this)
-                    .navigate(R.id.action_achievements_Fragment_to_achievements_Overview);
+            public void onClick(View v) {
+                NavHostFragment.findNavController(Achievements_Fragment.this).navigate(R.id.action_achievements_Fragment_to_achievements_Overview);
             }
         });
+
+        view.findViewById(R.id.academics).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
+
+        view.findViewById(R.id.athletics).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+
+        view.findViewById(R.id.extracurricular).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+
+
     }
 }

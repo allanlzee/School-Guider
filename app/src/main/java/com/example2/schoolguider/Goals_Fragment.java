@@ -9,6 +9,8 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.fragment.NavHostFragment;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
 public class Goals_Fragment extends Fragment {
 
     @Override
@@ -28,6 +30,15 @@ public class Goals_Fragment extends Fragment {
             public void onClick(View view) {
                 NavHostFragment.findNavController(Goals_Fragment.this)
                         .navigate(R.id.action_goals_Fragment_to_goals_Overview);
+            }
+        });
+
+        FloatingActionButton backToHome = view.findViewById(R.id.backToHome);
+        backToHome.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                NavHostFragment.findNavController(Goals_Fragment.this)
+                        .navigate(R.id.action_goals_Fragment_to_goals_Starter);
             }
         });
     }

@@ -155,6 +155,9 @@
             app:destination="@id/grades_Overview"
             app:enterAnim="@anim/fragment_fade_enter"
             app:exitAnim="@anim/fragment_fade_exit" />
+        <action
+            android:id="@+id/action_gradesFragment_to_gradesInput"
+            app:destination="@id/gradesInput" />
     </fragment>
     <fragment
         android:id="@+id/achievements_Fragment"
@@ -182,6 +185,9 @@
         <action
             android:id="@+id/action_achievements_Overview_to_achievements_Fragment"
             app:destination="@id/achievements_Fragment" />
+        <action
+            android:id="@+id/action_achievements_Overview_to_achievements_Starter"
+            app:destination="@id/achievements_Starter" />
     </fragment>
     <fragment
         android:id="@+id/goals_Fragment"
@@ -191,6 +197,9 @@
         <action
             android:id="@+id/action_goals_Fragment_to_goals_Overview"
             app:destination="@id/goals_Overview" />
+        <action
+            android:id="@+id/action_goals_Fragment_to_goals_Starter"
+            app:destination="@id/goals_Starter" />
     </fragment>
     <fragment
         android:id="@+id/goals_Overview"
@@ -243,7 +252,11 @@
         android:id="@+id/codingFragment"
         android:name="com.example2.schoolguider.CodingFragment"
         android:label="coding_fragment"
-        tools:layout="@layout/coding_fragment" />
+        tools:layout="@layout/coding_fragment" >
+        <action
+            android:id="@+id/action_codingFragment_to_school_Schedule2"
+            app:destination="@id/school_Schedule" />
+    </fragment>
     <activity
         android:id="@+id/notification2"
         android:name="com.example2.schoolguider.Notification"

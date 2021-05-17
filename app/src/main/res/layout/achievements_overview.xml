@@ -6,6 +6,17 @@
     android:layout_height="match_parent"
     tools:context=".Achievements_Overview">
 
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/backToHome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        app:srcCompat="@drawable/ic_action_home"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:contentDescription="@string/filler"/>
+
     <ImageView
         android:id="@+id/achievementsImage"
         android:layout_width="match_parent"

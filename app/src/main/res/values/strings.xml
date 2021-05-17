@@ -43,6 +43,7 @@
     <string name="nav_header_subtitle">android.studio@android.com</string>
     <string name="nav_header_desc">Navigation header</string>
 
+    <!--Menu Strings-->
     <string name="menu_home">Home</string>
     <string name="menu_gallery">Gallery</string>
     <string name="menu_slideshow">Slideshow</string>
@@ -138,13 +139,16 @@
         "For example, position the FAB to one side of stream of a cards so the FAB won’t interfere "
         "when a user tries to pick up one of cards.\n\n"
     </string>
-    <!-- TODO: Remove or change this placeholder text -->
+
+    <!--Placeholder Text-->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_notification">Notification</string>
     <string name="title_activity_course_grades">Course_Grades</string>
     <string name="title_activity_achievements_starter">Achievements_Starter</string>
     <string name="title_activity_goals_starter">Goals_Starter</string>
     <string name="title_activity_grades_input">GradesInput</string>
+
+    <!--School Activity Section-->
     <string name="quote1">"There are two types of people who will tell you that you cannot make a difference in this world: those who are afraid to try and those who are afraid you will succeed."</string>
     <string name="author1">-Ray Goforth</string>
     <string name="quote2">"There is a powerful driving force inside every human being that, once unleashed, can make any vision, dream, or desire a reality."</string>
@@ -168,16 +172,33 @@
     <string name="product">"Let's have a productive afternoon!"</string>
     <string name="eveningRelax">Relaxing Evening Activities</string>
     <string name="close">"Let's close out the day…"</string>
+
+    <!--Schedule Activities-->
     <string name="eveAct">Evening Activities</string>
     <string name="violin">Violin</string>
     <string name="basketball">Basketball</string>
     <string name="coding">Coding</string>
     <string name="dinner">Dinner</string>
+    <string name="afternoonA">Afternoon Activities</string>
+    <string name="homework">Homework</string>
+    <string name="lunch">Lunch</string>
+    <string name="school">School</string>
+    <string name="morningAct">Morning Activities</string>
+    <string name="meditation">Meditation</string>
+    <string name="workout">Workout</string>
+    <string name="breakfast">Breakfast</string>
+    <string name="music">Music</string>
+    <string name="reading">Reading</string>
+    <string name="chill">Just Chill…</string>
+
+    <!--Goals Sections-->
     <string name="goals">Goals Overview</string>
     <string name="goals2">Make Your Goals!</string>
     <string name="achievements">See Your Achievements!</string>
     <string name="courseGrades">Course Grades</string>
     <string name="curriculum">Curricular Overview</string>
+
+    <!--View Grades Section-->
     <string name="course1">Course 1</string>
     <string name="course2">Course 2</string>
     <string name="course3">Course 3</string>
@@ -195,17 +216,8 @@
     <string name="math">Math</string>
     <string name="science">Science</string>
     <string name="addMark">Add Mark</string>
-    <string name="afternoonA">Afternoon Activities</string>
-    <string name="homework">Homework</string>
-    <string name="lunch">Lunch</string>
-    <string name="school">School</string>
-    <string name="morningAct">Morning Activities</string>
-    <string name="meditation">Meditation</string>
-    <string name="workout">Workout</string>
-    <string name="breakfast">Breakfast</string>
-    <string name="music">Music</string>
-    <string name="reading">Reading</string>
-    <string name="chill">Just Chill...</string>
+
+    <!--Music Strings -->
     <string name="musicSection">"Allan's Favorite Music"</string>
     <string name="chilly">Chill</string>
     <string name="energy">Energy</string>
@@ -217,12 +229,18 @@
     <string name="greenday">Green Day</string>
     <string name="nirvana">Nirvana</string>
     <string name="postmalone">Post Malone</string>
-    <string name="gunsnroses">Guns N' Roses</string>
+    <string name="gunsnroses">Guns N\\' Roses</string>
     <string name="day6">Day 6</string>
     <string name="weezer">Weezer</string>
+    <string name="queen">Queen</string>
     <string name="coldplay">Coldplay</string>
     <string name="lofi">Lo-Fi</string>
+    <string name="bts">BTS</string>
+    <string name="snowPatrol">Snow Patrol</string>
+    <string name="fray">The Fray</string>
     <string name="arctic">Arctic Monkeys</string>
+
+    <!--Notification Strings-->
     <string name="notifications">Notifications</string>
     <string name="customNotifications">Custom Notifications</string>
     <string name="nightMode">Night Mode</string>
@@ -239,11 +257,18 @@ time we fall." ~Nelson Mandela</string>
     <string name="alarm_cancel">Alarm Cancelled</string>
     <string name="title_activity_evening_activites_page">Evening Activities Page</string>
 
+    <!--Alarm Notifications-->
     <string name="setAlarmMeditation">Set a Meditation Reminder</string>
     <string name="cancelAlarmMeditation">Cancel Meditation Reminder</string>
     <string name="cancelAlarm">Cancel Alarm</string>
     <string name="openAlarm">Open Time Picker</string>
     <string name="initialText">No Alarm Set</string>
+
+    <!--Button Strings-->
+    <string name="setAchievement">Add an Achievement</string>
+    <string name="academic">Academics</string>
+    <string name="athletics">Athletics</string>
+    <string name="extra">Extracurriculars</string>
 
 
 </resources>

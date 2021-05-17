@@ -9,7 +9,10 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.NavHost;
 import androidx.navigation.fragment.NavHostFragment;
+
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
 
@@ -22,8 +25,6 @@ public class GradesFragment extends Fragment {
     private TextView grade6;
     private TextView grade7;
     private TextView grade8;
-
-    // TODO: use these TextViews for editing
 
     @Override
     public View onCreateView(
@@ -42,6 +43,15 @@ public class GradesFragment extends Fragment {
             public void onClick(View view) {
                 NavHostFragment.findNavController(GradesFragment.this)
                         .navigate(R.id.action_gradesFragment_to_grades_Overview);
+            }
+        });
+
+        FloatingActionButton backToHome = view.findViewById(R.id.backToHome);
+        backToHome.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                NavHostFragment.findNavController(GradesFragment.this)
+                        .navigate(R.id.action_gradesFragment_to_gradesInput);
             }
         });
     }

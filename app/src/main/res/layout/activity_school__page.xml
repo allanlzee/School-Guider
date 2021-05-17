@@ -37,16 +37,14 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
         android:layout_margin="@dimen/fab_margin"
-        android:layout_marginBottom="675dp"
+        android:contentDescription="@string/filler"
         app:layout_constraintBottom_toBottomOf="@+id/include"
         app:layout_constraintEnd_toStartOf="@+id/appBarLayout"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0"
-        app:srcCompat="@drawable/ic_action_home"
-        android:contentDescription="Email Button"
-        />
+        app:srcCompat="@drawable/ic_action_home" />
 
     <Button
         android:id="@+id/gradesButton"

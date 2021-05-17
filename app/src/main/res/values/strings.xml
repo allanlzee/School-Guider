@@ -241,6 +241,9 @@ time we fall." ~Nelson Mandela</string>
 
     <string name="setAlarmMeditation">Set a Meditation Reminder</string>
     <string name="cancelAlarmMeditation">Cancel Meditation Reminder</string>
+    <string name="cancelAlarm">Cancel Alarm</string>
+    <string name="openAlarm">Open Time Picker</string>
+    <string name="initialText">No Alarm Set</string>
 
 
 </resources>

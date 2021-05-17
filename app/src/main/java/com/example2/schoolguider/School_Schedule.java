@@ -24,38 +24,17 @@ import java.util.ArrayList;
 
 public class School_Schedule extends AppCompatActivity {
 
-    // Initialize Spinners on the Schedule
-    private Spinner morning1;
-    private Spinner afternoon1;
-    private Spinner evening1;
+    private Spinner morning1, morning2, morning3, morning4;
+    private Spinner afternoon1, afternoon2, afternoon3, afternoon4;
+    private Spinner evening1, evening2, evening3, evening4;
 
-    private Spinner morning2;
-    private Spinner afternoon2;
-    private Spinner evening2;
+    private Button course1, course2, course3, course4;
 
-    private Spinner morning3;
-    private Spinner afternoon3;
-    private Spinner evening3;
+    private Button course5, course6, course7, course8;
 
-    private Spinner morning4;
-    private Spinner afternoon4;
-    private Spinner evening4;
+    private Button course9, course10, course11, course12;
 
-    // Initialize Buttons
-    private Button course1;
-    private Button course2;
-    private Button course3;
-    private Button course4;
-
-    private Button course5;
-    private Button course6;
-    private Button course7;
-    private Button course8;
-
-    private Button course9;
-    private Button course10;
-    private Button course11;
-    private Button course12;
+    private FloatingActionButton setAlarm;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -172,7 +151,13 @@ public class School_Schedule extends AppCompatActivity {
             }
         });
 
-        // TODO: add remaining button functionality
+        setAlarm = findViewById(R.id.buttonToAlarm);
+        setAlarm.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(School_Schedule.this, DailyNotification.class));
+            }
+        });
     }
 
     // This function brings the user to the "Morning Section" of the App when the user clicks on the Morning button in the schedule
@@ -198,12 +183,9 @@ public class School_Schedule extends AppCompatActivity {
     public void onEveningClick(View view) {
         Toast.makeText(School_Schedule.this, "Good Evening!", Toast.LENGTH_SHORT).show();
 
-        // action_school_Schedule_to_evening_Fragment
-
         NavController activityToEvening = Navigation.findNavController(School_Schedule.this,
                 R.id.action_school_Schedule_to_evening_Fragment);
         activityToEvening.navigateUp();
         activityToEvening.navigate(R.id.action_school_Schedule_to_evening_Fragment);
     }
-
 }

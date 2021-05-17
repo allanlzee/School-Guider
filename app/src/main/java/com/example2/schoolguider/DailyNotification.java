@@ -45,7 +45,6 @@ public class DailyNotification extends AppCompatActivity implements TimePickerDi
 
         setSupportActionBar(binding.toolbar);
 
-        // TODO: try nav_host_fragment_content_daily_notification
         NavController navController = Navigation.findNavController(this, R.id.action_FirstFragment_to_SecondFragment);
         appBarConfiguration = new AppBarConfiguration.Builder(navController.getGraph()).build();
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
@@ -114,8 +113,9 @@ public class DailyNotification extends AppCompatActivity implements TimePickerDi
     }
 
     public void updateTimeText(Calendar calendar) {
-        String timeText = "Alarm Set for Time: ";
+        String timeText = "Your Schedule is Starting at: ";
         timeText += DateFormat.getTimeInstance(DateFormat.SHORT).format(calendar.getTime());
+        timeText += "!";
 
         alarmText.setText(timeText);
     }
@@ -123,7 +123,6 @@ public class DailyNotification extends AppCompatActivity implements TimePickerDi
     public void startAlarm(Calendar calendar) {
         AlarmManager alarmManager = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
         Intent intent = new Intent(this, AlertReceiver.class);
-        // TODO: create AlertReceiver.java file to handle alarm
         PendingIntent pendingIntent = PendingIntent.getBroadcast(this, 1, intent, 0);
 
         if (calendar.before(Calendar.getInstance())) {

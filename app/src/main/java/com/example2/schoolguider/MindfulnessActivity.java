@@ -52,10 +52,6 @@ public class MindfulnessActivity extends AppCompatActivity {
                         .show();
             }
         });
-
-        /* Fragment reading = new Fragment();
-        FragmentManager manager = getSupportFragmentManager();
-        manager.beginTransaction().replace(R.id.mainLayout, reading).commit(); */
     }
 
     @Override

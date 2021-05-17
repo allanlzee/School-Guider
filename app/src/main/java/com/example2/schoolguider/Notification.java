@@ -1,7 +1,6 @@
 package com.example2.schoolguider;
 
 import android.app.AlarmManager;
-import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.app.TimePickerDialog;
 import android.content.Context;
@@ -17,7 +16,6 @@ import android.widget.Button;
 import android.widget.TimePicker;
 import android.widget.Toast;
 
-import androidx.core.app.NotificationCompat;
 import androidx.fragment.app.DialogFragment;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;

@@ -12,7 +12,6 @@
         android:src="@drawable/meditation_wallpaper"
         />
 
-
     <Button
         android:id="@+id/setReminder"
         android:layout_width="wrap_content"

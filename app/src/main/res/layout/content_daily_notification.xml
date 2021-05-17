@@ -5,14 +5,23 @@
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/wallpaper"
+        android:contentDescription="@string/filler"/>
+
     <TextView
         android:id="@+id/alarmSet"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="No Alarm Set"
+        android:text="@string/initialText"
         android:textSize="30sp"
+        android:textColor="@color/green"
+        android:layout_marginBottom="20dp"
+        android:textStyle="bold|italic"
         android:layout_centerHorizontal="true"
-        android:layout_above="@+id/createAlarm"
+
         android:padding="10dp"
         />
 
@@ -20,18 +29,19 @@
         android:id="@+id/createAlarm"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:text="Open Time Picker"
-        />
+        android:layout_centerInParent="true"
+        android:layout_above="@+id/cancelAlarm"
+        android:backgroundTint="@color/grades"
+        android:text="@string/openAlarm"
+        android:layout_marginBottom="30dp"/>
 
     <Button
         android:id="@+id/cancelAlarm"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Cancel Alarm"
-        android:layout_below="@id/createAlarm"
         android:layout_centerHorizontal="true"
-        />
-
+        android:backgroundTint="@color/grades"
+        android:text="@string/cancelAlarm"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="100dp"/>
 </RelativeLayout>

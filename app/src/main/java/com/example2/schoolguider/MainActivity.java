@@ -1,6 +1,5 @@
 package com.example2.schoolguider;
 
-import android.app.ActivityOptions;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -9,9 +8,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
-import android.transition.Explode;
-import android.transition.Fade;
-import android.transition.Slide;
 import android.view.View;
 
 import android.view.Menu;
@@ -54,34 +50,47 @@ public class MainActivity extends AppCompatActivity {
         //noinspection SimplifiableIfStatement
         switch (id) {
             case R.id.nav_home:
+                String destination = "Settings";
                 Toast.makeText(MainActivity.this, "Settings", Toast.LENGTH_SHORT).show();
                 startActivity(new Intent(MainActivity.this, SettingsActivity.class));
-                showSnackBar();
+                showSnackBar(destination);
                 return true;
             case R.id.nav_school:
+                String destination1 = "School";
                 Toast.makeText(MainActivity.this, "School", Toast.LENGTH_SHORT).show();
                 // Bring User to School Pages
                 startActivity(new Intent(MainActivity.this, School_Page.class));
+                showSnackBar(destination1);
                 return true;
             case R.id.nav_schedule:
+                String destination2 = "Schedule";
                 Toast.makeText(MainActivity.this, "Schedule", Toast.LENGTH_SHORT).show();
                 startActivity(new Intent(MainActivity.this, School_Schedule.class));
+                showSnackBar(destination2);
                 return true;
             case R.id.nav_mindfulness:
+                String destination3 = "Mindfulness";
                 Toast.makeText(MainActivity.this, "Mindfulness", Toast.LENGTH_SHORT).show();
                 startActivity(new Intent(MainActivity.this, MindfulnessActivity.class));
+                showSnackBar(destination3);
                 return true;
             case R.id.nav_Morning:
+                String destination4 = "Morning";
                 Toast.makeText(MainActivity.this, "Good Morning " + userName + "!", Toast.LENGTH_SHORT).show();
                 startActivity(new Intent(MainActivity.this, MorningActivitiesPage.class));
+                showSnackBar(destination4);
                 return true;
             case R.id.nav_Afternoon:
+                String destination5 = "Afternoon";
                 Toast.makeText(MainActivity.this, "Good Afternoon " + userName + "!", Toast.LENGTH_SHORT).show();
                 startActivity(new Intent(MainActivity.this, AfternoonActivitiesPage.class));
+                showSnackBar(destination5);
                 return true;
             case R.id.nav_Evening:
+                String destination6 = "Evening";
                 Toast.makeText(MainActivity.this, "Good Evening " + userName + "!", Toast.LENGTH_SHORT).show();
                 startActivity(new Intent(MainActivity.this, EveningActivitiesPage.class));
+                showSnackBar(destination6);
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
@@ -95,8 +104,8 @@ public class MainActivity extends AppCompatActivity {
         userName = inputName.getText().toString();
     }
 
-    public void showSnackBar() {
-        Snackbar.make(parent, "Going to Settings", Snackbar.LENGTH_INDEFINITE)
+    public void showSnackBar(String destination) {
+        Snackbar.make(parent, "Going to " + destination, Snackbar.LENGTH_INDEFINITE)
                 .setAction("Stop", new View.OnClickListener() {
 
                     @Override

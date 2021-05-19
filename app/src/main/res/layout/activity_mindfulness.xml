@@ -19,7 +19,7 @@
             android:gravity="center"
             android:minHeight="?actionBarSize"
             android:padding="@dimen/appbar_padding"
-            android:text="@string/app_name"
+            android:text="@string/meditation"
             android:textSize="40sp"
             android:textAppearance="@style/TextAppearance.Widget.AppCompat.Toolbar.Title" />
 
@@ -46,7 +46,6 @@
         android:layout_gravity="bottom|end"
         android:layout_margin="@dimen/fab_margin"
         app:srcCompat="@drawable/ic_action_home"
-        android:backgroundTint="@color/meditate1"
         android:contentDescription="@string/filler"/>
 
     <androidx.gridlayout.widget.GridLayout

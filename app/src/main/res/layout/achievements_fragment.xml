@@ -9,7 +9,8 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:src="@drawable/wallpaper_goals3" />
+        android:src="@drawable/wallpaper_goals3"
+        android:contentDescription="@string/backpack"/>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/backToHome"
@@ -19,7 +20,8 @@
         android:layout_alignParentBottom="true"
         android:layout_margin="@dimen/fab_margin"
         android:layout_marginTop="16dp"
-        android:src="@drawable/ic_action_home" />
+        android:src="@drawable/ic_action_home"
+        android:contentDescription="@string/home"/>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"

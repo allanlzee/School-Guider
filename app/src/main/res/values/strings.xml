@@ -269,6 +269,10 @@ time we fall." ~Nelson Mandela</string>
     <string name="academic">Academics</string>
     <string name="athletics">Athletics</string>
     <string name="extra">Extracurriculars</string>
+    <string name="home">Home Button</string>
+
+    <string name="course">Course Overview</string>
+    <string name="goalsOverview">Goals Overview</string>
 
 
 </resources>

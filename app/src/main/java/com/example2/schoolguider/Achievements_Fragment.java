@@ -37,7 +37,8 @@ public class Achievements_Fragment extends Fragment {
         backToHome.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                NavHostFragment.findNavController(Achievements_Fragment.this).navigate(R.id.action_achievements_Fragment_to_achievements_Overview);
+                NavHostFragment.findNavController(Achievements_Fragment.this)
+                        .navigate(R.id.action_achievements_Fragment_to_achievements_Overview);
             }
         });
 

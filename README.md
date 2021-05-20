@@ -28,7 +28,7 @@ Main Activity
 ![Screen Shot 2021-05-17 at 4 56 10 PM](https://user-images.githubusercontent.com/74578068/118555231-712cb280-b730-11eb-9126-4da8206c6ab2.png)
 
 When the user first opens the app, this will be the beginning screen. Although the design view does not show this, the user can open the following menu to quickly travel to a particular section. 
-//TODO: add menu picture
+
 
 School Schedule
 The user can select one of three options: Morning, Afternoon, and Evening. Each of these buttons will bring the user to a new fragment with their respectie activities. In addition, the spinners at the bottom are controlled using Java (ArrayList, ArrayAdapter). They can set the text of the button to the different courses that they may be taking. 

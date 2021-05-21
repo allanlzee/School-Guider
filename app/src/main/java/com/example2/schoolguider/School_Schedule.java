@@ -2,6 +2,7 @@ package com.example2.schoolguider;
 import android.content.Intent;
 import android.os.Bundle;
 
+import com.example2.schoolguider.databinding.ActivitySchoolScheduleBinding;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 
@@ -24,6 +25,8 @@ import java.util.ArrayList;
 
 public class School_Schedule extends AppCompatActivity {
 
+    private ActivitySchoolScheduleBinding binding;
+
     private Spinner morning1, morning2, morning3, morning4;
     private Spinner afternoon1, afternoon2, afternoon3, afternoon4;
     private Spinner evening1, evening2, evening3, evening4;
@@ -45,19 +48,14 @@ public class School_Schedule extends AppCompatActivity {
         viewPager.setAdapter(sectionsPagerAdapter);
         FloatingActionButton fab = findViewById(R.id.fab);
 
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Back to Home", Snackbar.LENGTH_LONG)
-                        .setAction("Go", new View.OnClickListener() {
-                            @Override
-                            public void onClick(View v) {
-                                startActivity(new Intent(School_Schedule.this, MainActivity.class));
-                            }
-                        })
-                        .show();
-            }
-        });
+        fab.setOnClickListener(view -> Snackbar.make(view, "Back to Home", Snackbar.LENGTH_LONG)
+                .setAction("Continue", new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        startActivity(new Intent(School_Schedule.this, MainActivity.class));
+                    }
+                })
+                .show());
 
         // Initialize the Spinners using IDs
         morning1 = findViewById(R.id.spinnerMorning1);

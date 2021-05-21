@@ -35,6 +35,7 @@ public class MindfulnessActivity extends AppCompatActivity {
         TabLayout tabs = findViewById(R.id.tabs);
         tabs.setupWithViewPager(viewPager);
         FloatingActionButton fab = findViewById(R.id.fab);
+        FloatingActionButton toAlarm = findViewById(R.id.buttonToAlarm);
 
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -52,6 +53,25 @@ public class MindfulnessActivity extends AppCompatActivity {
                         .show();
             }
         });
+
+        toAlarm.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+                Snackbar.make(view, "Go to Alarm", Snackbar.LENGTH_LONG)
+                        .setAction("Continue", new View.OnClickListener() {
+
+                            @Override
+                            public void onClick(View v) {
+                                startActivity(new Intent(MindfulnessActivity.this, DailyNotification.class));
+                            }
+                        })
+                        .setActionTextColor(getResources().getColor(R.color.morningButton))
+                        .setTextColor(getResources().getColor(R.color.schedule))
+                        .show();
+            }
+        });
+
     }
 
     @Override

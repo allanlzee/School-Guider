@@ -26,7 +26,7 @@
                 android:padding="@dimen/appbar_padding"
                 android:text="@string/app_name"
                 android:textAppearance="@style/TextAppearance.Widget.AppCompat.Toolbar.Title"
-                android:textSize="40sp" />
+                android:textSize="36sp" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -44,7 +44,20 @@
                 android:layout_margin="@dimen/fab_margin"
                 android:layout_alignParentEnd="true"
                 android:src="@drawable/ic_action_home"
+                android:contentDescription="@string/home"
                 />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/buttonToAlarm"
+                android:layout_below="@+id/backToHome"
+                android:layout_alignParentEnd="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:src="@drawable/ic_action_alarm"
+                android:contentDescription="@string/gradesOverviewAchievements"
+                />
+
 
         </RelativeLayout>
 

@@ -28,9 +28,6 @@ public class Goals_Starter extends AppCompatActivity {
         binding = GoalsStarterBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        // setSupportActionBar(binding.toolbar);
-        // TODO: revise the tab bar
-
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_goals_starter);
         appBarConfiguration = new AppBarConfiguration.Builder(navController.getGraph()).build();
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
@@ -48,6 +45,23 @@ public class Goals_Starter extends AppCompatActivity {
                         })
                         .setActionTextColor(getResources().getColor(R.color.schedule))
                         .setTextColor(getResources().getColor(R.color.orange))
+                        .show();
+            }
+        });
+
+        binding.buttonToAlarm.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Snackbar.make(view, "Go to Alarm", Snackbar.LENGTH_LONG)
+                        .setAction("Go", new View.OnClickListener() {
+
+                            @Override
+                            public void onClick(View v) {
+                                startActivity(new Intent(Goals_Starter.this, DailyNotification.class));
+                            }
+                        })
+                        .setActionTextColor(getResources().getColor(R.color.teal_200))
+                        .setTextColor(getResources().getColor(R.color.afternoon))
                         .show();
             }
         });

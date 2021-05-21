@@ -43,6 +43,24 @@ public class Achievements_Starter extends AppCompatActivity {
                         .show();
             }
         });
+
+        binding.buttonToAlarm.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+                Snackbar.make(view, "Go to Alarm", Snackbar.LENGTH_LONG)
+                        .setAction("Continue", new View.OnClickListener() {
+
+                            @Override
+                            public void onClick(View v) {
+                                startActivity(new Intent(Achievements_Starter.this, DailyNotification.class));
+                            }
+                        })
+                        .setActionTextColor(getResources().getColor(R.color.reading))
+                        .setTextColor(getResources().getColor(R.color.goals))
+                        .show();
+            }
+        });
     }
 
     public void onAchievementsClick(View view) {

@@ -274,5 +274,10 @@ time we fall." ~Nelson Mandela</string>
     <string name="course">Course Overview</string>
     <string name="goalsOverview">Goals Overview</string>
 
+    <string name="gradesOverviewAchievements">Achievements</string>
+    <string name="gradesOverviewGoals">Goals</string>
+    <string name="gradesOverviewNextSteps">Next Steps</string>
+    <string name="gradesOverviewAdvice">Advice</string>
+    <string name="gradesOverviewSchedule">Schedule</string>
 
 </resources>

@@ -23,6 +23,7 @@ public class GradesInput extends AppCompatActivity {
     private GradesInputBinding binding;
 
     private FloatingActionButton backToHome;
+    private FloatingActionButton toAlarm;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,12 +37,21 @@ public class GradesInput extends AppCompatActivity {
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
 
         backToHome = findViewById(R.id.backToHome);
+        toAlarm = findViewById(R.id.buttonToAlarm);
 
         backToHome.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(GradesInput.this, MainActivity.class));
+            }
+        });
+
+        toAlarm.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(GradesInput.this, DailyNotification.class));
             }
         });
     }

@@ -72,6 +72,24 @@ public class Notification extends AppCompatActivity implements TimePickerDialog.
             }
         });
 
+        binding.buttonToAlarm.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+                Snackbar.make(view, "Go to Alarm", Snackbar.LENGTH_LONG)
+                        .setAction("Go", new View.OnClickListener() {
+
+                            @Override
+                            public void onClick(View v) {
+                                startActivity(new Intent(Notification.this, DailyNotification.class));
+                            }
+                        })
+                        .setActionTextColor(getResources().getColor(R.color.light_blue_600))
+                        .setTextColor(getResources().getColor(R.color.achievements))
+                        .show();
+            }
+        });
+
         cancelMeditationAlarm.setOnClickListener(new View.OnClickListener() {
 
             @Override

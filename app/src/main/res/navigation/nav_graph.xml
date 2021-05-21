@@ -167,6 +167,9 @@
         <action
             android:id="@+id/action_achievements_Fragment_to_achievements_Overview"
             app:destination="@id/achievements_Overview" />
+        <action
+            android:id="@+id/action_achievements_Fragment_to_dailyNotification"
+            app:destination="@id/dailyNotification" />
     </fragment>
     <fragment
         android:id="@+id/grades_Overview"

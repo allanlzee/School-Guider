@@ -41,6 +41,24 @@ public class Course_Grades extends AppCompatActivity {
                         .show();
             }
         });
+
+        binding.buttonToAlarm.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+                Snackbar.make(view, "Go to Alarm", Snackbar.LENGTH_LONG)
+                        .setAction("Continue", new View.OnClickListener() {
+
+                            @Override
+                            public void onClick(View v) {
+                                startActivity(new Intent(Course_Grades.this, DailyNotification.class));
+                            }
+                        })
+                        .setActionTextColor(getResources().getColor(R.color.meditate))
+                        .setTextColor(getResources().getColor(R.color.green))
+                        .show();
+            }
+        });
     }
 
     @Override

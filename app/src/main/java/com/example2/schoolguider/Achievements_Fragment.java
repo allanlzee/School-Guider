@@ -34,11 +34,21 @@ public class Achievements_Fragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         FloatingActionButton backToHome = view.findViewById(R.id.backToHome);
+        FloatingActionButton toAlarm = view.findViewById(R.id.buttonToAlarm);
         backToHome.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 NavHostFragment.findNavController(Achievements_Fragment.this)
                         .navigate(R.id.action_achievements_Fragment_to_achievements_Overview);
+            }
+        });
+
+        toAlarm.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                NavHostFragment.findNavController(Achievements_Fragment.this)
+                        .navigate(R.id.action_achievements_Fragment_to_dailyNotification);
             }
         });
 

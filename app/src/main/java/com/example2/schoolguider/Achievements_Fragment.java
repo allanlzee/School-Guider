@@ -1,5 +1,6 @@
 package com.example2.schoolguider;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -47,8 +48,9 @@ public class Achievements_Fragment extends Fragment {
 
             @Override
             public void onClick(View v) {
-                NavHostFragment.findNavController(Achievements_Fragment.this)
-                        .navigate(R.id.action_achievements_Fragment_to_dailyNotification);
+                Intent toAlarm = new Intent(getActivity(), DailyNotification.class);
+                startActivity(toAlarm);
+                ((Activity) getActivity()).overridePendingTransition(0, 0);
             }
         });
 

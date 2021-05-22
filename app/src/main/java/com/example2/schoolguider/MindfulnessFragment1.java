@@ -13,6 +13,7 @@ import androidx.navigation.Navigation;
 import androidx.navigation.fragment.NavHostFragment;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.LayoutInflater;
@@ -23,6 +24,7 @@ import android.view.WindowManager;
 import android.widget.Button;
 
 import com.example2.schoolguider.databinding.Mindfulness1FragmentBinding;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 /**
  * An example full-screen activity that shows and hides the system UI (i.e.
@@ -128,6 +130,8 @@ public class MindfulnessFragment1 extends Fragment {
         mVisible = true;
 
         Button meditation = view.findViewById(R.id.startMeditation);
+        FloatingActionButton home = view.findViewById(R.id.backToHome);
+        FloatingActionButton alarm = view.findViewById(R.id.buttonToAlarm);
 
         mContentView = binding.fullscreenContent;
 
@@ -143,12 +147,33 @@ public class MindfulnessFragment1 extends Fragment {
         // operations to prevent the jarring behavior of controls going away
         // while interacting with the UI.
         meditation.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent notification = new Intent(getActivity(), Notification.class);
+                startActivity(notification);
+                ((Activity) getActivity()).overridePendingTransition(0, 0);
+            }
+        });
+
+        home.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
-                NavHostFragment.findNavController(MindfulnessFragment1.this).navigate(R.id.action_mindfulnessFragment1_to_notification2);
+                Intent main = new Intent(getActivity(), MainActivity.class);
+                startActivity(main);
+                ((Activity) getActivity()).overridePendingTransition(0, 0);
             }
         });
+
+        alarm.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent alarm = new Intent(getActivity(), DailyNotification.class);
+                startActivity(alarm);
+                ((Activity) getActivity()).overridePendingTransition(0, 0);
+            }
+        });
+
     }
 
     @Override

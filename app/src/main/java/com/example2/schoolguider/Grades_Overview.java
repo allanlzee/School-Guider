@@ -1,5 +1,6 @@
 package com.example2.schoolguider;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -44,6 +45,17 @@ public class Grades_Overview extends Fragment {
             }
         });
 
+        FloatingActionButton toAlarm = view.findViewById(R.id.buttonToAlarm);
+        toAlarm.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                Intent alarm = new Intent(getActivity(), DailyNotification.class);
+                startActivity(alarm);
+                ((Activity) getActivity()).overridePendingTransition(0, 0);
+            }
+        });
+
         // Set Navigation for the Buttons
         Button achievement = view.findViewById(R.id.achievements);
         Button goals = view.findViewById(R.id.goals);
@@ -80,7 +92,7 @@ public class Grades_Overview extends Fragment {
             @Override
             public void onClick(View v) {
                 NavHostFragment.findNavController(Grades_Overview.this)
-                        .navigate(R.id.action_grades_Overview_to_school_Schedule);
+                        .navigate(R.id.action_grades_Overview_to_achievements_Fragment);
                 // TODO: change this action ID
             }
         });
@@ -88,8 +100,9 @@ public class Grades_Overview extends Fragment {
         schedule.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                NavHostFragment.findNavController(Grades_Overview.this)
-                        .navigate(R.id.action_grades_Overview_to_school_Schedule);
+                Intent toSchedule = new Intent(getActivity(), DailyNotification.class);
+                startActivity(toSchedule);
+                ((Activity) getActivity()).overridePendingTransition(0, 0);
             }
         });
     }

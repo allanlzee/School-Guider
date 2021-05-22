@@ -19,6 +19,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
 /**
  * An example full-screen activity that shows and hides the system UI (i.e.
  * status bar and navigation/system bar) with user interaction.
@@ -136,6 +138,28 @@ public class Morning_Fragment extends Fragment {
             @Override
             public void onClick(View v) {
                 NavHostFragment.findNavController(Morning_Fragment.this).navigate(R.id.action_morning_Fragment_to_morningActivitiesPage);
+            }
+        });
+
+        FloatingActionButton backToHome = view.findViewById(R.id.backToHome);
+        FloatingActionButton toAlarm  = view.findViewById(R.id.buttonToAlarm);
+
+        backToHome.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+                NavHostFragment.findNavController(Morning_Fragment.this)
+                        .navigate(R.id.action_morning_Fragment_to_school_Schedule);
+            }
+        });
+
+        toAlarm.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                Intent alarm = new Intent(getActivity(), DailyNotification.class);
+                startActivity(alarm);
+                ((Activity) getActivity()).overridePendingTransition(0, 0);
             }
         });
     }

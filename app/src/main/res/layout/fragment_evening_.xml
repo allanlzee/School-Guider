@@ -10,6 +10,29 @@
     <!-- The primary full-screen view. This can be replaced with whatever view
          is needed to present your content, e.g. VideoView, SurfaceView,
          TextureView, etc. -->
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/backToHome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        android:src="@drawable/ic_action_home"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:contentDescription="@string/filler"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/buttonToAlarm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:src="@drawable/ic_action_alarm"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/backToHome"
+        android:contentDescription="@string/gradesOverviewAchievements"
+        />
+
     <TextView
         android:id="@+id/eveningTitle"
         android:layout_width="350dp"

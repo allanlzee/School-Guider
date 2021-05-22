@@ -68,6 +68,9 @@
             app:destination="@id/morningActivitiesPage"
             app:enterAnim="@anim/fragment_fade_enter"
             app:exitAnim="@anim/fragment_fade_exit" />
+        <action
+            android:id="@+id/action_morning_Fragment_to_school_Schedule"
+            app:destination="@id/school_Schedule" />
     </fragment>
     <fragment
         android:id="@+id/afternoon_Fragment"
@@ -167,9 +170,6 @@
         <action
             android:id="@+id/action_achievements_Fragment_to_achievements_Overview"
             app:destination="@id/achievements_Overview" />
-        <action
-            android:id="@+id/action_achievements_Fragment_to_dailyNotification"
-            app:destination="@id/dailyNotification" />
     </fragment>
     <fragment
         android:id="@+id/grades_Overview"
@@ -188,9 +188,6 @@
         <action
             android:id="@+id/action_grades_Overview_to_goals_Overview"
             app:destination="@id/goals_Overview" />
-        <action
-            android:id="@+id/action_grades_Overview_to_school_Schedule"
-            app:destination="@id/school_Schedule" />
     </fragment>
     <fragment
         android:id="@+id/achievements_Overview"

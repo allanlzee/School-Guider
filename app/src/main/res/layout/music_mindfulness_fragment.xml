@@ -159,7 +159,7 @@
             android:layout_height="90dp"
             app:layout_column="0"
             app:layout_row="2"
-            tools:srcCompat="@tools:sample/backgrounds/scenic"
+            android:src="@drawable/radiohead"
             android:contentDescription="@string/filler"/>
 
         <ImageView
@@ -168,7 +168,7 @@
             android:layout_height="90dp"
             app:layout_column="1"
             app:layout_row="2"
-            tools:srcCompat="@tools:sample/backgrounds/scenic"
+            android:src="@drawable/green_day"
             android:contentDescription="@string/filler"/>
 
         <ImageView
@@ -177,7 +177,7 @@
             android:layout_height="90dp"
             app:layout_column="2"
             app:layout_row="2"
-            tools:srcCompat="@tools:sample/backgrounds/scenic"
+            android:src="@drawable/coldplay"
             android:contentDescription="@string/filler"/>
 
         <ImageView
@@ -186,7 +186,7 @@
             android:layout_height="90dp"
             app:layout_column="3"
             app:layout_row="2"
-            tools:srcCompat="@tools:sample/backgrounds/scenic"
+            android:src="@drawable/lofi"
             android:contentDescription="@string/filler"/>
 
         <Button
@@ -239,7 +239,7 @@
             android:layout_height="90dp"
             app:layout_column="0"
             app:layout_row="4"
-            tools:srcCompat="@tools:sample/backgrounds/scenic"
+            android:src="@drawable/malone"
             android:contentDescription="@string/filler"/>
 
         <ImageView
@@ -248,7 +248,7 @@
             android:layout_height="90dp"
             app:layout_column="1"
             app:layout_row="4"
-            tools:srcCompat="@tools:sample/backgrounds/scenic"
+            android:src="@drawable/nirvana"
             android:contentDescription="@string/filler"/>
 
         <ImageView
@@ -257,7 +257,7 @@
             android:layout_height="90dp"
             app:layout_column="2"
             app:layout_row="4"
-            tools:srcCompat="@tools:sample/backgrounds/scenic"
+            android:src="@drawable/day6"
             android:contentDescription="@string/filler"/>
 
         <ImageView
@@ -266,7 +266,7 @@
             android:layout_height="90dp"
             app:layout_column="3"
             app:layout_row="4"
-            tools:srcCompat="@tools:sample/backgrounds/scenic"
+            android:src="@drawable/monkeys"
             android:contentDescription="@string/filler"/>
 
         <Button
@@ -285,7 +285,7 @@
             android:layout_width="100sp"
             android:layout_height="wrap_content"
             android:onClick="onBtnClick"
-            android:text="@string/gunsnroses"
+            android:text="Guns N' Roses"
             android:textSize="8sp"
             app:layout_column="1"
             app:layout_row="5"
@@ -363,7 +363,7 @@
             android:layout_height="90dp"
             app:layout_column="0"
             app:layout_row="6"
-            tools:srcCompat="@tools:sample/backgrounds/scenic"
+            android:src="@drawable/joji"
             android:contentDescription="@string/filler"/>
 
         <ImageView
@@ -372,7 +372,7 @@
             android:layout_height="90dp"
             app:layout_column="0"
             app:layout_row="8"
-            tools:srcCompat="@tools:sample/backgrounds/scenic"
+            android:src="@drawable/bts"
             android:contentDescription="@string/filler"/>
 
         <ImageView
@@ -381,7 +381,7 @@
             android:layout_height="90dp"
             app:layout_column="1"
             app:layout_row="8"
-            tools:srcCompat="@tools:sample/backgrounds/scenic"
+            android:src="@drawable/snow_patrol"
             android:contentDescription="@string/filler"/>
 
         <ImageView
@@ -390,7 +390,7 @@
             android:layout_height="90dp"
             app:layout_column="2"
             app:layout_row="8"
-            tools:srcCompat="@tools:sample/backgrounds/scenic"
+            android:src="@drawable/fray"
             android:contentDescription="@string/filler"/>
 
         <ImageView
@@ -399,7 +399,7 @@
             android:layout_height="90dp"
             app:layout_column="3"
             app:layout_row="8"
-            tools:srcCompat="@tools:sample/backgrounds/scenic"
+            android:src="@drawable/queen"
             android:contentDescription="@string/filler"/>
 
         <ImageView
@@ -408,7 +408,7 @@
             android:layout_height="90dp"
             app:layout_column="1"
             app:layout_row="6"
-            tools:srcCompat="@tools:sample/backgrounds/scenic"
+            android:src="@drawable/gunsnroses"
             android:contentDescription="@string/filler"/>
 
         <ImageView
@@ -417,7 +417,7 @@
             android:layout_height="90dp"
             app:layout_column="2"
             app:layout_row="6"
-            tools:srcCompat="@tools:sample/backgrounds/scenic"
+            android:src="@drawable/weezer"
             android:contentDescription="@string/filler"/>
 
         <ImageView
@@ -426,7 +426,7 @@
             android:layout_height="90dp"
             app:layout_column="3"
             app:layout_row="6"
-            tools:srcCompat="@tools:sample/backgrounds/scenic"
+            android:src="@drawable/beatles"
             android:contentDescription="@string/filler"/>
 
 

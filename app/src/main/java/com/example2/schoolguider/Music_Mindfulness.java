@@ -10,7 +10,6 @@ import android.view.ViewGroup;
 import androidx.fragment.app.Fragment;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.navigation.fragment.NavHostFragment;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
@@ -49,11 +48,7 @@ class Music_Mindfulness extends Fragment {
                 startActivity(alarm);
                 ((Activity) getActivity()).overridePendingTransition(0, 0);
             }
-        })
-
-
-
-
+        });
     }
 
     public void onBtnClick(View view) {

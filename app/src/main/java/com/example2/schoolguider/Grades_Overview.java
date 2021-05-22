@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
@@ -40,6 +41,55 @@ public class Grades_Overview extends Fragment {
             public void onClick(View v) {
                 NavHostFragment.findNavController(Grades_Overview.this)
                         .navigate(R.id.action_grades_Overview_to_gradesFragment);
+            }
+        });
+
+        // Set Navigation for the Buttons
+        Button achievement = view.findViewById(R.id.achievements);
+        Button goals = view.findViewById(R.id.goals);
+        Button next = view.findViewById(R.id.nextSteps);
+        Button advice = view.findViewById(R.id.advice);
+        Button schedule = view.findViewById(R.id.schedule);
+
+        achievement.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // action_grades_Overview_to_achievements_Fragment
+                NavHostFragment.findNavController(Grades_Overview.this)
+                        .navigate(R.id.action_grades_Overview_to_achievements_Fragment);
+            }
+        });
+
+        goals.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                NavHostFragment.findNavController(Grades_Overview.this)
+                        .navigate(R.id.action_grades_Overview_to_goals_Fragment);
+            }
+        });
+
+        next.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                NavHostFragment.findNavController(Grades_Overview.this)
+                        .navigate(R.id.action_grades_Overview_to_goals_Overview);
+            }
+        });
+
+        advice.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                NavHostFragment.findNavController(Grades_Overview.this)
+                        .navigate(R.id.action_grades_Overview_to_school_Schedule);
+                // TODO: change this action ID
+            }
+        });
+
+        schedule.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                NavHostFragment.findNavController(Grades_Overview.this)
+                        .navigate(R.id.action_grades_Overview_to_school_Schedule);
             }
         });
     }

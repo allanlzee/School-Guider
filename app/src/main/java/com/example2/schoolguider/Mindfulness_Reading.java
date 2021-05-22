@@ -1,5 +1,7 @@
 package com.example2.schoolguider;
 
+import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -85,12 +87,24 @@ public class Mindfulness_Reading extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        FloatingActionButton home = view.findViewById(R.id.fab);
+        FloatingActionButton home = view.findViewById(R.id.backToHome);
+        FloatingActionButton alarm = view.findViewById(R.id.buttonAlarm);
+
         home.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
                 showSnackBar();
+            }
+        });
+
+        alarm.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                Intent alarm = new Intent(getActivity(), DailyNotification.class);
+                startActivity(alarm);
+                ((Activity)getActivity()).overridePendingTransition(0, 0);
             }
         });
     }

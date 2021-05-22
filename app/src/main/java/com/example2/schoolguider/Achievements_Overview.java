@@ -1,5 +1,7 @@
 package com.example2.schoolguider;
 
+import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -34,11 +36,22 @@ public class Achievements_Overview extends Fragment {
         });
 
         FloatingActionButton backToHome = view.findViewById(R.id.backToHome);
+        FloatingActionButton toAlarm = view.findViewById(R.id.buttonAlarm);
         backToHome.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 NavHostFragment.findNavController(Achievements_Overview.this)
                         .navigate(R.id.action_achievements_Overview_to_achievements_Starter);
+            }
+        });
+
+        toAlarm.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                Intent alarm = new Intent(getActivity(), DailyNotification.class);
+                startActivity(alarm);
+                ((Activity) getActivity()).overridePendingTransition(0, 0);
             }
         });
     }

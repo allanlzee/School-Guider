@@ -51,16 +51,17 @@
         android:layout_margin="@dimen/fab_margin"
         app:srcCompat="@drawable/ic_action_home"
         android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
+        android:layout_alignParentTop="true"
         android:contentDescription="@string/filler"/>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/buttonToAlarm"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"
         android:src="@drawable/ic_action_alarm"
-        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/fab"
+        android:layout_marginEnd="16dp"
+        android:layout_alignParentEnd="true"
         android:layout_toStartOf="@+id/fab"
         android:contentDescription="@string/gradesOverviewAchievements"
         />

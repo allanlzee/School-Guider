@@ -75,8 +75,9 @@ public class Grades_Overview extends Fragment {
         goals.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                NavHostFragment.findNavController(Grades_Overview.this)
-                        .navigate(R.id.action_grades_Overview_to_goals_Fragment);
+                Intent goals = new Intent(getActivity(), Goals_Starter.class);
+                startActivity(goals);
+                ((Activity) getActivity()).overridePendingTransition(0, 0);
             }
         });
 

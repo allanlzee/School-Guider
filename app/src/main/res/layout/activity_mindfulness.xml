@@ -22,7 +22,8 @@
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:src="@drawable/ic_action_alarm"
-            android:layout_toStartOf="@+id/fab"
+            android:layout_below="@+id/fab"
+            android:layout_alignParentEnd="true"
             android:contentDescription="@string/gradesOverviewAchievements"
             />
 

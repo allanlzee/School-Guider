@@ -11,11 +11,20 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/fab_margin"
-        android:backgroundTint="@color/red"
         app:srcCompat="@drawable/ic_action_home"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:contentDescription="@string/home"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/buttonAlarm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/backToHome"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="16dp"
+        android:src="@drawable/ic_action_alarm"
+        />
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appBar"

@@ -1,5 +1,6 @@
 package com.example2.schoolguider;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -27,14 +28,30 @@ class Music_Mindfulness extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        FloatingActionButton home = view.findViewById(R.id.fab);
+        FloatingActionButton home = view.findViewById(R.id.backToHome);
+        FloatingActionButton toAlarm = view.findViewById(R.id.buttonAlarm);
+
         home.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
-                NavHostFragment.findNavController(Music_Mindfulness.this).navigate(R.id.action_music_Mindfulness_to_mindfulnessActivity);
+                Intent home = new Intent(getActivity(), MainActivity.class);
+                startActivity(home);
+                ((Activity) getActivity()).overridePendingTransition(0, 0);
             }
         });
+
+        toAlarm.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                Intent alarm = new Intent(getActivity(), DailyNotification.class);
+                startActivity(alarm);
+                ((Activity) getActivity()).overridePendingTransition(0, 0);
+            }
+        })
+
+
 
 
     }

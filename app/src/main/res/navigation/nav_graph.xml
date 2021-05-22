@@ -183,9 +183,6 @@
             android:id="@+id/action_grades_Overview_to_achievements_Fragment"
             app:destination="@id/achievements_Fragment" />
         <action
-            android:id="@+id/action_grades_Overview_to_goals_Fragment"
-            app:destination="@id/goals_Fragment" />
-        <action
             android:id="@+id/action_grades_Overview_to_goals_Overview"
             app:destination="@id/goals_Overview" />
     </fragment>

@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Achievements_Overview">
+    tools:context=".Achievements_Overview"
+    android:background="@drawable/achievements_image">
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/backToHome"
@@ -26,28 +27,6 @@
         android:layout_margin="16dp"
         android:src="@drawable/ic_action_alarm"
         />
-
-    <ImageView
-        android:id="@+id/achievementsImage"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:contentDescription="@string/title_activity_achievements_starter"
-        android:src="@drawable/achievements_image"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <TextView
-        android:id="@+id/textview_second"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toTopOf="@id/backToActivity"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/backToActivity"

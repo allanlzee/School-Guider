@@ -11,6 +11,8 @@ import androidx.navigation.fragment.NavHostFragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.Toast;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
@@ -73,6 +75,12 @@ public class Goals_Overview extends Fragment {
         FloatingActionButton backToHome = view.findViewById(R.id.backToHome);
         FloatingActionButton toAlarm = view.findViewById(R.id.buttonAlarm);
 
+        Button goal1 = view.findViewById(R.id.goal1);
+        Button goal2 = view.findViewById(R.id.goal2);
+        Button goal3 = view.findViewById(R.id.goal3);
+        Button goal4 = view.findViewById(R.id.goal4);
+        Button goal5 = view.findViewById(R.id.goal5);
+
         backToHome.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -87,6 +95,41 @@ public class Goals_Overview extends Fragment {
                 Intent alarm = new Intent(getActivity(), DailyNotification.class);
                 startActivity(alarm);
                 ((Activity) getActivity()).overridePendingTransition(0, 0);
+            }
+        });
+
+        goal1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getActivity(), "Click on 'Add Goal'", Toast.LENGTH_LONG).show();
+            }
+        });
+
+        goal2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getActivity(), "Click on 'Add Goal'", Toast.LENGTH_LONG).show();
+            }
+        });
+
+        goal3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getActivity(), "Click on 'Add Goal'", Toast.LENGTH_LONG).show();
+            }
+        });
+
+        goal4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getActivity(), "Click on 'Add Goal'", Toast.LENGTH_LONG).show();
+            }
+        });
+
+        goal5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getActivity(), "Click on 'Add Goal'", Toast.LENGTH_LONG).show();
             }
         });
     }

@@ -3,7 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Goals_Overview">
+    tools:context=".Goals_Overview"
+    android:background="@drawable/goals_overview">
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/backToHome"
@@ -56,6 +57,119 @@
 
     </com.google.android.material.appbar.AppBarLayout>
 
+    <Button
+        android:id="@+id/goal1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/green"
+        android:layout_below="@id/appBar"
+        android:layout_margin="20dp"
+        android:text="Goal #1"
+        android:textSize="20sp"
+        />
 
+    <EditText
+        android:id="@+id/edit1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/goal1"
+        android:layout_below="@id/appBar"
+        android:layout_margin="20dp"
+        android:hint="Add Goal"
+        android:textColorHint="@color/white"
+        android:textSize="20sp"
+        android:textColor="@color/white"/>
+
+    <Button
+        android:id="@+id/goal2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/morningButton"
+        android:layout_below="@id/goal1"
+        android:layout_margin="20dp"
+        android:text="Goal #2"
+        android:textSize="20sp"
+        />
+
+    <EditText
+        android:id="@+id/edit2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/goal2"
+        android:layout_below="@id/edit1"
+        android:layout_margin="20dp"
+        android:hint="Add Goal"
+        android:textColorHint="@color/white"
+        android:textSize="20sp"
+        android:textColor="@color/white"/>
+
+    <Button
+        android:id="@+id/goal3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/afternoon"
+        android:layout_below="@id/goal2"
+        android:layout_margin="20dp"
+        android:text="Goal #3"
+        android:textSize="20sp"
+        />
+
+    <EditText
+        android:id="@+id/edit3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/goal3"
+        android:layout_below="@id/edit2"
+        android:layout_margin="20dp"
+        android:hint="Add Goal"
+        android:textColorHint="@color/white"
+        android:textSize="20sp"
+        android:textColor="@color/white"/>
+
+    <Button
+        android:id="@+id/goal4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/grades_intro"
+        android:layout_below="@id/goal3"
+        android:layout_margin="20dp"
+        android:text="Goal #4"
+        android:textSize="20sp"
+        />
+
+    <EditText
+        android:id="@+id/edit4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/goal4"
+        android:layout_below="@id/edit3"
+        android:layout_margin="20dp"
+        android:hint="Add Goal"
+        android:textColorHint="@color/white"
+        android:textSize="20sp"
+        android:textColor="@color/white"/>
+
+    <Button
+        android:id="@+id/goal5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/reading"
+        android:layout_below="@id/goal4"
+        android:layout_margin="20dp"
+        android:text="Goal #5"
+        android:textSize="20sp"
+        />
+
+    <EditText
+        android:id="@+id/edit5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/goal5"
+        android:layout_below="@id/edit4"
+        android:layout_margin="20dp"
+        android:hint="Add Goal"
+        android:textColorHint="@color/white"
+        android:textSize="20sp"
+        android:textColor="@color/white"/>
 
 </RelativeLayout>
